@@ -1,0 +1,58 @@
+
+<body ng-app="MyWebsite">
+<div class="main" ng-controller="MainController">
+<!--<nav-bar></nav-bar>-->
+<div class="parallax-container">
+    <div class="parallax" parallax-directive><img src="images/centre2.jpg"></div>
+</div>
+<div class="section white">
+    <div class="row container">
+        <h2 class="header">{{ aboutPage.header }}</h2>
+        <p class="grey-text text-darken-3 lighten-3">
+            {{ aboutPage.intro }}
+        </p>
+        <div class="row">
+            <div ng-repeat="aboutDetail in aboutDetails">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img ng-src="{{ aboutDetail.imagePath }}">
+                        <span class="card-title">{{ aboutDetail.header }}</span>
+                    </div>
+                    <div class="card-content">
+                        <p>
+                            {{ aboutDetail.details }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+                </div>
+</div>
+    </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax" parallax-directive><img src="images/centre2.jpg"></div>
+    </div>
+    <div class="contact-section">
+    <div class="section white">
+        <div class="row container">
+            <h2 class="header">{{ aboutPage.contact }}</h2>
+            <p class="grey-text text-darken-3 lighten-3">
+                {{ aboutPage.socialText }}
+            </p>
+            <p><a href="http://www.facebook.com/jitin7" target="_blank">
+                <i class="fa fa-facebook-square fa-3x" style="color: royalblue"></i></a>
+                <a href="http://twitter.com/js_2892" target="_blank">
+                    <i class="fa fa-twitter-square fa-3x" style="color: royalblue"></i></a>
+                <a href="https://in.linkedin.com/pub/jitin-sharma/66/179/460" target="_blank">
+                    <i class="fa fa-linkedin-square fa-3x" style="color: royalblue"></i></a></p>
+            <p class="grey-text text-darken-3 lighten-3">
+                {{ aboutPage.gitText }}
+            </p>
+            <p><a href="https://github.com/js2892" target="_blank">
+                <i class="fa fa-github fa-3x" style="color: royalblue"></i></a>
+        </div>
+</div>
+    </div>
+    </div>
+</body>

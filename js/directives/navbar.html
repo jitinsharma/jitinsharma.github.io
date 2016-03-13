@@ -1,0 +1,24 @@
+<div class="navbar-fixed" ng-controller="MainController">
+<nav>
+    <div class="nav-wrapper">
+        <div class="logo">
+            <a href="#/" class="brand-logo">{{ pageTitle }}</a>
+            <div class="menu">
+                <a href="#" data-activates="mobile-demo" side-nav class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#/">{{ menu.home }}</a></li>
+                <li><a href="#/about">{{ menu.about }}</a></li>
+                <li><a href="#/resume">{{menu.resume}}</a></li>
+                <li><a href="#/blog">{{menu.blog}}</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="#/">{{menu.home}}</a></li>
+                <li><a href="#/about">{{menu.about}}</a></li>
+                <li><a href="#/resume">{{menu.resume}}</a></li>
+                <li><a href="#/blog">{{menu.blog}}</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    </div>

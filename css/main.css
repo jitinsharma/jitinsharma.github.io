@@ -1,0 +1,146 @@
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-wrapper {
+    background-color: royalblue;
+    position: fixed;
+}
+
+.nav-wrapper a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hide-on-med-and-down a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.side-nav a{
+    text-decoration: none;
+    color: royalblue;
+}
+
+.menu a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-wrapper .logo a{
+    padding-left: 10px;
+}
+
+.parallax-container{
+    height: 300px;
+}
+
+.contact-section{
+    align-content: center;
+    text-align: center;
+}
+
+.resume-button{
+    display: table;
+    margin: 0 auto;
+    padding-top: 10px;
+    color: royalblue;
+}
+
+.about-button{
+    display: table;
+    margin: 0 auto;
+}
+
+.card-action a{
+    color: white;
+}
+
+.work-data i{
+    vertical-align: middle;
+    font-size: 48px;
+    color: brown;
+}
+
+.location{
+    display: inline-block;
+    float: right;
+    clear: both;
+}
+
+.location i{
+    color: slategray;
+    font-size: 36px;
+    vertical-align: middle;
+}
+
+.work-data{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.work-data .year{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.work-data .work{
+    display: inline-block;
+    /*position: absolute;*/
+    text-align: center;
+}
+
+.page-footer{
+    background-color: royalblue;
+    position:fixed;
+    bottom:0;
+    width: 100%;
+}
+
+.page-footer .container span{
+    color: white;
+}
+
+.card .resume-header{
+    color: white;
+    background-color: brown;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.home-card{
+    animation-name: move-up;
+    animation-duration: 2s;
+    -webkit-transform: translateZ(0);
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.work-card{
+    animation-duration: 2s;
+    animation-name: move-up;
+    -webkit-transform: translateZ(0);
+}
+
+@keyframes move-up {
+    from {
+        margin-top: 100%;
+        width: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
