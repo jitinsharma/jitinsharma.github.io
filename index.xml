@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jitin Sharma</title>
-    <link>https://jitinsharma.in/</link>
+    <link>https://jitinsharma.github.io/</link>
     <description>Recent content on Jitin Sharma</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://jitinsharma.in/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jitinsharma.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hi I&#39;m Jitin</title>
-      <link>https://jitinsharma.in/about/</link>
+      <link>https://jitinsharma.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jitinsharma.in/about/</guid>
+      <guid>https://jitinsharma.github.io/about/</guid>
       <description>I currently work as an Android Engineer at GO-JEK in a design focussed team to keep UI ASAP(As Shiny As Possible). Previously I worked at Amadeus Labs, building mobile applications for airlines all over the world.
 I ocassionally write blogs and do some open source stuff on Github. I also talk a bit about Android and Kotlin at user groups and conferences and can always be found hanging around at BlrDroid and BlrKotlin meetup groups.</description>
     </item>
     
     <item>
       <title>Public Speaking</title>
-      <link>https://jitinsharma.in/publicspeaking/</link>
+      <link>https://jitinsharma.github.io/publicspeaking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jitinsharma.in/publicspeaking/</guid>
+      <guid>https://jitinsharma.github.io/publicspeaking/</guid>
       <description>Architectures with Kotlin Multiplatform Fragments, April 2019 (Bangalore India)
  
 
