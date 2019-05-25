@@ -29,6 +29,8 @@
     {{ end }}
     {{ end }}
     <br/>
-    <i class="fas fa-clock"></i> {{ .ReadingTime }} min read
+    {{ if ne .Params.readingTime false }}
+        <i class="fas fa-clock"></i> {{ .ReadingTime }} min read
+    {{ end }}
 </div>
 {{ end }}
