@@ -1,4 +1,599 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jitin Sharma]]></title><description><![CDATA[software-ish]]></description><link>https://jitinsharma.in</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 31 Jan 2020 09:48:34 GMT</lastBuildDate><item><title><![CDATA[Parsing Kotlin code using Kotlin]]></title><description><![CDATA[ As Android codebases have moved largely to kotlin, code analysis for kotlin code presents itself as a unique problem with a utterly simple solution.]]></description><link>https://jitinsharma.in/posts/parsing-kotlin-using-code-kotlin/</link><guid isPermaLink="false">https://jitinsharma.in/posts/parsing-kotlin-using-code-kotlin/</guid><pubDate>Tue, 10 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;/media/parsing-kotlin-using-code-kotlin/logo.svg&quot; width=&quot;75&quot; height=&quot;75&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jitin Sharma]]></title><description><![CDATA[software-ish]]></description><link>https://jitinsharma.in</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 31 Mar 2020 17:24:31 GMT</lastBuildDate><item><title><![CDATA[Lessons learnt from Vector Drawables]]></title><description><![CDATA[Working safely with Vector Drawables on different API levels.]]></description><link>https://jitinsharma.in/posts/lessons-learnt-from-vector-drawables/</link><guid isPermaLink="false">https://jitinsharma.in/posts/lessons-learnt-from-vector-drawables/</guid><pubDate>Tue, 31 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/90a2c0f682fb9cd20b5379bf19928b6c/c8551/vector-header.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 8.75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAWUlEQVQI1z2MOwoAIAxDvf/JXD2EODlU8IefSAo2U17SxtVaQe29kXPGvVe5944YI77mnGitWe+9R0pJPTN23HBrLQtFBOcc5VIKQgjWcXCMYcy/f0txkPwAQtGcB77jjHQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/90a2c0f682fb9cd20b5379bf19928b6c/8ac56/vector-header.webp 240w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/d3be9/vector-header.webp 480w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/e46b2/vector-header.webp 960w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/f992d/vector-header.webp 1440w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/882b9/vector-header.webp 1920w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/38df0/vector-header.webp 2814w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/90a2c0f682fb9cd20b5379bf19928b6c/8ff5a/vector-header.png 240w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/e85cb/vector-header.png 480w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/d9199/vector-header.png 960w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/07a9c/vector-header.png 1440w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/29114/vector-header.png 1920w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/c8551/vector-header.png 2814w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/90a2c0f682fb9cd20b5379bf19928b6c/d9199/vector-header.png&quot;
+          alt=&quot;vector header&quot;
+          title=&quot;vector header&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Dialing back to days of Android 5.0 release(s) one of the things which got a lot of people excited was Android got support for SVGs in form of vector Drawables. No longer you were required to draw custom shapes or have icon png(s) based on density, just import SVGs using Android Studio and let the support library draw them for you!&lt;/p&gt;
+&lt;p&gt;This article is more or less a list of lessons which I’ve learnt while working with vectors and how to make sure to use vectors safely avoiding crashes on devices with API level less than 21.&lt;/p&gt;
+&lt;h2 id=&quot;without-support-library&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#without-support-library&quot; aria-label=&quot;without support library permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Without Support Library&lt;/h2&gt;
+&lt;p&gt;By default, if you don’t enable support library use all vector drawables are converted to pngs in their density folders. While this means you’ll never face an rendering issue since pngs are supported in all versions of Android, this will definitely increased size of your app by a lot if you heavily depend on vectors.&lt;/p&gt;
+&lt;p&gt;Here’s how a vector xml file in transformed into multiple pngs during build cycle&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 562px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ad9a0eeae5df49192070d7adbb59071c/6e88f/vector-png.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.83333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB4klEQVQ4y42TyXKbQBRF+ZjEqco6cVYWoxHN3ECDADPKqaRSqeT/VzevkRhsSSktbjX9BEfn9aDEcQTX0VEnNsbMQZaGCFwDnqPB3avnaPCZTrU52uZ5O9egcB4hYDvwwMKPzMLvJsLrWKGtOIqUoRQeBN8jdFWKhsiT0Tej/qamRBEZMZWsdOSRhV+Zgark6F9SDG2OpowpnMA+yjxA7BsTOKT312jLSIbxBJSFPH7Gn8JGewjAw2dE7vmfCSJBPDCneehu7db5BDQtY1H2qSDI8ie1/r3NIBJGIHMCrWbaBfQN0DDORfmj/IAADbfwt2IYxhpjKzA0p2SxjZC62dpdAs13RQr39cVy6PIJdsi8q+3eNpRFaUjPWWDgKBz0BBppYzraoFTaXWn3/4YzkAy73EXXFnjtD2jrlNbTuWp3l6EgwyFnaM9rJ4FZvL8PaJqnXZbHZgXqOBYuhqHEsSswUnLa8buAYehP53AuSGAqWxYMzYtAR3ZyDU+3Zf5QX47QmgUY0D1Vl4K8MRI4kGHfnwyPNJYiWC7AJWyN4vsuEl9DQm0mBJLjITIw5g5aMutreQ0T1LkHTkuTzu/diKJaDj5+3eHTozrlgfL5m4qdzWCnFVhSTnliMT58eVreuZV/AuQzc05rztkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/ad9a0eeae5df49192070d7adbb59071c/8ac56/vector-png.webp 240w,
+/static/ad9a0eeae5df49192070d7adbb59071c/d3be9/vector-png.webp 480w,
+/static/ad9a0eeae5df49192070d7adbb59071c/49232/vector-png.webp 562w&quot;
+          sizes=&quot;(max-width: 562px) 100vw, 562px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/ad9a0eeae5df49192070d7adbb59071c/8ff5a/vector-png.png 240w,
+/static/ad9a0eeae5df49192070d7adbb59071c/e85cb/vector-png.png 480w,
+/static/ad9a0eeae5df49192070d7adbb59071c/6e88f/vector-png.png 562w&quot;
+          sizes=&quot;(max-width: 562px) 100vw, 562px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/ad9a0eeae5df49192070d7adbb59071c/6e88f/vector-png.png&quot;
+          alt=&quot;vector png&quot;
+          title=&quot;vector png&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This rasterization into pngs modifies after build size of one vector(in this case) from 2kb to 7kb which is more than &lt;strong&gt;3x&lt;/strong&gt; size increase. &lt;/p&gt;
+&lt;p&gt;Ideally this approach should be avoided if your app has a lot of vectors. Let’s look into next section on how to work with Support Library.&lt;/p&gt;
+&lt;h2 id=&quot;with-support-library&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#with-support-library&quot; aria-label=&quot;with support library permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;With Support Library&lt;/h2&gt;
+&lt;p&gt;To use vectors with support library, there is a simple flag which can be added in &lt;code class=&quot;language-text&quot;&gt;build.gradle&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;groovy&quot;&gt;&lt;pre class=&quot;language-groovy&quot;&gt;&lt;code class=&quot;language-groovy&quot;&gt;android &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;...&lt;/span&gt;
+    vectorDrawables&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;useSupportLibrary &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and add following code to your Application class’s &lt;code class=&quot;language-text&quot;&gt;onCreate&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;AppCompatDelegate&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setCompatVectorFromResourcesEnabled&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Using support library means there is no conversion of xml to pngs based on density, instead these drawables are drawn on runtime on canvas.&lt;/p&gt;
+&lt;p&gt;Following this we will broadly divide usage into following sections&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#using-vector-drawables-in-framework-components&quot;&gt;Using vector drawables in Framework Components&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#loading-drawables-outside-xml&quot;&gt;Loading drawables outside xml&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#working-with-custom-views&quot;&gt;Working with custom views&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#safeguarding-with-lint&quot;&gt;Safeguarding with lint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#tl-dr&quot;&gt;TL;DR&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;using-vector-drawables-in-framework-components&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#using-vector-drawables-in-framework-components&quot; aria-label=&quot;using vector drawables in framework components permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Using vector drawables in Framework Components&lt;/h3&gt;
+&lt;p&gt;A very straightforward way of using vectors is &lt;code class=&quot;language-text&quot;&gt;ImageView&lt;/code&gt; which can be used for icons/shapes etc.&lt;/p&gt;
+&lt;p&gt;Since vectors are not supported natively, they always should be used with &lt;code class=&quot;language-text&quot;&gt;app&lt;/code&gt; namespace. Android Studio does a good job to let you know the same for &lt;code class=&quot;language-text&quot;&gt;ImageView&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8a845613296359c96e6a0688a55c8461/061c7/vector-imageview.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 25.416666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABA0lEQVQY01WPaW6FMAyEOQ4CEtYQCI/HVvZXhFS2qr3/NaYGVKn98ckZOxqPtTQrcPHMIWQEz/ehBEfx8NFXEZ4qgOM5cAIHrnBhuzY4Zzc2B2PsH9qDjH6JVUKGAXz3/lioBmXSoB1adO8txnlE2eSQqU8IqDyES8ss64/hmS7LSzLMrqRZUcIwTErAkYYJipj6sYKMBaQSCKn6oYcgIqRHKRksZoJxC8wyofXjC+txYNl2rPvNRnrdD2zEsq5Ytw0fZ6XZQu9zfupxmihECu4yOHSVTaZa2b7QzF/EN5ppQ0cL6mFCPX2ipv7bMNPJI6qmR9X2d73oLi1CCV3X6Srj4gfGOqxWLacabAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/8a845613296359c96e6a0688a55c8461/8ac56/vector-imageview.webp 240w,
+/static/8a845613296359c96e6a0688a55c8461/d3be9/vector-imageview.webp 480w,
+/static/8a845613296359c96e6a0688a55c8461/e46b2/vector-imageview.webp 960w,
+/static/8a845613296359c96e6a0688a55c8461/77293/vector-imageview.webp 1216w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/8a845613296359c96e6a0688a55c8461/8ff5a/vector-imageview.png 240w,
+/static/8a845613296359c96e6a0688a55c8461/e85cb/vector-imageview.png 480w,
+/static/8a845613296359c96e6a0688a55c8461/d9199/vector-imageview.png 960w,
+/static/8a845613296359c96e6a0688a55c8461/061c7/vector-imageview.png 1216w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/8a845613296359c96e6a0688a55c8461/d9199/vector-imageview.png&quot;
+          alt=&quot;vector imageview&quot;
+          title=&quot;vector imageview&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;But let’s look at some other scenarios&lt;/p&gt;
+&lt;h4 id=&quot;textview&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#textview&quot; aria-label=&quot;textview permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TextView&lt;/h4&gt;
+&lt;p&gt;We can also set icon to &lt;code class=&quot;language-text&quot;&gt;TextView&lt;/code&gt; as &lt;code class=&quot;language-text&quot;&gt;drawableStart&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;drawableTop&lt;/code&gt; etc.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;TextView&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;layout_width&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;wrap_content&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;layout_height&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;wrap_content&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;drawableStart&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;@drawable/ic_account&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;text&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;Account&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you run this code on devices with &lt;strong&gt;API &amp;#x3C;21&lt;/strong&gt;, you’ll face this error. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;Caused by: android.view.InflateException: Binary XML &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; line &lt;span class=&quot;token comment&quot;&gt;#11: Error inflating class TextView&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Caused by: android.content.res.Resources&lt;span class=&quot;token variable&quot;&gt;$NotFoundException&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt; File res/drawable/ic_account.xml from drawable resource ID &lt;span class=&quot;token comment&quot;&gt;#0x7f060060&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;For &lt;code class=&quot;language-text&quot;&gt;TextView&lt;/code&gt;, the solution is already present if you are using &lt;code class=&quot;language-text&quot;&gt;androidx.appcompat&lt;/code&gt; version &lt;code class=&quot;language-text&quot;&gt;1.1.0&lt;/code&gt; or above.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;TextView&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;layout_width&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;wrap_content&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;layout_height&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;wrap_content&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;text&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;Account&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;app:&lt;/span&gt;drawableStartCompat&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;@drawable/ic_account&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;other-viewsviewgroups&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#other-viewsviewgroups&quot; aria-label=&quot;other viewsviewgroups permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Other Views/ViewGroups&lt;/h4&gt;
+&lt;p&gt;Unfortunately, Android Studio doesn’t warn if vectors are used with &lt;code class=&quot;language-text&quot;&gt;android&lt;/code&gt; namespace in components other than &lt;code class=&quot;language-text&quot;&gt;ImageView&lt;/code&gt; which makes it harder to find out where vector rendering might become a problem. There are a lot of practical use cases where you could use vectors outside of &lt;code class=&quot;language-text&quot;&gt;ImageView&lt;/code&gt; such as background of a smaller &lt;code class=&quot;language-text&quot;&gt;ViewGroup&lt;/code&gt; and also you can use them to draw complex shapes without writing &lt;code class=&quot;language-text&quot;&gt;canvas&lt;/code&gt; related code yourself.&lt;/p&gt;
+&lt;p&gt;In such cases, a there are two ways to use vectors with &lt;code class=&quot;language-text&quot;&gt;android&lt;/code&gt; namespace&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Wrap them in a &lt;code class=&quot;language-text&quot;&gt;StateList&lt;/code&gt; drawable&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;ic_account_statelist.xml&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;selector&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;xmlns:&lt;/span&gt;android&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;http://schemas.android.com/apk/res/android&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;item&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;drawable&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;@drawable/ic_account&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;selector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;By creating &lt;code class=&quot;language-text&quot;&gt;StateList&lt;/code&gt;, this drawable can used with &lt;code class=&quot;language-text&quot;&gt;android&lt;/code&gt; namespace anywhere and should work below API 21, though this requires you to create on extra file per vector.&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Load vectors as drawables and set them outside of xml in Kotlin/Java&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You can set drawables to &lt;code class=&quot;language-text&quot;&gt;TextView&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;ViewGroup&lt;/code&gt; etc outside of xml also&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;viewGroup&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;background &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; yourDrawable
+textView&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setCompoundDrawables&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;leftDrawable&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; topDrawable&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; rightDrawable&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; bottomDrawable&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now the question is how to load Drawable. &lt;/p&gt;
+&lt;h3 id=&quot;loading-drawables-outside-xml&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#loading-drawables-outside-xml&quot; aria-label=&quot;loading drawables outside xml permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Loading drawables outside xml&lt;/h3&gt;
+&lt;p&gt;The most common known way of loading drawable is via &lt;code class=&quot;language-text&quot;&gt;ContextCompat&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;ContextCompat&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getDrawable&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; R&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;drawable&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ic_account&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Also there is another less known way&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;AppCompatResources&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getDrawable&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; R&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;drawable&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ic_account&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In current scenario both will work fine since this is plain vector.
+But let’s say we have a vector which has a &lt;code class=&quot;language-text&quot;&gt;gradient&lt;/code&gt; tag&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;vector&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;xmlns:&lt;/span&gt;android&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;http://schemas.android.com/apk/res/android&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;xmlns:&lt;/span&gt;aapt&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;http://schemas.android.com/aapt&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;width&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;9dp&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;height&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;17dp&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;viewportWidth&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;9&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;viewportHeight&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;17&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;path&lt;/span&gt;
+        &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;pathData&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;M7.1921,17L8.0072,17L8.0072,0L0,0L0,9.8079C-0,11.8049 0.2818,12.9046 0.8109,13.894C1.3401,14.8834 2.1166,15.6599 3.106,16.1891C4.0954,16.7182 5.1951,17 7.1921,17Z&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;strokeWidth&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;1&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;fillType&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;evenOdd&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;strokeColor&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;#00000000&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token namespace&quot;&gt;aapt:&lt;/span&gt;attr&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;android:fillColor&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;gradient&lt;/span&gt;
+                &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;startY&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;17&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+                &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;startX&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;3.3198788&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+                &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;endY&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;17&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+                &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;endX&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;5.201214&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+                &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;linear&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+                &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;item&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;offset&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;0&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;color&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;#000000&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+                &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;item&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;offset&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;1&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;color&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;#FFFFFF&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;gradient&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;token namespace&quot;&gt;aapt:&lt;/span&gt;attr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;path&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;vector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Loading this vector via &lt;code class=&quot;language-text&quot;&gt;ContextCompat&lt;/code&gt; will throw this error on devices with &lt;strong&gt;API level 21-23&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;Caused by: org.xmlpull.v1.XmlPullParserException: Binary XML &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; line &lt;span class=&quot;token comment&quot;&gt;#13: invalid color state list tag gradient&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This works fine above &lt;strong&gt;API 23&lt;/strong&gt; and even below &lt;strong&gt;API 21&lt;/strong&gt; but fails in between these APIs. Weird, right!&lt;/p&gt;
+&lt;p&gt;Let’s look at what &lt;code class=&quot;language-text&quot;&gt;ContextCompat&lt;/code&gt; does&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4edb7b4864382e635a7fd16fe9881031/1dbe8/contextcompat-getdrawable.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 19.166666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAw0lEQVQY012PUW6DMBBEOU7jJcbY2ICxE0ggUXr/+7waIjVVP55mtNodzVbZCbEzDN6S5xtxSsyDZcuOa3Lkiyb4L3zo8f3w1jDQByFNihiFYE94Z2ldR9XqmnsKrLlnfX6zPgq3F+v9ybxsxJSpa0FEUOpUUIcXUWX+8W8VqvqsSVZx6YR8XQ6WbQ97kKeFcUyMeaYfIq7zNE3zG6qUHP6jikprzRw0Xas5F9+YthwZTFt0xxisddjyzk5Tdv62/N/wB7zCf8TFiWINAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/4edb7b4864382e635a7fd16fe9881031/8ac56/contextcompat-getdrawable.webp 240w,
+/static/4edb7b4864382e635a7fd16fe9881031/d3be9/contextcompat-getdrawable.webp 480w,
+/static/4edb7b4864382e635a7fd16fe9881031/e46b2/contextcompat-getdrawable.webp 960w,
+/static/4edb7b4864382e635a7fd16fe9881031/04d72/contextcompat-getdrawable.webp 1374w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/4edb7b4864382e635a7fd16fe9881031/8ff5a/contextcompat-getdrawable.png 240w,
+/static/4edb7b4864382e635a7fd16fe9881031/e85cb/contextcompat-getdrawable.png 480w,
+/static/4edb7b4864382e635a7fd16fe9881031/d9199/contextcompat-getdrawable.png 960w,
+/static/4edb7b4864382e635a7fd16fe9881031/1dbe8/contextcompat-getdrawable.png 1374w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/4edb7b4864382e635a7fd16fe9881031/d9199/contextcompat-getdrawable.png&quot;
+          alt=&quot;contextcompat getdrawable&quot;
+          title=&quot;contextcompat getdrawable&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Above &lt;strong&gt;API 21&lt;/strong&gt;, it uses &lt;code class=&quot;language-text&quot;&gt;context&lt;/code&gt; to inflate drawables, but there is a catch. Support for &lt;code class=&quot;language-text&quot;&gt;gradient&lt;/code&gt; tag in vectors was introduced in &lt;strong&gt;API 24&lt;/strong&gt; hence resolving drawables via &lt;code class=&quot;language-text&quot;&gt;context&lt;/code&gt; will fail below &lt;strong&gt;API 24&lt;/strong&gt; since framework doesn’t know what &lt;code class=&quot;language-text&quot;&gt;gradient&lt;/code&gt; tag is!&lt;/p&gt;
+&lt;p&gt;Below &lt;strong&gt;API 21&lt;/strong&gt;, it uses &lt;code class=&quot;language-text&quot;&gt;context.getResources&lt;/code&gt; and IIRC, inflation of drawables via &lt;code class=&quot;language-text&quot;&gt;Resources&lt;/code&gt; is intercepted by &lt;code class=&quot;language-text&quot;&gt;AppCompat&lt;/code&gt; and it takes over inflation of drawables.&lt;/p&gt;
+&lt;p&gt;This error can be avoided by using &lt;code class=&quot;language-text&quot;&gt;AppCompatResources&lt;/code&gt; instead of &lt;code class=&quot;language-text&quot;&gt;ContextCompat&lt;/code&gt; which works well on all API levels because it does a lot of checks! 😅 Look for yourself&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/08ded04fad34f4b3fcabebe70d21ad24/6f278/appcompatresources-getdrawable.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.166666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABtUlEQVQoz21S7Y7bIBDM09Q2xAZswGDHuctHW6VS+/5vM52FJIru8mPECtjZ2Z3dBaNxDANuq8HP8wnX33/w93bBv9sZ13PGuip4bxDmBB8iMWOOGktWyIlvViPybRgGKKWw65SGnQIvZ8QYMacFMR9IsMDHhR8dVKfK5wckp+s02lZiom3LvdYaO60VEsnyuhFHpJQwOVOqhhiLqpgy47lgHCfeBZ7jk+SBolACZw0+L7+wfV6oMuCwrpjzWogKGcknT5LJ8/RM7J4Er4R3hboo+jhdsR5PCH7EmmYmRljnComjKudGGGthrUPf90+yr6SFUAYqSjxbksQQaquiStqUeykgb1LAkviV6DWuLZv+3lJgPMD19VPT/ODgG7RNU08Ov8YtTemI9pvSQtj3eyyHI02huxz4Ydvodn62KpBW6wxDGYWjKbJC+/3+u0JrDBJNCHNmInfO17kZksg4Br4bw/mVlmuR6vZbQgXDpO3jVJBpyLZWZ2WWspcp50Jc23xB+7blPSbbc/tDaVvMECX+bkykalEjhb+uyFtTZAXGXmGkMT4ktmZK5QceBqh74rvde8V/QdJ3YZhMg5cAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/08ded04fad34f4b3fcabebe70d21ad24/8ac56/appcompatresources-getdrawable.webp 240w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/d3be9/appcompatresources-getdrawable.webp 480w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/e46b2/appcompatresources-getdrawable.webp 960w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/f992d/appcompatresources-getdrawable.webp 1440w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/a31b7/appcompatresources-getdrawable.webp 1488w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/08ded04fad34f4b3fcabebe70d21ad24/8ff5a/appcompatresources-getdrawable.png 240w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/e85cb/appcompatresources-getdrawable.png 480w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/d9199/appcompatresources-getdrawable.png 960w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/07a9c/appcompatresources-getdrawable.png 1440w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/6f278/appcompatresources-getdrawable.png 1488w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/08ded04fad34f4b3fcabebe70d21ad24/d9199/appcompatresources-getdrawable.png&quot;
+          alt=&quot;appcompatresources getdrawable&quot;
+          title=&quot;appcompatresources getdrawable&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Preferring &lt;code class=&quot;language-text&quot;&gt;AppCompatResources&lt;/code&gt; becomes fairly important if you have a utility class or an extension function to load drawables app wide, since that class won’t be aware of what kind of drawables it’s receiveing.&lt;/p&gt;
+&lt;h3 id=&quot;working-with-custom-views&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#working-with-custom-views&quot; aria-label=&quot;working with custom views permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Working with custom views&lt;/h3&gt;
+&lt;p&gt;If your app has Custom Views in it, it might be possible that you are receveing drawable references through custom attributes. These attributes can then resolve drawables via &lt;code class=&quot;language-text&quot;&gt;TypedArray&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;TrafficView&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;context&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Context&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; attrs&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; AttributeSet&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;View&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;context&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; attrs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;init&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; typedArray &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; context&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;theme&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;obtainStyledAttributes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;attrs&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; R&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;styleable&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;TrafficView&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; drawable &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; typedArray&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getDrawable&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;R&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;styleable&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;TrafficView_image_src&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;addDrawable&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;drawable&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        typedArray&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;recycle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;typedArray.getDrawable&lt;/code&gt; will fail below &lt;strong&gt;API 21&lt;/strong&gt; if drawable has a vector tag in it. This is also one of the reasons &lt;code class=&quot;language-text&quot;&gt;android&lt;/code&gt; namespace in framework components cannot resolve vectors since &lt;code class=&quot;language-text&quot;&gt;TypedArray&lt;/code&gt; is bound to framework API level and cannot be overriden by &lt;code class=&quot;language-text&quot;&gt;AppCompat&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For custom views this can be solved by creating an extension function&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; TypedArray&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getDrawableCompat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;context&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Context&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token annotation builtin&quot;&gt;@StyleableRes&lt;/span&gt; id&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Int&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Drawable&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; resource &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getResourceId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;resource &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; AppCompatResouces&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getDrawable&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;context&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; resource&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Here instead of inflating &lt;code class=&quot;language-text&quot;&gt;Drawable&lt;/code&gt; via &lt;code class=&quot;language-text&quot;&gt;TypedArray&lt;/code&gt;, we just retrieve resourceId from it and then use &lt;code class=&quot;language-text&quot;&gt;AppCompatResources&lt;/code&gt; to safely inflate the drawable.&lt;/p&gt;
+&lt;h3 id=&quot;safeguarding-with-lint&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#safeguarding-with-lint&quot; aria-label=&quot;safeguarding with lint permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Safeguarding with Lint&lt;/h3&gt;
+&lt;p&gt;Android Studio’s lint checks may not be enough if you’re using vectors heavily in your app and often use it outside of &lt;code class=&quot;language-text&quot;&gt;ImageView&lt;/code&gt;. In such cases it might be beneficial to write your own lint rule to prevent runtime issues.&lt;/p&gt;
+&lt;p&gt;Here are two examples which will cause crash at runtime where we are using vector with &lt;code class=&quot;language-text&quot;&gt;android&lt;/code&gt; namespace on API levels below 21.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/003c4bea5e79a52f002a766d1585f9e5/d5bfb/linear-layout-vector.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 20%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAwElEQVQY03XM206DQBRGYR6HwwBlOhyKlEg0ajqltCBKWki46Pu/wnKk6YVRL76snf9iW0oGPJfKSHirUmK1whUewr8T+IH4Uc/z/mW5rssqiCjTiiIpKbYFaR6TPSSLKAlZZxHSVOURfiiwbRvHcX753peHWbzh9XHHU/mC1vpmZ+w1RbVhW+WmNypeI6X8k1IKKwwD+u6Dob0wdGemaWKeZ8ZxpB862s9mcexqTv2Bpq1p7rfp8f2wqE+a63XmC0Iqh2CL0DVlAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/003c4bea5e79a52f002a766d1585f9e5/8ac56/linear-layout-vector.webp 240w,
+/static/003c4bea5e79a52f002a766d1585f9e5/d3be9/linear-layout-vector.webp 480w,
+/static/003c4bea5e79a52f002a766d1585f9e5/e46b2/linear-layout-vector.webp 960w,
+/static/003c4bea5e79a52f002a766d1585f9e5/f13ee/linear-layout-vector.webp 1072w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/003c4bea5e79a52f002a766d1585f9e5/8ff5a/linear-layout-vector.png 240w,
+/static/003c4bea5e79a52f002a766d1585f9e5/e85cb/linear-layout-vector.png 480w,
+/static/003c4bea5e79a52f002a766d1585f9e5/d9199/linear-layout-vector.png 960w,
+/static/003c4bea5e79a52f002a766d1585f9e5/d5bfb/linear-layout-vector.png 1072w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/003c4bea5e79a52f002a766d1585f9e5/d9199/linear-layout-vector.png&quot;
+          alt=&quot;linear layout vector&quot;
+          title=&quot;linear layout vector&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 818px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/af182ed1a0bcdcb90ee9def1e73d8928/64d87/textview-vector.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 22.499999999999996%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABF0lEQVQY00WN2W6CUBRF+RoU6lCUAk1QxAmcELiKDErVB///D1av2NiHlbV3cnK2spwM8V2D0B8w+u7TardpS1qt1ttPtLb2Qvvj3XV0/R/FHHRwhgYz18W1HPrdT0zTxLEdDMPAsixs26ZvdOnJ205P50PSMzoN+oeGqqrN6NOKKsPYnbJdpKxne4L5imgfIYRgs9kQxzFJnBCuA6ahxyycMPZdaY9p4OFNR3LUxvp6DSu+PyGNBNm+5BCdiHcpeZ5T13XjsiwpioJUpGyTkJ1Ys46k05XsK8LtkkUwZxkumM8mKEEQcKlq6uLGOf+hzCtutxuPx4P7/d48vl6vVOeSrBCcqiP5JSMrDxxlF8ekyXmdIdKIX7FcsKdjipZYAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/af182ed1a0bcdcb90ee9def1e73d8928/8ac56/textview-vector.webp 240w,
+/static/af182ed1a0bcdcb90ee9def1e73d8928/d3be9/textview-vector.webp 480w,
+/static/af182ed1a0bcdcb90ee9def1e73d8928/3a941/textview-vector.webp 818w&quot;
+          sizes=&quot;(max-width: 818px) 100vw, 818px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/af182ed1a0bcdcb90ee9def1e73d8928/8ff5a/textview-vector.png 240w,
+/static/af182ed1a0bcdcb90ee9def1e73d8928/e85cb/textview-vector.png 480w,
+/static/af182ed1a0bcdcb90ee9def1e73d8928/64d87/textview-vector.png 818w&quot;
+          sizes=&quot;(max-width: 818px) 100vw, 818px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/af182ed1a0bcdcb90ee9def1e73d8928/64d87/textview-vector.png&quot;
+          alt=&quot;textview vector&quot;
+          title=&quot;textview vector&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We can write a custom lint rule which will then give out errors in XML whenever vectors are used without &lt;code class=&quot;language-text&quot;&gt;app&lt;/code&gt; namespace.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;u&gt;&lt;code class=&quot;language-kotlin&quot;&gt;VectorUsageDetector&lt;/code&gt;&lt;/u&gt;&lt;/summary&gt;
+&lt;p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; VectorUsageDetector &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;ResourceXmlDetector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;companion&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; VECTOR_ISSUE &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Issue&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+                id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Vector Usage Issue&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                briefDescription &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Warns usage of vectors with `android` namespace&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                explanation &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Vectors with `android` are not supported in API level below 21&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                category &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Category&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;CORRECTNESS&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                severity &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Severity&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ERROR&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                implementation &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Implementation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+                        VectorUsageDetector&lt;span class=&quot;token operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;java&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                        Scope&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;RESOURCE_FILE_SCOPE
+                &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;appliesTo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;folderType&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; ResourceFolderType&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Boolean &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; folderType &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; ResourceFolderType&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;LAYOUT
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getApplicableAttributes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Collection&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;String&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; XmlScannerConstants&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ALL
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;visitAttribute&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;context&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; XmlContext&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; attribute&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Attr&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; attribute&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name
+        &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; value &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; attribute&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;value
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;android:&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;and&lt;/span&gt; value&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;drawable&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; isVectorDrawable &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;isVectorDrawable&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;@drawable/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; context&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;isVectorDrawable&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                context&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;report&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+                        VECTOR_ISSUE&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                        attribute&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                        context&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getValueLocation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;attribute&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                        &lt;span class=&quot;token string&quot;&gt;&quot;Vector is used without `app` namespace. This can cause a crash on API levels below 21.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;isVectorDrawable&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; context&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; XmlContext&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Boolean &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; isVectorDrawable &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+        context&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;mainProject&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;resourceFolders&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;forEach&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; folder &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; folder&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path
+            &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; drawableFolder &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token interpolation variable&quot;&gt;$path&lt;/span&gt;/drawable/&quot;&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; drawableFile &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token interpolation variable&quot;&gt;$drawableFolder&lt;/span&gt;/&lt;span class=&quot;token interpolation variable&quot;&gt;$name&lt;/span&gt;.xml&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;drawableFile&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                drawableFile&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;forEachLine&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; lineString &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;
+                    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;lineString&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;TAG_VECTOR&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; isVectorDrawable &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+                &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; isVectorDrawable
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+&lt;/details&gt;  
+&lt;p&gt;Here’s how it looks like with lint rule in place.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f0c6cd047ad94077b691a0c6b1d65a55/e9140/linear-layout-lint-error.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 28.750000000000004%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABIElEQVQY02WO63KCMBSEeR7uXgKBcBFMEGxFKyBqO33/t9ieRJ1ppz++2c2ek02sjVhhmzPkyRKu58JxHYOrofNLdWbbNhzH+YfOX1hpxCEziTLLkWQcXESkMVbxAmv+gNFjHpWaQlsX/C75W25xJlCLHTZFja7r0O5aNE2DXKXgBUOcrY0u2QJBGCBYBA99+pDU9zz4vm+wkihFmVYosgJSSVRVhawQKEqOPI8hUoayTCASBkG/F2mElHxGXsP5mkpDQxAEsMb5iuNwxnCZcR4nfBDDNGO6XAnKhsn4UTNdCJqPWmlnfu6MI977HrtuD0udviEPN6j+Dnn8hCLkYYbsr+S/SO/G61nzdkRDl+ruZPJtf4PsDlDtHpVqUdYSP761zbxuO9eQAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/f0c6cd047ad94077b691a0c6b1d65a55/8ac56/linear-layout-lint-error.webp 240w,
+/static/f0c6cd047ad94077b691a0c6b1d65a55/d3be9/linear-layout-lint-error.webp 480w,
+/static/f0c6cd047ad94077b691a0c6b1d65a55/e46b2/linear-layout-lint-error.webp 960w,
+/static/f0c6cd047ad94077b691a0c6b1d65a55/ab43a/linear-layout-lint-error.webp 1226w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/f0c6cd047ad94077b691a0c6b1d65a55/8ff5a/linear-layout-lint-error.png 240w,
+/static/f0c6cd047ad94077b691a0c6b1d65a55/e85cb/linear-layout-lint-error.png 480w,
+/static/f0c6cd047ad94077b691a0c6b1d65a55/d9199/linear-layout-lint-error.png 960w,
+/static/f0c6cd047ad94077b691a0c6b1d65a55/e9140/linear-layout-lint-error.png 1226w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/f0c6cd047ad94077b691a0c6b1d65a55/d9199/linear-layout-lint-error.png&quot;
+          alt=&quot;linear layout lint error&quot;
+          title=&quot;linear layout lint error&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4bfacda6be1554f575b9acf9997bbe4d/11a8f/textview-lint-error.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA9klEQVQY04WN3U6DQBSEeRoxsEgFWn62BbrQUAr7A7QmJiYae+H7P8F4irW9MfHiy8yZ3TPHcl0HWbxAySMECx/M8+BdcZk7wzxS+uc4/2NdFsPgGdVGIM8KbMUWRVFACIGsjBElAaI0RMyX8C8H2f3gX1iMMTI++KoET3LUdT2XCVEhXcfgmwhpFoKvV0jSJR334T95t2J25VZo2zY455imEVJKDIOBGTRBajTG0UCpnryiTEFTJjWhJJT+mbUxaNoWu6aB9Wg/IMsr9K9f2E/vaE+fxBntkfzxA4ffeX47ox9O6JTBfnzD4YVy0l5TYSexazt8AwJcqu1EUHpFAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/4bfacda6be1554f575b9acf9997bbe4d/8ac56/textview-lint-error.webp 240w,
+/static/4bfacda6be1554f575b9acf9997bbe4d/d3be9/textview-lint-error.webp 480w,
+/static/4bfacda6be1554f575b9acf9997bbe4d/e46b2/textview-lint-error.webp 960w,
+/static/4bfacda6be1554f575b9acf9997bbe4d/4cec6/textview-lint-error.webp 1272w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/4bfacda6be1554f575b9acf9997bbe4d/8ff5a/textview-lint-error.png 240w,
+/static/4bfacda6be1554f575b9acf9997bbe4d/e85cb/textview-lint-error.png 480w,
+/static/4bfacda6be1554f575b9acf9997bbe4d/d9199/textview-lint-error.png 960w,
+/static/4bfacda6be1554f575b9acf9997bbe4d/11a8f/textview-lint-error.png 1272w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/4bfacda6be1554f575b9acf9997bbe4d/d9199/textview-lint-error.png&quot;
+          alt=&quot;textview lint error&quot;
+          title=&quot;textview lint error&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Having instrumentation test case which run on devices with API level less than 21 can also help to catch these errors early.&lt;/p&gt;
+&lt;h3 id=&quot;tl-dr&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#tl-dr&quot; aria-label=&quot;tl dr permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TL; DR&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Vectors are great for icons and small custom shapes, but use them judiciously with support library&lt;/li&gt;
+&lt;li&gt;Always use &lt;code class=&quot;language-text&quot;&gt;AppCompatResouces&lt;/code&gt; over &lt;code class=&quot;language-text&quot;&gt;ContextCompat&lt;/code&gt; when loading vector drawables.&lt;/li&gt;
+&lt;li&gt;Always prefer &lt;code class=&quot;language-text&quot;&gt;app&lt;/code&gt; namespace when using vector drawables in xml.&lt;/li&gt;
+&lt;li&gt;Write Lint rules to safeguard incorrect usage and run instrumentation test cases on device with API level less than 21.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;extra-material-on-vectors&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#extra-material-on-vectors&quot; aria-label=&quot;extra material on vectors permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Extra material on Vectors&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Here’s a 25 min video on Vectors - &lt;a href=&quot;https://youtu.be/fgbl34me3kk&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Vector Assets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Here’s a library which extends certain svg functionalities to Vector Drawables - &lt;a href=&quot;https://github.com/alexjlockwood/kyrie&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;kyrie&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks for reading!&lt;/p&gt;
+&lt;p&gt;Stay safe.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Parsing Kotlin code using Kotlin]]></title><description><![CDATA[ As Android codebases have moved largely to kotlin, code analysis for kotlin code presents itself as a unique problem with a utterly simple solution.]]></description><link>https://jitinsharma.in/posts/parsing-kotlin-using-code-kotlin/</link><guid isPermaLink="false">https://jitinsharma.in/posts/parsing-kotlin-using-code-kotlin/</guid><pubDate>Tue, 10 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;/media/parsing-kotlin-using-code-kotlin/logo.svg&quot; width=&quot;75&quot; height=&quot;75&quot;&gt;
 &lt;p&gt;So you are already writing code in Kotlin and it feels great. The feeling is mutual, Kotlin is a great language and everyone loves lambdas.&lt;/p&gt;
 &lt;p&gt;I’m writing about here a problem which I faced earlier where I was trying to do code analysis over Kotlin files to create a tool. The problem statement was to read the whole code and figure problems inside it.&lt;/p&gt;
 &lt;p&gt;But first things first, &lt;strong&gt;why would you want to parse files?&lt;/strong&gt;&lt;/p&gt;
@@ -7,7 +602,7 @@
 &lt;li&gt;Do code analysis over .kt files&lt;/li&gt;
 &lt;li&gt;Anything else? Once you get handle to source code, it opens a lot of possibilites - you’ll see, read on&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;how&quot;&gt;&lt;a href=&quot;#how&quot; aria-label=&quot;how permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How&lt;/h2&gt;
+&lt;h2 id=&quot;how&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#how&quot; aria-label=&quot;how permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How&lt;/h2&gt;
 &lt;p&gt;The answer is right there, literally, inside the kotlin compiler!&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;groovy&quot;&gt;&lt;pre class=&quot;language-groovy&quot;&gt;&lt;code class=&quot;language-groovy&quot;&gt;implementation &lt;span class=&quot;token string gstring&quot;&gt;&quot;org.jetbrains.kotlin:kotlin-compiler-embeddable:1.3.21&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The embeddable jar has classes inside it which allow us to parse kotlin source code.&lt;/p&gt;
@@ -17,7 +612,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;Well I’m glad you asked. PSI(Program Structure Interface) is Intellij internal format used for representating files inside Intellij IDEA. More details &lt;a href=&quot;https://www.jetbrains.org/intellij/sdk/docs/basics/architectural_overview/psi.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;That’s right we’re gonna parse our code in similar fashion to how Intellij does it.(ok maybe a bit substandard fashion)&lt;/p&gt;
-&lt;h2 id=&quot;show-me-code&quot;&gt;&lt;a href=&quot;#show-me-code&quot; aria-label=&quot;show me code permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Show me code&lt;/h2&gt;
+&lt;h2 id=&quot;show-me-code&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#show-me-code&quot; aria-label=&quot;show me code permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Show me code&lt;/h2&gt;
 &lt;p&gt;First thing we need to setup a project by creating environment for Kotlin&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; project &lt;span class=&quot;token keyword&quot;&gt;by&lt;/span&gt; lazy &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     KotlinCoreEnvironment&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;createForProduction&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
@@ -50,7 +645,7 @@
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Above snippets of code can be really useful if you want to analyze your own source code and build tools around it(such as code analysis)&lt;/p&gt;
-&lt;h2 id=&quot;practical-example&quot;&gt;&lt;a href=&quot;#practical-example&quot; aria-label=&quot;practical example permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Practical Example&lt;/h2&gt;
+&lt;h2 id=&quot;practical-example&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#practical-example&quot; aria-label=&quot;practical example permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Practical Example&lt;/h2&gt;
 &lt;p&gt;I have an &lt;a href=&quot;https://github.com/jitinsharma/Kotlin.someExtensions&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;open source repository&lt;/a&gt; where I keep on adding extension functions related to Android. It’s a set of files and not a complete project. So to generate &lt;strong&gt;.md&lt;/strong&gt; files for the code, I had to build up something of my own instead of using dokka.&lt;/p&gt;
 &lt;p&gt;The elements in PSI also allow us to access code comments. Here’s how&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; docText &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; ktFunction&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;docComment&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;text&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -77,43 +672,44 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/22a1a502afaab2936ff2e5e6c71cedf1/a83d3/image-extensions-doc.png&quot;
+    href=&quot;/static/22a1a502afaab2936ff2e5e6c71cedf1/78415/image-extensions-doc.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 48.71582435791218%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAABZUlEQVQoz32S646DIBSE+/7Pt2mbVkUQRatF8AZqk1mgl+223f0xGYjxZOY7bFrdYzQzhsk6zU+63v23T5rs8ut810bUElL1OKsOTashtZc/K9SyhV1X2MVrCX7/8XXQY2DJBeI0A3Oe8xYF78CZQkYlKJHBq1KiyHuIvEM/TOhd+j8TjpOBEAo0kcgzjbIYQFmFKGaIkgxpmoPyCqToIOoBRXlC1UiYef080Ff1vPrRohvN7WxcChP8wcvOV/n7E8O3yneGfjmiPkP1w42jdlw19DBiWS+w8+JSLW9VX1Nual7gmBCw7ITSceJUgxEFljiOqQr8Ylc3Eh3ypg+p7XJ5VH5LeBLSseLY7g9g1C1od0YaaST7FvFeghwljocG1C2nlhMa16ZyTXyrzwmrFiXhICnF1+6AY8Sw3ZLghJRoWwOlJsjz6BA418P/A/2Wjfl5BoPxD9oEH60N3IKWm8/rv5W/AZOS/DUNtSQnAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 48.75000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAABZUlEQVQoz32S646DIBSE+/7Pt2mbVkUQRatF8AZqk1mgl+223f0xGYjxZOY7bFrdYzQzhsk6zU+63v23T5rs8ut810bUElL1OKsOTashtZc/K9SyhV1X2MVrCX7/8XXQY2DJBeI0A3Oe8xYF78CZQkYlKJHBq1KiyHuIvEM/TOhd+j8TjpOBEAo0kcgzjbIYQFmFKGaIkgxpmoPyCqToIOoBRXlC1UiYef080Ff1vPrRohvN7WxcChP8wcvOV/n7E8O3yneGfjmiPkP1w42jdlw19DBiWS+w8+JSLW9VX1Nual7gmBCw7ITSceJUgxEFljiOqQr8Ylc3Eh3ypg+p7XJ5VH5LeBLSseLY7g9g1C1od0YaaST7FvFeghwljocG1C2nlhMa16ZyTXyrzwmrFiXhICnF1+6AY8Sw3ZLghJRoWwOlJsjz6BA418P/A/2Wjfl5BoPxD9oEH60N3IKWm8/rv5W/AZOS/DUNtSQnAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
         &lt;source
-          srcset=&quot;/static/22a1a502afaab2936ff2e5e6c71cedf1/01472/image-extensions-doc.webp 240w,
-/static/22a1a502afaab2936ff2e5e6c71cedf1/222bd/image-extensions-doc.webp 480w,
-/static/22a1a502afaab2936ff2e5e6c71cedf1/620b9/image-extensions-doc.webp 960w,
-/static/22a1a502afaab2936ff2e5e6c71cedf1/08399/image-extensions-doc.webp 1207w&quot;
+          srcset=&quot;/static/22a1a502afaab2936ff2e5e6c71cedf1/8ac56/image-extensions-doc.webp 240w,
+/static/22a1a502afaab2936ff2e5e6c71cedf1/d3be9/image-extensions-doc.webp 480w,
+/static/22a1a502afaab2936ff2e5e6c71cedf1/e46b2/image-extensions-doc.webp 960w,
+/static/22a1a502afaab2936ff2e5e6c71cedf1/459db/image-extensions-doc.webp 1207w&quot;
           sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/22a1a502afaab2936ff2e5e6c71cedf1/0783d/image-extensions-doc.png 240w,
-/static/22a1a502afaab2936ff2e5e6c71cedf1/782f4/image-extensions-doc.png 480w,
-/static/22a1a502afaab2936ff2e5e6c71cedf1/f570d/image-extensions-doc.png 960w,
-/static/22a1a502afaab2936ff2e5e6c71cedf1/a83d3/image-extensions-doc.png 1207w&quot;
+          srcset=&quot;/static/22a1a502afaab2936ff2e5e6c71cedf1/8ff5a/image-extensions-doc.png 240w,
+/static/22a1a502afaab2936ff2e5e6c71cedf1/e85cb/image-extensions-doc.png 480w,
+/static/22a1a502afaab2936ff2e5e6c71cedf1/d9199/image-extensions-doc.png 960w,
+/static/22a1a502afaab2936ff2e5e6c71cedf1/78415/image-extensions-doc.png 1207w&quot;
           sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/22a1a502afaab2936ff2e5e6c71cedf1/f570d/image-extensions-doc.png&quot;
+          src=&quot;/static/22a1a502afaab2936ff2e5e6c71cedf1/d9199/image-extensions-doc.png&quot;
           alt=&quot;ImageExtensions.md&quot;
           title=&quot;ImageExtensions.md&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&quot;final-words&quot;&gt;&lt;a href=&quot;#final-words&quot; aria-label=&quot;final words permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Final Words&lt;/h2&gt;
+&lt;h2 id=&quot;final-words&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#final-words&quot; aria-label=&quot;final words permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Final Words&lt;/h2&gt;
 &lt;p&gt;So we have observed how we can leverage parsing kotlin source code to create solutions around code analysis and auto documentation generation. Let me know in comments if any other use case comes to your mind.&lt;/p&gt;
 &lt;p&gt;Here’s the repository for above example where markdown is auto generated
 &lt;a href=&quot;https://github.com/jitinsharma/Kotlin.someExtensions&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://github.com/jitinsharma/Kotlin.someExtensions&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Network Profiler in Android Studio 3.1]]></title><description><![CDATA[Android Studio 3.1 recently came out of beta. It has a lot of features such as kotlin lint checks, D8 compiler and also a revamped Network Profiler.]]></description><link>https://jitinsharma.in/posts/network-profiler-android-studio/</link><guid isPermaLink="false">https://jitinsharma.in/posts/network-profiler-android-studio/</guid><pubDate>Thu, 29 Mar 2018 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
@@ -123,7 +719,7 @@
 &lt;p&gt;From early days of DDMS, we could always check how network data was being consumed but the current iteration of profiler has added a whole new set of features. Let’s check them out&lt;/p&gt;
 &lt;p&gt;First of all, network graph looks pretty neat&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/3332/1*MoKlMWet4KS8TXvHKE7jww.png&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;request-debugging&quot;&gt;&lt;a href=&quot;#request-debugging&quot; aria-label=&quot;request debugging permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Request Debugging&lt;/h3&gt;
+&lt;h3 id=&quot;request-debugging&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#request-debugging&quot; aria-label=&quot;request debugging permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Request Debugging&lt;/h3&gt;
 &lt;p&gt;Clicking on any request in graph will give you it’s details such as Request type and Response data.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2220/1*1a470GtDWs6bLEXiMDvbdQ.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;You can also check Request and Response headers&lt;/p&gt;
@@ -135,7 +731,7 @@
 &lt;p&gt;Bonus Point — If you are using third party SDKs, you can always check any arbitrary request going from your app and get details such as server url etc. Below is an example request sent from Crashlytics caught by the profiler&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/4836/1*-LRfcrGWNsulHPNnw_EIdA.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Always better know such things in advance, than &lt;a href=&quot;https://medium.com/tow-center/the-graph-api-key-points-in-the-facebook-and-cambridge-analytica-debacle-b69fe692d747&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;getting red faced later.&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;and-one-last-thing&quot;&gt;&lt;a href=&quot;#and-one-last-thing&quot; aria-label=&quot;and one last thing permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;And one last thing&lt;/h3&gt;
+&lt;h3 id=&quot;and-one-last-thing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#and-one-last-thing&quot; aria-label=&quot;and one last thing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;And one last thing&lt;/h3&gt;
 &lt;p&gt;Profiler can also help you catch radio bursts of high power when you’re on mobile network.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/5588/1*sfeXZeKxYAOz_tTF6qSfjw.png&quot; alt=&quot;Radio’s mode shown in blue line&quot;&gt;&lt;/p&gt;
 &lt;p&gt;The graph presents a timeline of when your application causes the radio to remain in high power mode which in turn causes more battery consumption. You can use this to investigate network calls and make your application more battery friendly.&lt;/p&gt;
@@ -168,7 +764,7 @@
 version &lt;span class=&quot;token string&quot;&gt;&apos;1.0-SNAPSHOT&apos;&lt;/span&gt;
 
 buildscript &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    ext&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;kotlin_version &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;1.2.21&apos;&lt;/span&gt;
+    ext&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;kotlin_version &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;1.2.21&apos;&lt;/span&gt;
 
     repositories &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;token function&quot;&gt;mavenCentral&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
@@ -192,10 +788,10 @@ dependencies &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
 compileKotlin &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    kotlinOptions&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;jvmTarget &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string gstring&quot;&gt;&quot;1.8&quot;&lt;/span&gt;
+    kotlinOptions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jvmTarget &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string gstring&quot;&gt;&quot;1.8&quot;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 compileTestKotlin &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    kotlinOptions&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;jvmTarget &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string gstring&quot;&gt;&quot;1.8&quot;&lt;/span&gt;
+    kotlinOptions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jvmTarget &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string gstring&quot;&gt;&quot;1.8&quot;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now we’ll compile this to a .jar using &lt;em&gt;./gradlew assemble&lt;/em&gt; and then import this to an Android Project.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2000/1*GGGoF41MuTlrN4zoj_zUaQ.png&quot; alt=&quot;Classes Generated&quot;&gt;&lt;/p&gt;
@@ -231,11 +827,11 @@ compileTestKotlin &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
        &lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;moving-to-ios&quot;&gt;&lt;a href=&quot;#moving-to-ios&quot; aria-label=&quot;moving to ios permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Moving to iOS&lt;/h2&gt;
+&lt;h2 id=&quot;moving-to-ios&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#moving-to-ios&quot; aria-label=&quot;moving to ios permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Moving to iOS&lt;/h2&gt;
 &lt;p&gt;Let’s see if we can reproduce similar approach for iOS using Kotlin Native plugin.&lt;/p&gt;
 &lt;p&gt;In a folder above our Base project, we’ll add following build.gradle&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;groovy&quot;&gt;&lt;pre class=&quot;language-groovy&quot;&gt;&lt;code class=&quot;language-groovy&quot;&gt;buildscript &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    ext&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;kotlin_native_version &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;0.6&apos;&lt;/span&gt;
+    ext&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;kotlin_native_version &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;0.6&apos;&lt;/span&gt;
     repositories &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;token function&quot;&gt;mavenCentral&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
         maven &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -248,7 +844,7 @@ compileTestKotlin &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 group &lt;span class=&quot;token string&quot;&gt;&apos;io.github.jitinsharma&apos;&lt;/span&gt;
 apply plugin&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string gstring&quot;&gt;&quot;konan&quot;&lt;/span&gt;
-konan&lt;span class=&quot;token operator&quot;&gt;.&lt;/span&gt;targets &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string gstring&quot;&gt;&quot;iphone&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string gstring&quot;&gt;&quot;iphone_sim&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+konan&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;targets &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string gstring&quot;&gt;&quot;iphone&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string gstring&quot;&gt;&quot;iphone_sim&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
 konanArtifacts &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;token function&quot;&gt;framework&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Base&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
         srcDir &lt;span class=&quot;token string&quot;&gt;&apos;base/src/main/kotlin&apos;&lt;/span&gt;
@@ -375,7 +971,7 @@ open &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span cla
 &lt;p&gt;In above example, json string doesn’t have quotes. We can parse such json with &lt;code class=&quot;language-text&quot;&gt;JSON.unquoted&lt;/code&gt;. This can be helpful during debugging.&lt;/p&gt;
 &lt;p&gt;Here’s a definition of all such properties available&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/3492/1*rVs5EHVIHD7OkRImEhkucA.png&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;additional-properties&quot;&gt;&lt;a href=&quot;#additional-properties&quot; aria-label=&quot;additional properties permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Additional Properties&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;additional-properties&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#additional-properties&quot; aria-label=&quot;additional properties permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Additional Properties&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;Often our data objects have properties which could be optional. For example, there could be extra properties which we initialize on client side which server may not provide while fetching the json. Similarly there may be properties which may or may not be present in json. Fortunately the lib handles both cases.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token annotation builtin&quot;&gt;@Optional&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; isMetro &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Boolean &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
@@ -406,10 +1002,10 @@ isMetro&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class
 &lt;blockquote&gt;
 &lt;p&gt; If you’re not sure about consistency of values in json, using JSON.nonstrict might be a good idea to avoid exceptions&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;class-variables-can-have-different-names-than-the-name-of-key-in-json-just-annotate-using-serialname&quot;&gt;&lt;a href=&quot;#class-variables-can-have-different-names-than-the-name-of-key-in-json-just-annotate-using-serialname&quot; aria-label=&quot;class variables can have different names than the name of key in json just annotate using serialname permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Class variables can have different names than the name of key in json. Just annotate using @SerialName&lt;/h3&gt;
+&lt;h3 id=&quot;class-variables-can-have-different-names-than-the-name-of-key-in-json-just-annotate-using-serialname&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#class-variables-can-have-different-names-than-the-name-of-key-in-json-just-annotate-using-serialname&quot; aria-label=&quot;class variables can have different names than the name of key in json just annotate using serialname permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Class variables can have different names than the name of key in json. Just annotate using @SerialName&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token annotation builtin&quot;&gt;@SerialName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;d_country&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; country &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;additional-utilities&quot;&gt;&lt;a href=&quot;#additional-utilities&quot; aria-label=&quot;additional utilities permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Additional Utilities&lt;/h2&gt;
+&lt;h2 id=&quot;additional-utilities&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#additional-utilities&quot; aria-label=&quot;additional utilities permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Additional Utilities&lt;/h2&gt;
 &lt;p&gt;There are few utilities also available out of box&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Mapper&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Mapper can convert a object to a map — straightforward.&lt;/p&gt;
