@@ -1,4 +1,102 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jitin Sharma]]></title><description><![CDATA[software-ish]]></description><link>https://jitinsharma.in</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 31 Jul 2020 05:21:16 GMT</lastBuildDate><item><title><![CDATA[Taming Android Resources and LayoutInflater for string manipulation]]></title><description><![CDATA[Intercepting string resources for dynamic updates.]]></description><link>https://jitinsharma.in/posts/taming-android-resources-and-layoutinflater-for-string-manipulation/</link><guid isPermaLink="false">https://jitinsharma.in/posts/taming-android-resources-and-layoutinflater-for-string-manipulation/</guid><pubDate>Tue, 28 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Recently I was working on a problem where we wanted to make our string resources dynamic. In every app, there are strings which would often come from backend APIs and are dynamic by nature, but a lot of strings are packaged in &lt;code class=&quot;language-text&quot;&gt;strings.xml&lt;/code&gt;. There might be requirements to make few of these dynamic as well for eg. A/B testing etc. The major pain point here is these strings would have usages spread all over codebase and there is no default way to override &lt;code class=&quot;language-text&quot;&gt;strings.xml&lt;/code&gt; to make them dynamic.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jitin Sharma]]></title><description><![CDATA[software-ish]]></description><link>https://jitinsharma.in</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 25 Jan 2021 05:45:15 GMT</lastBuildDate><item><title><![CDATA[Take care of your gradle home directory]]></title><description><![CDATA[An accidental discovery of disk memory impacts of gradle home directory]]></description><link>https://jitinsharma.in/posts/take-care-of-your-gradle-home-directory</link><guid isPermaLink="false">https://jitinsharma.in/posts/take-care-of-your-gradle-home-directory</guid><pubDate>Mon, 25 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;It was just another day of building my Android project on Macbbook when my build failed with a very strange error.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;gt; A failure occurred while executing com.android.build.gradle.tasks.PackageAndroidArtifact$IncrementalSplitterRunnable
+   &amp;gt; java.io.IOException: No space left on device&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I checked Storage Manager and it showed me &lt;code class=&quot;language-text&quot;&gt;16MB&lt;/code&gt; of free space left. Welp!&lt;/p&gt;
+&lt;p&gt;I had suddenly run out of all my disk memory. Now I’ve had problems with my storage of my MacBook in past too but the situation never became this dire. To get things working fast, I removed all local docker images and caches to reclaim around 10GB of memory enough to get my work going.&lt;/p&gt;
+&lt;p&gt;I remained skeptical since then where is disk memory going, since I could not find anything suspicious in Storage Manager.&lt;/p&gt;
+&lt;p&gt;At this point I already know my usual culprits - docker images, emulator images, Android sdk platform sources but I had already optimised these few days ago so these definitely didn’t cause any problem.&lt;/p&gt;
+&lt;p&gt;So I poked at my &lt;code class=&quot;language-text&quot;&gt;.gradle&lt;/code&gt; folder and found it’s size to be &lt;code class=&quot;language-text&quot;&gt;28GB&lt;/code&gt;. 🤯&lt;/p&gt;
+&lt;p&gt;The first thought was to check downloaded library caches in &lt;code class=&quot;language-text&quot;&gt;caches/modules-2/files-2.1&lt;/code&gt;. It was around &lt;code class=&quot;language-text&quot;&gt;1.5GB&lt;/code&gt;, nothing suprising here.&lt;/p&gt;
+&lt;p&gt;So I decided to dissect the whole &lt;code class=&quot;language-text&quot;&gt;.gradle&lt;/code&gt; folder and try to find out where all the storage is going.&lt;/p&gt;
+&lt;p&gt;Guess what I found&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;.gradle/daemon/&lt;/code&gt; folder’s size was ~&lt;code class=&quot;language-text&quot;&gt;15GB&lt;/code&gt;. All this folder had was log files!&lt;/p&gt;
+&lt;p&gt;But how did this happen.&lt;/p&gt;
+&lt;p&gt;Now this folder contains hundreds of log files for daemons spawned by different versions of gradle&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a36fc388752bc51be83772b55477e1c4/cd78c/daemon-directory.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.24999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACKElEQVQoz3WSS5OaQBSFXWeVRUYRbFB8MCiCiKAyPmYmgsj4YtSajKYqqUrlF2SRRSpV2eZXn3S34pjX4lRTTffp79x7M4Mgxt39W4xGI65SSYUoCKhaHvrLPbq9ISynj8q1CVnVIEglrJMNkiSB799gMgnovTFM00KhQJDpRAmCMILrujCMJur1BvRaFQ0/gv70E3LwHcLkB96Mv+H1zVe88r4g3HxGHIWwbQf9vk+NfVhWC4TIyIzffcLjdodet8dfaTZNGLoOZzTBePsRjYYJkaggxQoUtYacKGOz2eH5eY/x+JYThuEUnY57JGyFCQYc2US5XIEkEUg0smZ7GCx2nFamLyuKgiJVnv5br9dUCTyPnhkMqQZot50joXX/gOHoFo7TQUkt04tFyIUCamYb3WCOWrVKDyp8v1gsQRBEzGYx4viB33Fdj8fW9frJcLLkNWQ1YMgKvUREEXrHx93uAzzH4Y2SZeVkmKeRt9jvD7wZQRBiOo3QpSXjkVkcdjgVIyGShLJhox8/4rpWA5F/J1ytVlguVzRyl9eQxbbt9pEwNbkUN2y00JuuYNTr531mmM+LPO58Pud1Y6PzT8NLQlmmTVAr0AwLmqbxMqSRs9kcn8HD4T2PHIZ/Rr4wvFwJISC0OeRUkpSQGcZxjMViyZvCTBllq2X/TfiyvtCmSglzOQFRNOOGbPbSyOex+R8hi31pyr5Zt6+usrQp63OX2VAzpZF/AevHc/bkkH6oAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/a36fc388752bc51be83772b55477e1c4/8ac56/daemon-directory.webp 240w,
+/static/a36fc388752bc51be83772b55477e1c4/d3be9/daemon-directory.webp 480w,
+/static/a36fc388752bc51be83772b55477e1c4/e46b2/daemon-directory.webp 960w,
+/static/a36fc388752bc51be83772b55477e1c4/5b1dd/daemon-directory.webp 1236w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/a36fc388752bc51be83772b55477e1c4/8ff5a/daemon-directory.png 240w,
+/static/a36fc388752bc51be83772b55477e1c4/e85cb/daemon-directory.png 480w,
+/static/a36fc388752bc51be83772b55477e1c4/d9199/daemon-directory.png 960w,
+/static/a36fc388752bc51be83772b55477e1c4/cd78c/daemon-directory.png 1236w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/a36fc388752bc51be83772b55477e1c4/d9199/daemon-directory.png&quot;
+          alt=&quot;daemon directory&quot;
+          title=&quot;daemon directory&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Most of the log files in these folder are 1-2 MB or less. But then I found some log files whose size was ~1GB and even ~5GB!&lt;/p&gt;
+&lt;div class=&quot;image-container&quot;&gt;
+    &lt;div style=&quot;float:left;margin-right:5px;&quot;&gt;
+        &lt;img src=&quot;/media/take-care-of-your-gradle-home-directory/daemon-size-1.png&quot;/&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;float:left;margin-right:5px;&quot;&gt;
+        &lt;img class=&quot;middle-img&quot; src=&quot;/media/take-care-of-your-gradle-home-directory/daemon-size-2.png&quot;/&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;Very suspicious!&lt;/p&gt;
+&lt;h2 id=&quot;travelling-back-in-time--1-month&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#travelling-back-in-time--1-month&quot; aria-label=&quot;travelling back in time  1 month permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Travelling back in time ~ 1 month&lt;/h2&gt;
+&lt;p&gt;Almost a month ago, one fine day I was hit with this error when I was trying to build my projects&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Failed to execute org.gradle.cache.internal.AsyncCacheAccessDecoratedCache$2@1204453a.
+java.lang.StackOverflowError
+	at org.gradle.cache.internal.btree.FreeListBlockStore$FreeListBlock.alloc(FreeListBlockStore.java:222)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This error didn’t really block my build, and since Android Studio trims down long outputs I never fully realised how many exceptions I was actually getting. This happened across multiple projects with different gradle versions over a course of few days.&lt;/p&gt;
+&lt;p&gt;I eventually found(though stackoverflow, ofcourse) that deleting &lt;code class=&quot;language-text&quot;&gt;caches/journal-1&lt;/code&gt; fixes this issue since it’s cause by corruption of entries in this folder - &lt;code class=&quot;language-text&quot;&gt;file-access.bin&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;journal-1.lock&lt;/code&gt; and they are regenerated if not available.&lt;/p&gt;
+&lt;p&gt;From what I understand &lt;code class=&quot;language-text&quot;&gt;journal-1.lock&lt;/code&gt; is used by gradle cache and it’s corruption was probably root of all exceptions.&lt;/p&gt;
+&lt;p&gt;Once I regenrated &lt;code class=&quot;language-text&quot;&gt;caches/journal-1&lt;/code&gt;, my builds started showing normal outputs.&lt;/p&gt;
+&lt;p&gt;Now back to problem at hand.&lt;/p&gt;
+&lt;p&gt;I guess you have figured out by now what those large log files contained. Lines and lines of this exception&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;java.lang.StackOverflowError
+	at org.gradle.cache.internal.btree.FreeListBlockStore$FreeListBlock.alloc(FreeListBlockStore.java:222)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The largest log file had ~&lt;code class=&quot;language-text&quot;&gt;49,000,000&lt;/code&gt; lines of exception. Thank god, Sublime text didn’t throw a StackOverflow error on opening it (pun intended)&lt;/p&gt;
+&lt;p&gt;I checked &lt;code class=&quot;language-text&quot;&gt;./gradle/daemon&lt;/code&gt; throroughly and found out 4 days of logs were consuming ~&lt;code class=&quot;language-text&quot;&gt;10GB&lt;/code&gt; of disk memory!&lt;/p&gt;
+&lt;h3 id=&quot;take-care-of-your-gradle-home-directory&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#take-care-of-your-gradle-home-directory&quot; aria-label=&quot;take care of your gradle home directory permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Take care of your gradle home directory&lt;/h3&gt;
+&lt;p&gt;and don’t ignore errors in build like me 😅&lt;/p&gt;
+&lt;p&gt;Here are few more tips for optimising disk memory when it comes to gradle&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I’m a heavy user of Android Studio Canary, which means I have multiple installations of different gradle versions sitting in my machine.
+By default &lt;code class=&quot;language-text&quot;&gt;.gradle&lt;/code&gt; folders bifurcates a lot of settings by gradle versions as separate folders.
+It’s a good idea to poke around your &lt;code class=&quot;language-text&quot;&gt;.gradle&lt;/code&gt; folder routinely and delete what’s not needed. I had folders for gradle versions as old as &lt;code class=&quot;language-text&quot;&gt;4.10&lt;/code&gt; which were not deleted.&lt;/li&gt;
+&lt;li&gt;Gradle downloads and caches all wrapper distributions in &lt;code class=&quot;language-text&quot;&gt;/wrapper/dists&lt;/code&gt;. If you often juggle between rc/stable versions of Gradle, you can expect this to swell up as well. Also sometimes Android Studio suggests you to download gradle distribution with sources to inspect gradle script sources. You can avoid this unless you actually want to inspect sources of gradle script, otherwise &lt;code class=&quot;language-text&quot;&gt;wrapper/dists&lt;/code&gt; will have two copies of gradle wrapper(&lt;code class=&quot;language-text&quot;&gt;-all&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;-bin&lt;/code&gt;). &lt;code class=&quot;language-text&quot;&gt;-all&lt;/code&gt; distribution folders are usually 200+mb larger than &lt;code class=&quot;language-text&quot;&gt;-bin&lt;/code&gt; (multiply by number of versions you have on machine)&lt;/li&gt;
+&lt;li&gt;If your builds have build cache enabled, you might want to look at &lt;code class=&quot;language-text&quot;&gt;/caches/build-cache-1&lt;/code&gt; too.&lt;/li&gt;
+&lt;li&gt;Get a new macbook with more disk memory.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Gradle is smart too&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I was pleasantly surprised that my &lt;code class=&quot;language-text&quot;&gt;caches/modules-2/files-2.1&lt;/code&gt; was only 1.5GB. This is because Gradle automatically cleans up library &lt;a href=&quot;https://docs.gradle.org/current/userguide/directory_layout.html#dir:gradle_user_home:cache_cleanup&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;cache, wrapper dists&lt;/a&gt; and &lt;a href=&quot;https://docs.gradle.org/current/userguide/build_cache.html#sec:build_cache_configure_local&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;build cache&lt;/a&gt; with time period of 7-30 days. Also Build cache can be cleaned by running &lt;code class=&quot;language-text&quot;&gt;./gradlew cleanBuildCache&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Unfortunately I believe this does not apply to log files, since my log files were more than 30 days old and did not get deleted.&lt;/p&gt;
+&lt;p&gt;Fin.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Taming Android Resources and LayoutInflater for string manipulation]]></title><description><![CDATA[Intercepting string resources for dynamic updates.]]></description><link>https://jitinsharma.in/posts/taming-android-resources-and-layoutinflater-for-string-manipulation/</link><guid isPermaLink="false">https://jitinsharma.in/posts/taming-android-resources-and-layoutinflater-for-string-manipulation/</guid><pubDate>Tue, 28 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Recently I was working on a problem where we wanted to make our string resources dynamic. In every app, there are strings which would often come from backend APIs and are dynamic by nature, but a lot of strings are packaged in &lt;code class=&quot;language-text&quot;&gt;strings.xml&lt;/code&gt;. There might be requirements to make few of these dynamic as well for eg. A/B testing etc. The major pain point here is these strings would have usages spread all over codebase and there is no default way to override &lt;code class=&quot;language-text&quot;&gt;strings.xml&lt;/code&gt; to make them dynamic.&lt;/p&gt;
 &lt;p&gt;One solution is to move away from &lt;code class=&quot;language-text&quot;&gt;strings.xml&lt;/code&gt; and keep strings as constant objects or a map. But moving away from &lt;code class=&quot;language-text&quot;&gt;strings.xml&lt;/code&gt; has few disadvantages such as &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Strings cannot be used in layout preview&lt;/li&gt;
