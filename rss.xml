@@ -1,18 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jitin Sharma]]></title><description><![CDATA[software-ish]]></description><link>https://jitinsharma.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 14 Apr 2025 16:23:17 GMT</lastBuildDate><item><title><![CDATA[Adventures in Android Timekeeping]]></title><description><![CDATA[Understanding clock skew of System.currentTimeMillis() in Android]]></description><link>https://jitinsharma.com/posts/adventures-in-android-timekeeping/</link><guid isPermaLink="false">https://jitinsharma.com/posts/adventures-in-android-timekeeping/</guid><pubDate>Tue, 15 Apr 2025 00:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;image-container&quot;&gt;
-    &lt;img src=&quot;/media/adventures-in-android-timekeeping/banner.jpeg&quot; width=&quot;800&quot; height=&quot;500&quot;/&gt;
-&lt;/div&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jitin Sharma]]></title><description><![CDATA[Jitin Sharma]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 22 Jul 2025 06:09:39 GMT</lastBuildDate><item><title><![CDATA[Adventures in Android Timekeeping]]></title><description><![CDATA[Understanding clock skew of System.currentTimeMillis() in Android]]></description><link>https://jitinsharma.com/posts/adventures-in-android-timekeeping/</link><guid isPermaLink="false">https://jitinsharma.com/posts/adventures-in-android-timekeeping/</guid><pubDate>Tue, 15 Apr 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2be52d1eec555424ea81a217aac71d6a/46d55/image.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 77.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBBAX/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAH/2gAMAwEAAhADEAAAAc53roQKW//EABgQAAMBAQAAAAAAAAAAAAAAAAECAxIQ/9oACAEBAAEFAgjFJoGLDJWuY6PP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGhAAAgIDAAAAAAAAAAAAAAAAAAEREhAxQf/aAAgBAQAGPwK3By4Giq3Of//EABsQAQACAgMAAAAAAAAAAAAAAAEAESExEFFh/9oACAEBAAE/IVBMWoaNSKrsYGS3D1MFX7x//9oADAMBAAIAAwAAABAP7//EABURAQEAAAAAAAAAAAAAAAAAABAh/9oACAEDAQE/EKf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAcEAEBAAIDAQEAAAAAAAAAAAABEQAhMUFhUXH/2gAIAQEAAT8QVWgr6vRho09HfuQJ0mYkAuYwiN/dZw7lfVed4t5z/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/2be52d1eec555424ea81a217aac71d6a/8ac56/image.webp 240w,
+/static/2be52d1eec555424ea81a217aac71d6a/d3be9/image.webp 480w,
+/static/2be52d1eec555424ea81a217aac71d6a/e46b2/image.webp 960w,
+/static/2be52d1eec555424ea81a217aac71d6a/f992d/image.webp 1440w,
+/static/2be52d1eec555424ea81a217aac71d6a/882b9/image.webp 1920w,
+/static/2be52d1eec555424ea81a217aac71d6a/37c59/image.webp 2040w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/2be52d1eec555424ea81a217aac71d6a/09b79/image.jpg 240w,
+/static/2be52d1eec555424ea81a217aac71d6a/7cc5e/image.jpg 480w,
+/static/2be52d1eec555424ea81a217aac71d6a/6a068/image.jpg 960w,
+/static/2be52d1eec555424ea81a217aac71d6a/644c5/image.jpg 1440w,
+/static/2be52d1eec555424ea81a217aac71d6a/0f98f/image.jpg 1920w,
+/static/2be52d1eec555424ea81a217aac71d6a/46d55/image.jpg 2040w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/2be52d1eec555424ea81a217aac71d6a/6a068/image.jpg&quot;
+            alt=&quot;Adventures in Android Timekeeping&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;My alarm clock regularly wakes me up at 6am or 06:00:00 to be exact. Time is a surprisingly variable concept. Atomic clocks define absolute precision, but in everyday life — like my alarm going off at 6:00 AM — a few seconds rarely matter.&lt;/p&gt;
 &lt;p&gt;At work, I often have to deal with a bit more precise time since certain logical steps in mobile apps determine certain actions users can take. This led me to a rabbit hole of how time is determined on Android.&lt;/p&gt;
 &lt;h2 id=&quot;what-is-current-time&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#what-is-current-time&quot; aria-label=&quot;what is current time permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What is current time&lt;/h2&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;System.currentTimeMillis()&lt;/code&gt; will return time in epoch format based on the device’s current time. Accuracy of such is important in cases when some steps must be taken based on it, which are not validated on server, such as&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Batch Processing of data  &lt;/li&gt;
-&lt;li&gt;Adding timestamp to an event, which might be compared to backend timestamp.  &lt;/li&gt;
+&lt;li&gt;Batch Processing of data&lt;/li&gt;
+&lt;li&gt;Adding timestamp to an event, which might be compared to backend timestamp.&lt;/li&gt;
 &lt;li&gt;Enabling logic based on time of day (Example - stock market opening/closing on 9.15am/3.30pm)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Unfortunately current time can be flawed based on&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;User changing time and date  &lt;/li&gt;
+&lt;li&gt;User changing time and date&lt;/li&gt;
 &lt;li&gt;Drift in automatic time&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;automatic-time&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#automatic-time&quot; aria-label=&quot;automatic time permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Automatic time&lt;/h2&gt;
@@ -23,9 +68,9 @@
 &lt;p&gt;NTP uses servers which are geographically distributed systems, from which devices can sync timestamps. In general, even outside of mobile devices, this is considered best approach to sync time.
 For Android, &lt;code class=&quot;language-text&quot;&gt;time.android.com&lt;/code&gt; is AOSP’s default server which is also duplicated across geography. But this itself has certain limitations&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The device needs to compensate for the return trip time of the network call made to the NTP server, Android already does that but under assumption both legs of round trip take equivalent time and that difference is adjusted (&lt;a href=&quot;https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/core/java/android/net/SntpClient.java;drc=61197364367c9e404c7da6900658f1b16c42d0da;l=229?q=Sntp&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;source&lt;/a&gt;).  &lt;/li&gt;
-&lt;li&gt;The default sync interval is 18 hours.  &lt;/li&gt;
-&lt;li&gt;Request to NTP server times out at 5 seconds, post which 3 retries will happen.  &lt;/li&gt;
+&lt;li&gt;The device needs to compensate for the return trip time of the network call made to the NTP server, Android already does that but under assumption both legs of round trip take equivalent time and that difference is adjusted (&lt;a href=&quot;https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/core/java/android/net/SntpClient.java;drc=61197364367c9e404c7da6900658f1b16c42d0da;l=229?q=Sntp&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;source&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;The default sync interval is 18 hours.&lt;/li&gt;
+&lt;li&gt;Request to NTP server times out at 5 seconds, post which 3 retries will happen.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;All of these configs are overridable by OEMs/Carriers and they often are so this itself might vary across manufacturers/carriers.&lt;br&gt;
 Example - Some manufacturers prefer using local NTP servers like &lt;code class=&quot;language-text&quot;&gt;in.pool.ntp.org&lt;/code&gt; for India.&lt;br&gt;
@@ -39,58 +84,55 @@ Fun fact: Most of these servers have no SLAs for downtime 🤭&lt;/p&gt;
 &lt;h2 id=&quot;catch-my-drift&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#catch-my-drift&quot; aria-label=&quot;catch my drift permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Catch my drift!&lt;/h2&gt;
 &lt;p&gt;So what’s the solution, needless to say in general you should never trust the client, otherwise time drift will be the least of your problems. For other use cases&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Google now has a nice Trusted Time API which you can use (&lt;a href=&quot;https://android-developers.googleblog.com/2025/02/trustedtime-api-introducing-reliable-approach-to-time-keeping-for-apps.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://android-developers.googleblog.com/2025/02/trustedtime-api-introducing-reliable-approach-to-time-keeping-for-apps.html&lt;/a&gt; )  &lt;/li&gt;
+&lt;li&gt;Google now has a nice Trusted Time API which you can use (&lt;a href=&quot;https://android-developers.googleblog.com/2025/02/trustedtime-api-introducing-reliable-approach-to-time-keeping-for-apps.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://android-developers.googleblog.com/2025/02/trustedtime-api-introducing-reliable-approach-to-time-keeping-for-apps.html&lt;/a&gt; )&lt;/li&gt;
 &lt;li&gt;You can deploy your own time service, potentially hosted regionally or on a CDN edge node to minimize latency for your clients, and use its timestamp consistently within your app.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;fin&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#fin&quot; aria-label=&quot;fin permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Fin&lt;/h2&gt;
 &lt;p&gt;TL;DR time is hard&lt;/p&gt;
 &lt;p&gt;Further reading on NTP: &lt;a href=&quot;https://developers.google.com/time&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://developers.google.com/time&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;If you’re ever in London, don’t miss the Greenwich time museum to learn the history of clocks and time itself.&lt;/p&gt;
-&lt;p&gt;&lt;span
+&lt;p&gt;&lt;img src=&quot;media/adventures-in-android-timekeeping/greenwich.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Effective guide to Mobile Design Adoption]]></title><description><![CDATA[A simple guide to get your design system adopted across organization]]></description><link>https://jitinsharma.com/posts/effective-guide-to-mobile-design-adoption/</link><guid isPermaLink="false">https://jitinsharma.com/posts/effective-guide-to-mobile-design-adoption/</guid><pubDate>Wed, 09 Aug 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/61532e1bb0e792fe2a87ac10bed6808e/47311/greenwich.jpg&quot;
+    href=&quot;/static/825bda5147711ad0ffbf3003c5029a0a/212bf/image.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 177.91666666666669%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAMEAQIF/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAIBA//aAAwDAQACEAMQAAABr63K/O6CZs9fno1YaNnIIQf/xAAdEAACAgIDAQAAAAAAAAAAAAAAAQISAxETITEy/9oACAEBAAEFAqJDXVUiUSRol8SInPbH2J6MyriXk/f/xAAWEQADAAAAAAAAAAAAAAAAAAAQESD/2gAIAQMBAT8BDj//xAAWEQADAAAAAAAAAAAAAAAAAAAQESD/2gAIAQIBAT8BCj//xAAcEAACAgIDAAAAAAAAAAAAAAABEAARMUEDMpH/2gAIAQEABj8CI0ZWkC/F1ErCxOKn/8QAHhAAAgICAgMAAAAAAAAAAAAAAAERITFBYaFRgfH/2gAIAQEAAT8hdJ2QLm6sJCG+i7gRsXSx7Zs4D5MM15bFYKVQNt9ESmd+BcTG+kPKyM0f/9oADAMBAAIAAwAAABBUNA38P//EABgRAAMBAQAAAAAAAAAAAAAAAAABECFB/9oACAEDAQE/EGjDSnZ//8QAGBEBAQADAAAAAAAAAAAAAAAAACEBEEH/2gAIAQIBAT8QVGVc1//EACAQAQADAAEEAwEAAAAAAAAAAAEAESExQWFxkVGBwdH/2gAIAQEAAT8QAptY+HWorOVZydyEh7pa0nAOLPsgCl8doJSLoeSECtr8Jc4NgBiu2EWFTUCrzKPeRi0E8v5FzcbWW6HeBYWLNaqjftjsAuQBTWT/2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 47.91666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//aAAwDAQACEAMQAAABkTZx1CAn/8QAFxABAQEBAAAAAAAAAAAAAAAAAQAQIf/aAAgBAQABBQKGHm//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwFH/8QAFhEBAQEAAAAAAAAAAAAAAAAAABES/9oACAECAQE/AYy//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAHBAAAgEFAQAAAAAAAAAAAAAAAAExEBEhUYFx/9oACAEBAAE/IU8W5R3jXg56KD//2gAMAwEAAgADAAAAEDzv/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAh/9oACAEDAQE/EHJF/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAECAQE/EMrL/8QAHxABAAICAQUBAAAAAAAAAAAAAREhADFRQWFxgaHx/9oACAEBAAE/EHEpgZDodnjrfeMQshomoqfz5iIp7cVJCi2ebypjkZqz/9k=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
-              srcset=&quot;/static/61532e1bb0e792fe2a87ac10bed6808e/8ac56/greenwich.webp 240w,
-/static/61532e1bb0e792fe2a87ac10bed6808e/d3be9/greenwich.webp 480w,
-/static/61532e1bb0e792fe2a87ac10bed6808e/e46b2/greenwich.webp 960w,
-/static/61532e1bb0e792fe2a87ac10bed6808e/260c2/greenwich.webp 1080w&quot;
-              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              srcset=&quot;/static/825bda5147711ad0ffbf3003c5029a0a/8ac56/image.webp 240w,
+/static/825bda5147711ad0ffbf3003c5029a0a/d3be9/image.webp 480w,
+/static/825bda5147711ad0ffbf3003c5029a0a/8b983/image.webp 768w&quot;
+              sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
               type=&quot;image/webp&quot;
             /&gt;
           &lt;source
-            srcset=&quot;/static/61532e1bb0e792fe2a87ac10bed6808e/09b79/greenwich.jpg 240w,
-/static/61532e1bb0e792fe2a87ac10bed6808e/7cc5e/greenwich.jpg 480w,
-/static/61532e1bb0e792fe2a87ac10bed6808e/6a068/greenwich.jpg 960w,
-/static/61532e1bb0e792fe2a87ac10bed6808e/47311/greenwich.jpg 1080w&quot;
-            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            srcset=&quot;/static/825bda5147711ad0ffbf3003c5029a0a/09b79/image.jpg 240w,
+/static/825bda5147711ad0ffbf3003c5029a0a/7cc5e/image.jpg 480w,
+/static/825bda5147711ad0ffbf3003c5029a0a/212bf/image.jpg 768w&quot;
+            sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
             type=&quot;image/jpeg&quot;
           /&gt;
           &lt;img
             class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/61532e1bb0e792fe2a87ac10bed6808e/6a068/greenwich.jpg&quot;
-            alt=&quot;greenwich&quot;
-            title=&quot;greenwich&quot;
+            src=&quot;/static/825bda5147711ad0ffbf3003c5029a0a/212bf/image.jpg&quot;
+            alt=&quot;Effective guide to Mobile Design Adoption&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
           /&gt;
         &lt;/picture&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Effective guide to Mobile Design Adoption]]></title><description><![CDATA[A simple guide to get your design system adopted across organization]]></description><link>https://jitinsharma.com/posts/effective-guide-to-mobile-design-adoption/</link><guid isPermaLink="false">https://jitinsharma.com/posts/effective-guide-to-mobile-design-adoption/</guid><pubDate>Wed, 09 Aug 2023 00:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;image-container&quot;&gt;
-    &lt;img src=&quot;/media/effective-guide-to-mobile-design-adoption/design-system-banner.jpg&quot;/&gt;
-&lt;/div&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&quot;prologue-&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#prologue-&quot; aria-label=&quot;prologue  permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Prologue 🍿&lt;/h2&gt;
 &lt;p&gt;Design System is often used by organization to centralize the UI look and feel of their apps across platforms. As a product becomes huge, this becomes a necessity and is also helpful in bringing brand changes easily. I have worked with Design Systems for some time now and one of the biggest issues is not with building it but rather how do you make everyone use it. If you are a large organization with multiple verticals, it becomes a gargantuan task aligning everyone. This guide represents some straightforward steps which you can take to ease this adoption.&lt;/p&gt;
 &lt;h2 id=&quot;start-with-design-team-&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#start-with-design-team-&quot; aria-label=&quot;start with design team  permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Start with Design Team 👫&lt;/h2&gt;
@@ -99,7 +141,7 @@ Secondly detaching components shouldn’t be allowed when using Design System co
 &lt;h2 id=&quot;make-discovery-obvious-&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#make-discovery-obvious-&quot; aria-label=&quot;make discovery obvious  permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Make discovery obvious 🔎&lt;/h2&gt;
 &lt;p&gt;Once a Design System is built, it must be dead simple for everyone(devs, designers, PM) to visualize it. That shiny mail you wrote about launching a Design system, half of your audience didn’t even read it and the other half forgot about it over the weekend.&lt;/p&gt;
 &lt;h4 id=&quot;-component-documentation&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-component-documentation&quot; aria-label=&quot; component documentation permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;➡ Component Documentation&lt;/h4&gt;
-&lt;p&gt;Every component must be documented at each level - Design and Code. &lt;/p&gt;
+&lt;p&gt;Every component must be documented at each level - Design and Code.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A designer documenting a component must define how it should be used and what obvious mistakes to avoid. Figma links should be previewed inside the doc.&lt;/li&gt;
 &lt;li&gt;Code documentations should be written by developers with exhaustive API usages. Use tools like &lt;code class=&quot;language-text&quot;&gt;dokka&lt;/code&gt; to produce HTML pages.&lt;/li&gt;
@@ -130,10 +172,51 @@ If you have rapport with product teams, you can even set OKRs using this number 
 &lt;h4 id=&quot;-the-who-uses-metric&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-the-who-uses-metric&quot; aria-label=&quot; the who uses metric permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;➡ The who uses metric&lt;/h4&gt;
 &lt;p&gt;This is a show off metric to feel good about yourself. It is the reverse of what we did earlier, using the same data from Lint static analysis, we figure out how many times a project/module/product used our component. This gives a count of component usages, multiplied by a calculated number of hours (effort a product dev would take to build this component himself) and you get the number of hours the team saved because they used the Design System component. Profit💰!&lt;/p&gt;
 &lt;h2 id=&quot;epilogue-&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#epilogue-&quot; aria-label=&quot;epilogue  permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Epilogue 🎬&lt;/h2&gt;
-&lt;p&gt;If you have reached here, I hope this guide helps you out with Design Systems. As a platform engineer, it’s always beneficial to view fellow developers as customers and align with their viewpoint, that’s when you bring out the best solutions for the platform. If you have any questions, feel free to reach me on &lt;del&gt;&lt;a href=&quot;https://twitter.com/_jitinsharma&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Twitter&lt;/a&gt;&lt;/del&gt;, well on &lt;a href=&quot;https://twitter.com/_jitinsharma&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;X&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Composing a Design System]]></title><description><![CDATA[Building a custom Design System with Jetpack Compose]]></description><link>https://jitinsharma.com/posts/composing-a-design-system/</link><guid isPermaLink="false">https://jitinsharma.com/posts/composing-a-design-system/</guid><pubDate>Thu, 25 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;image-container&quot;&gt;
-    &lt;img src=&quot;/media/composing-a-design-system/banner.png&quot;/&gt;
-&lt;/div&gt;
-At my organization, we are heavy users of Design System across multiple apps and have built two iterations of our in-house design system in the last few years. Maintaining a Design System also meant finding creative ways to bridge the gap between Design Platforms(Sketch, Figma etc) and Mobile Platforms(Android, iOS). I&apos;ve been experimenting with Jetpack Compose to rebuild our custom design system and this blog is a summary of what I found:
+&lt;p&gt;If you have reached here, I hope this guide helps you out with Design Systems. As a platform engineer, it’s always beneficial to view fellow developers as customers and align with their viewpoint, that’s when you bring out the best solutions for the platform. If you have any questions, feel free to reach me on &lt;del&gt;&lt;a href=&quot;https://twitter.com/_jitinsharma&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Twitter&lt;/a&gt;&lt;/del&gt;, well on &lt;a href=&quot;https://twitter.com/_jitinsharma&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;X&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Composing a Design System]]></title><description><![CDATA[Building a custom Design System with Jetpack Compose]]></description><link>https://jitinsharma.com/posts/composing-a-design-system/</link><guid isPermaLink="false">https://jitinsharma.com/posts/composing-a-design-system/</guid><pubDate>Thu, 25 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e6c9dd76c09ed9b946ed3710571653bd/d0c2f/image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 35%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAACxLAAAsSwGlPZapAAAB4UlEQVR42mNgYGBgA2IOe/t4DiDN8OXLF8Nnz59/fvPq1asfP398ePP2zfefP35+e/HlzffX399/+f/h08//794/////vxxIPZBmZEADYkCT5EOFGKSBbBkgZr5+5AjvhSdvkn59/W/+f9s/PqAmyf/PL4hd/3pd6v+jN9L/n90SPZM2k/+qSU94u8vk8hinKStyzCZ5w03cu1fTa/4+48v//zGw73/5n+fqh799j3/9/3/k/ccjGrfKZ+hdKd7pdLvKCKR2/6osHhB91qTH76RZ97ni0LlvoiJW/k92m3eunqGeCWzgqVOqSusPGGWB2Fc//be78enP/+e//n9PnT7rd+rWKX8Xfb7/32rq+YOhlf9FV4WGMoP1WPYYXjDpWZkSNuWaWfKC/25B05fDHCgJxKJAzAnxMr/AsZs3pYHeFGVUsex1jcr537Pl53+bqg9b6///Z5p/4ld24tzvLiCNn+yXivSEz5OVL1pmqJW1igdmoBQHB4M8vziDApAtD8RCsMDm964QZFWzalZP27+Av+K/4KXnV6Ze+Pj/f8++/8ZAJUzq6uq8UIfwAzHIQEEGXCB+/n8Om9ZPojD+/5kMrO+eZuUsP/PfFsRXUWFg12LQYmMQF+dm4OYWh6YWdgB+yNlLtAk+tQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/e6c9dd76c09ed9b946ed3710571653bd/8ac56/image.webp 240w,
+/static/e6c9dd76c09ed9b946ed3710571653bd/d3be9/image.webp 480w,
+/static/e6c9dd76c09ed9b946ed3710571653bd/e46b2/image.webp 960w,
+/static/e6c9dd76c09ed9b946ed3710571653bd/66be3/image.webp 1362w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/e6c9dd76c09ed9b946ed3710571653bd/8ff5a/image.png 240w,
+/static/e6c9dd76c09ed9b946ed3710571653bd/e85cb/image.png 480w,
+/static/e6c9dd76c09ed9b946ed3710571653bd/d9199/image.png 960w,
+/static/e6c9dd76c09ed9b946ed3710571653bd/d0c2f/image.png 1362w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/e6c9dd76c09ed9b946ed3710571653bd/d9199/image.png&quot;
+            alt=&quot;Composing a Design System&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+At my organization, we are heavy users of Design System across multiple apps and have built two iterations of our in-house design system in the last few years. Maintaining a Design System also meant finding creative ways to bridge the gap between Design Platforms(Sketch, Figma etc) and Mobile Platforms(Android, iOS). I’ve been experimenting with Jetpack Compose to rebuild our custom design system and this blog is a summary of what I found:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#design-system-basics&quot;&gt;Design System Basics&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#working-with-colors-and-gradients&quot;&gt;Working with Colors and Gradients&lt;/a&gt;&lt;/li&gt;
@@ -173,7 +256,7 @@ A Design System makes sure your user doesn’t feel alienated within your app as
 &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;By creating an extension on &lt;code class=&quot;language-text&quot;&gt;Modifier&lt;/code&gt;, this allows us to create a central API for applying design specific gradients abstracting out properties like angles, stops etc from end users.&lt;/p&gt;
 &lt;h2 id=&quot;managing-typography&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#managing-typography&quot; aria-label=&quot;managing typography permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Managing Typography&lt;/h2&gt;
-&lt;p&gt;I’ve been developing applications since before xml support was added for font files. Before that, it was a constant effort around &lt;code class=&quot;language-text&quot;&gt;Typeface&lt;/code&gt; APIs to make sure custom fonts were managed and applied properly everywhere(Do you even &lt;em&gt;Calligraphy&lt;/em&gt; bro 😛 ). &lt;/p&gt;
+&lt;p&gt;I’ve been developing applications since before xml support was added for font files. Before that, it was a constant effort around &lt;code class=&quot;language-text&quot;&gt;Typeface&lt;/code&gt; APIs to make sure custom fonts were managed and applied properly everywhere(Do you even &lt;em&gt;Calligraphy&lt;/em&gt; bro 😛 ).&lt;/p&gt;
 &lt;p&gt;Ever since fonts got support for xml, managing styles for &lt;code class=&quot;language-text&quot;&gt;TextView&lt;/code&gt; was far better. The existing system still suffers from certain hiccups&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Setting styles programmatically using &lt;code class=&quot;language-text&quot;&gt;setTextAppearance&lt;/code&gt; does not respect line height.&lt;/li&gt;
@@ -188,7 +271,7 @@ A Design System makes sure your user doesn’t feel alienated within your app as
 &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;TextStyle&lt;/code&gt; supports a variety of properties &lt;code class=&quot;language-text&quot;&gt;fontSynthesis&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;letterSpacing&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;baselineShift&lt;/code&gt; etc. I wasn’t even aware such things were possible until I looked at these classes😅&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Spannable&lt;/code&gt; is now known as &lt;code class=&quot;language-text&quot;&gt;AnnotatedString&lt;/code&gt; which accepts &lt;code class=&quot;language-text&quot;&gt;SpanStyle&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;ParagraphStyles&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The larger improvement here is &lt;code class=&quot;language-text&quot;&gt;Text&lt;/code&gt; is text, it’s no longer a base class for &lt;code class=&quot;language-text&quot;&gt;Button&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;EditText&lt;/code&gt; (Composition over inheritance). Editable and Clickable behaviours are represented with different composables functions or Modifiers. &lt;/p&gt;
+&lt;p&gt;The larger improvement here is &lt;code class=&quot;language-text&quot;&gt;Text&lt;/code&gt; is text, it’s no longer a base class for &lt;code class=&quot;language-text&quot;&gt;Button&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;EditText&lt;/code&gt; (Composition over inheritance). Editable and Clickable behaviours are represented with different composables functions or Modifiers.&lt;/p&gt;
 &lt;h2 id=&quot;spacings-shapes-and-shadows&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#spacings-shapes-and-shadows&quot; aria-label=&quot;spacings shapes and shadows permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Spacings, Shapes and Shadows&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Spacings&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Compose introduces two new classes &lt;code class=&quot;language-text&quot;&gt;androidx.compose.ui.unit.Dp&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;androidx.compose.ui.unit.Px&lt;/code&gt; to define measurements. Spacings can be mapped using plain objects or classes depending whether they are theme dependent or not.&lt;/p&gt;
@@ -243,49 +326,7 @@ setContent &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 &lt;h2 id=&quot;components&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#components&quot; aria-label=&quot;components permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Components&lt;/h2&gt;
 &lt;p&gt;If we take a look back at traditional Android UI, the framework provided a lot of customisable components such as &lt;code class=&quot;language-text&quot;&gt;Button&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;EditText&lt;/code&gt; and even more like &lt;code class=&quot;language-text&quot;&gt;RecyclerView&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Card&lt;/code&gt; were provided via AppCompat. One of the behaviour common in a lot of these components was they were themed according to what theme OS was applying. For example a &lt;code class=&quot;language-text&quot;&gt;Button&lt;/code&gt; would look wildly different depending on which OS it was being rendered. For &lt;code class=&quot;language-text&quot;&gt;MaterialTheme&lt;/code&gt;, this was advently solved by MDC components which followed material guidelines irrespective of OS versions on which they were being rendered.&lt;/p&gt;
 &lt;p&gt;Compose builds components on the same concept where components are separated by a design layer defined by &lt;code class=&quot;language-text&quot;&gt;foundation&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;material&lt;/code&gt; packages.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/919b58cee0efdda9d1cc2015126250e3/7a4b2/ui-packages.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 27.916666666666668%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAACxLAAAsSwGlPZapAAAAkklEQVQY06WQawuCQBBFd61co0LshSY9TEz7/3/QO3E+LJEgNHBgd2Zn58517ncsxF30YhAVJO6POIlG1OIqirmNS7EWmdiIVASxE543K+6Bd4GeyQ9NQcuKtuolqvvo/BYP6rcpC85MM3UHFFou//p0z9mUlljgseaI75/YYnzN5A4leaQgI1cx9MVGDfcnWyYj/0cFehvmcQ4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/919b58cee0efdda9d1cc2015126250e3/8ac56/ui-packages.webp 240w,
-/static/919b58cee0efdda9d1cc2015126250e3/d3be9/ui-packages.webp 480w,
-/static/919b58cee0efdda9d1cc2015126250e3/e46b2/ui-packages.webp 960w,
-/static/919b58cee0efdda9d1cc2015126250e3/9eb34/ui-packages.webp 1240w&quot;
-              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/919b58cee0efdda9d1cc2015126250e3/8ff5a/ui-packages.png 240w,
-/static/919b58cee0efdda9d1cc2015126250e3/e85cb/ui-packages.png 480w,
-/static/919b58cee0efdda9d1cc2015126250e3/d9199/ui-packages.png 960w,
-/static/919b58cee0efdda9d1cc2015126250e3/7a4b2/ui-packages.png 1240w&quot;
-            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/919b58cee0efdda9d1cc2015126250e3/d9199/ui-packages.png&quot;
-            alt=&quot;ui packages&quot;
-            title=&quot;ui packages&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;media/composing-a-design-system/ui-packages.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;UI components within the Compose framework are divided into classes which make no assumptions around Theming such as &lt;code class=&quot;language-text&quot;&gt;BasicText&lt;/code&gt; and classes such as &lt;code class=&quot;language-text&quot;&gt;Text&lt;/code&gt; which expose &lt;code class=&quot;language-text&quot;&gt;LocalTextStyle&lt;/code&gt; as a &lt;code class=&quot;language-text&quot;&gt;CompositionLocal&lt;/code&gt; allowing them to be themed. This can be compared to color attributes such as &lt;code class=&quot;language-text&quot;&gt;colorControlActivated&lt;/code&gt; which we would use in traditional framework components such as &lt;code class=&quot;language-text&quot;&gt;Switch&lt;/code&gt; to theme it.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;To Material or not&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Since compose separates out Material components, if you try to build a Custom Design system with just &lt;code class=&quot;language-text&quot;&gt;foundation&lt;/code&gt;, the only components you will find yourself with are &lt;code class=&quot;language-text&quot;&gt;BasicText&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;BasicTextField&lt;/code&gt; and layout functions. Any other component like &lt;code class=&quot;language-text&quot;&gt;RadioButton&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;CheckBox&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Switch&lt;/code&gt; etc will have to be built with scratch which is a departure from current situation where you could create custom versions of such components using &lt;code class=&quot;language-text&quot;&gt;AppCompatRadioButton&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;AppCompatCheckBox&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;SwitchCompat&lt;/code&gt; etc.&lt;/p&gt;
@@ -327,49 +368,7 @@ setContent &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;.gradle/daemon/&lt;/code&gt; folder’s size was ~&lt;code class=&quot;language-text&quot;&gt;15GB&lt;/code&gt;. All this folder had was log files!&lt;/p&gt;
 &lt;p&gt;But how did this happen.&lt;/p&gt;
 &lt;p&gt;Now this folder contains hundreds of log files for daemons spawned by different versions of gradle&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/a36fc388752bc51be83772b55477e1c4/cd78c/daemon-directory.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 61.24999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAACG0lEQVQoz4WSW2/aMBiGud7VpKocCjHhFGgSHBIISQjHQDgMCISK9aZ0k6b9gV1UmtQfsH/9zjaFwqZpF1YcJ378vJ+/hBcuMRwF6Ha7bPRQKBRxl06jTFtwomfYnTEMJ0BZa0MqUyRJDatoh128g+t6CIIxer0+DKMBSSJI2IsHzBZLOG0Hul4XQ7uvQu/MoD7+AglfkRy94qb/Ex/9F3xo/8Bk9x3r5Rym1YLnddDp+Gg0zCOw//gN8cMeruOiXqfQNB1qtQrLH2K4/4K6qiKbzYGQPGS5gHQ6g+02xtPTAYPBEGE4xXQ6Q5sJ5XISEka4gd8bgFKKUqmMLFvMZjJQaBP+ao97BpcYLJ+XGVAWwNVqjZhFbrVs+H5XGJqmdTQ0xmsMhgFs20axWBIbCYMqdRPONEJNUdiPJ+DRcDabY72OBJCbcaCqakcgHX1CMAlhUEMo59kmKXuHmuVg9PkrXHZQgR10GZnb8cj9/kDE5Qd4nncESrmcAJ1i8cHXiiqFu4hRrVTEj5eGy+UKm81WGI7HExH7HJkQ+Qwib9AT0JlvQHVdWF8azucLAWw2WwLG24bP34D5M+xqLhdRqWlQKsoVMJlMifodDs9XkXlP/gW8smQfJV4K9iTk/VI4kEOiaAPLago73ovnPvwXkFzU9PTOgalUmgGn7GJi1hltEZmb8nr+B0jwZzk48PY2KfrwcHi/ZT5OkX8DmIRz0cdFUIEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/a36fc388752bc51be83772b55477e1c4/8ac56/daemon-directory.webp 240w,
-/static/a36fc388752bc51be83772b55477e1c4/d3be9/daemon-directory.webp 480w,
-/static/a36fc388752bc51be83772b55477e1c4/e46b2/daemon-directory.webp 960w,
-/static/a36fc388752bc51be83772b55477e1c4/5b1dd/daemon-directory.webp 1236w&quot;
-              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/a36fc388752bc51be83772b55477e1c4/8ff5a/daemon-directory.png 240w,
-/static/a36fc388752bc51be83772b55477e1c4/e85cb/daemon-directory.png 480w,
-/static/a36fc388752bc51be83772b55477e1c4/d9199/daemon-directory.png 960w,
-/static/a36fc388752bc51be83772b55477e1c4/cd78c/daemon-directory.png 1236w&quot;
-            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/a36fc388752bc51be83772b55477e1c4/d9199/daemon-directory.png&quot;
-            alt=&quot;daemon directory&quot;
-            title=&quot;daemon directory&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;media/take-care-of-your-gradle-home-directory/daemon-directory.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Most of the log files in these folder are 1-2 MB or less. But then I found some log files whose size was ~1GB and even ~5GB!&lt;/p&gt;
 &lt;div class=&quot;image-container&quot;&gt;
     &lt;div style=&quot;float:left;margin-right:5px;&quot;&gt;
@@ -401,18 +400,26 @@ java.lang.StackOverflowError
 &lt;p&gt;and don’t ignore errors in build like me 😅&lt;/p&gt;
 &lt;p&gt;Here are few more tips for optimising disk memory when it comes to gradle&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;I’m a heavy user of Android Studio Canary, which means I have multiple installations of different gradle versions sitting in my machine.
-By default &lt;code class=&quot;language-text&quot;&gt;.gradle&lt;/code&gt; folders bifurcates a lot of settings by gradle versions as separate folders.
-It’s a good idea to poke around your &lt;code class=&quot;language-text&quot;&gt;.gradle&lt;/code&gt; folder routinely and delete what’s not needed. I had folders for gradle versions as old as &lt;code class=&quot;language-text&quot;&gt;4.10&lt;/code&gt; which were not deleted.&lt;/li&gt;
-&lt;li&gt;Gradle downloads and caches all wrapper distributions in &lt;code class=&quot;language-text&quot;&gt;/wrapper/dists&lt;/code&gt;. If you often juggle between rc/stable versions of Gradle, you can expect this to swell up as well. Also sometimes Android Studio suggests you to download gradle distribution with sources to inspect gradle script sources. You can avoid this unless you actually want to inspect sources of gradle script, otherwise &lt;code class=&quot;language-text&quot;&gt;wrapper/dists&lt;/code&gt; will have two copies of gradle wrapper(&lt;code class=&quot;language-text&quot;&gt;-all&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;-bin&lt;/code&gt;). &lt;code class=&quot;language-text&quot;&gt;-all&lt;/code&gt; distribution folders are usually 200+mb larger than &lt;code class=&quot;language-text&quot;&gt;-bin&lt;/code&gt; (multiply by number of versions you have on machine)&lt;/li&gt;
-&lt;li&gt;If your builds have build cache enabled, you might want to look at &lt;code class=&quot;language-text&quot;&gt;/caches/build-cache-1&lt;/code&gt; too.&lt;/li&gt;
-&lt;li&gt;Get a new macbook with more disk memory.&lt;/li&gt;
+&lt;li&gt;I’m a heavy user of Android Studio Canary, which means I have multiple installations of different gradle versions sitting in my machine.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By default &lt;code class=&quot;language-text&quot;&gt;.gradle&lt;/code&gt; folders bifurcates a lot of settings by gradle versions as separate folders.
+It’s a good idea to poke around your &lt;code class=&quot;language-text&quot;&gt;.gradle&lt;/code&gt; folder routinely and delete what’s not needed. I had folders for gradle versions as old as &lt;code class=&quot;language-text&quot;&gt;4.10&lt;/code&gt; which were not deleted.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Gradle downloads and caches all wrapper distributions in &lt;code class=&quot;language-text&quot;&gt;/wrapper/dists&lt;/code&gt;. If you often juggle between rc/stable versions of Gradle, you can expect this to swell up as well. Also sometimes Android Studio suggests you to download gradle distribution with sources to inspect gradle script sources. You can avoid this unless you actually want to inspect sources of gradle script, otherwise &lt;code class=&quot;language-text&quot;&gt;wrapper/dists&lt;/code&gt; will have two copies of gradle wrapper(&lt;code class=&quot;language-text&quot;&gt;-all&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;-bin&lt;/code&gt;). &lt;code class=&quot;language-text&quot;&gt;-all&lt;/code&gt; distribution folders are usually 200+mb larger than &lt;code class=&quot;language-text&quot;&gt;-bin&lt;/code&gt; (multiply by number of versions you have on machine)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If your builds have build cache enabled, you might want to look at &lt;code class=&quot;language-text&quot;&gt;/caches/build-cache-1&lt;/code&gt; too.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get a new macbook with more disk memory.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Gradle is smart too&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I was pleasantly surprised that my &lt;code class=&quot;language-text&quot;&gt;caches/modules-2/files-2.1&lt;/code&gt; was only 1.5GB. This is because Gradle automatically cleans up library &lt;a href=&quot;https://docs.gradle.org/current/userguide/directory_layout.html#dir:gradle_user_home:cache_cleanup&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;cache, wrapper dists&lt;/a&gt; and &lt;a href=&quot;https://docs.gradle.org/current/userguide/build_cache.html#sec:build_cache_configure_local&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;build cache&lt;/a&gt; with time period of 7-30 days. Also Build cache can be cleaned by running &lt;code class=&quot;language-text&quot;&gt;./gradlew cleanBuildCache&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Unfortunately I believe this does not apply to log files(&lt;a href=&quot;https://github.com/gradle/gradle/issues/8795&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;open issue&lt;/a&gt;), since my log files were more than 30 days old and did not get deleted.&lt;/p&gt;
 &lt;p&gt;Fin.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Taming Android Resources and LayoutInflater for string manipulation]]></title><description><![CDATA[Intercepting string resources for dynamic updates.]]></description><link>https://jitinsharma.com/posts/taming-android-resources-and-layoutinflater-for-string-manipulation/</link><guid isPermaLink="false">https://jitinsharma.com/posts/taming-android-resources-and-layoutinflater-for-string-manipulation/</guid><pubDate>Tue, 28 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Recently I was working on a problem where we wanted to make our string resources dynamic. In every app, there are strings which would often come from backend APIs and are dynamic by nature, but a lot of strings are packaged in &lt;code class=&quot;language-text&quot;&gt;strings.xml&lt;/code&gt;. There might be requirements to make few of these dynamic as well for eg. A/B testing etc. The major pain point here is these strings would have usages spread all over codebase and there is no default way to override &lt;code class=&quot;language-text&quot;&gt;strings.xml&lt;/code&gt; to make them dynamic.&lt;/p&gt;
-&lt;p&gt;One solution is to move away from &lt;code class=&quot;language-text&quot;&gt;strings.xml&lt;/code&gt; and keep strings as constant objects or a map. But moving away from &lt;code class=&quot;language-text&quot;&gt;strings.xml&lt;/code&gt; has few disadvantages such as &lt;/p&gt;
+&lt;p&gt;One solution is to move away from &lt;code class=&quot;language-text&quot;&gt;strings.xml&lt;/code&gt; and keep strings as constant objects or a map. But moving away from &lt;code class=&quot;language-text&quot;&gt;strings.xml&lt;/code&gt; has few disadvantages such as&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Strings cannot be used in layout preview&lt;/li&gt;
 &lt;li&gt;Need new logic for localisation&lt;/li&gt;
@@ -429,53 +436,7 @@ It’s a good idea to poke around your &lt;code class=&quot;language-text&quot;&
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;context&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;R&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hello_world&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//kotlin&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;R.string.hello_world&lt;/code&gt; is a constant integer which is created by &lt;code class=&quot;language-text&quot;&gt;aapt&lt;/code&gt; and added to &lt;code class=&quot;language-text&quot;&gt;R.java&lt;/code&gt; along with other constants.
 Once an &lt;code class=&quot;language-text&quot;&gt;apk&lt;/code&gt; is generated strings are packaged in &lt;code class=&quot;language-text&quot;&gt;resources.arsc&lt;/code&gt; along with other xml data. Here’s a image of our packaged string along with it’s generated id.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/6f9695f7c9e70b93ef45bce488a17261/9c2d2/resource-arsc-preview.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 10%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAbklEQVQI102JsQ6CMAAF+azKgosUSgm0GCNQExlYgBkwhm8/iYg6XO5dnhdpS2LrlYq0uCGzkjivOOnL2o6jtATSbA7Ne+/8PvO1p84t2X1Bu4m8WZDlg6h+El5HUjfj6wGhekSycfjw3/sWquMFObBNnzshpKgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/6f9695f7c9e70b93ef45bce488a17261/8ac56/resource-arsc-preview.webp 240w,
-/static/6f9695f7c9e70b93ef45bce488a17261/d3be9/resource-arsc-preview.webp 480w,
-/static/6f9695f7c9e70b93ef45bce488a17261/e46b2/resource-arsc-preview.webp 960w,
-/static/6f9695f7c9e70b93ef45bce488a17261/f992d/resource-arsc-preview.webp 1440w,
-/static/6f9695f7c9e70b93ef45bce488a17261/882b9/resource-arsc-preview.webp 1920w,
-/static/6f9695f7c9e70b93ef45bce488a17261/3b8fd/resource-arsc-preview.webp 2226w&quot;
-              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/6f9695f7c9e70b93ef45bce488a17261/8ff5a/resource-arsc-preview.png 240w,
-/static/6f9695f7c9e70b93ef45bce488a17261/e85cb/resource-arsc-preview.png 480w,
-/static/6f9695f7c9e70b93ef45bce488a17261/d9199/resource-arsc-preview.png 960w,
-/static/6f9695f7c9e70b93ef45bce488a17261/07a9c/resource-arsc-preview.png 1440w,
-/static/6f9695f7c9e70b93ef45bce488a17261/29114/resource-arsc-preview.png 1920w,
-/static/6f9695f7c9e70b93ef45bce488a17261/9c2d2/resource-arsc-preview.png 2226w&quot;
-            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/6f9695f7c9e70b93ef45bce488a17261/d9199/resource-arsc-preview.png&quot;
-            alt=&quot;resource arsc preview&quot;
-            title=&quot;resource arsc preview&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;media/taming-android-resources-and-layoutinflater-for-string-manipulation/resource-arsc-preview.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;The id here &lt;code class=&quot;language-text&quot;&gt;0x7f100027&lt;/code&gt; represents the integer value of &lt;code class=&quot;language-text&quot;&gt;R.string.hello_world&lt;/code&gt;.
 Any layout file referencing this string value using &lt;code class=&quot;language-text&quot;&gt;@string&lt;/code&gt; is also re-written with same id.&lt;/p&gt;
 &lt;p&gt;-&gt; &lt;code class=&quot;language-text&quot;&gt;activity_main.xml&lt;/code&gt; packaged in apk&lt;/p&gt;
@@ -516,7 +477,7 @@ In this section we explore the same.&lt;/p&gt;
 &lt;p&gt;The moment you override Resources, you’ll be welcomed with following deprecation ⚠️ warning ⚠️&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@deprecated Resources should not be constructed by apps.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Since Resources can be overridden on configuration change, overriding resources is discouraged. Ignoring this warning for now(ofcourse at your risk) 🤷‍♂️&lt;/p&gt;
-&lt;p&gt;Here we have also have &lt;code class=&quot;language-text&quot;&gt;dynamicStringMap&lt;/code&gt; which is an in-memory map of strings which have been fetched from backend. It’s good to keep this structure in memory so the string access is faster since your views might request a lot of strings in their layout cycle. &lt;/p&gt;
+&lt;p&gt;Here we have also have &lt;code class=&quot;language-text&quot;&gt;dynamicStringMap&lt;/code&gt; which is an in-memory map of strings which have been fetched from backend. It’s good to keep this structure in memory so the string access is faster since your views might request a lot of strings in their layout cycle.&lt;/p&gt;
 &lt;p&gt;Overriding resources allows us to override following methods&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;id&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Int&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
@@ -664,100 +625,14 @@ resources&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;p&gt;I did some performance analysis on my own projects and found results to be kind of inconclusive. Layout inflation time did increase but % varied from 4 to 38 in one case. I guess it’s better to trace layout inflation time for your project and check if increase is within limits.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Thanks for reading!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Lessons learnt from Vector Drawables]]></title><description><![CDATA[Working safely with Vector Drawables on different API levels.]]></description><link>https://jitinsharma.com/posts/lessons-learnt-from-vector-drawables/</link><guid isPermaLink="false">https://jitinsharma.com/posts/lessons-learnt-from-vector-drawables/</guid><pubDate>Tue, 31 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/90a2c0f682fb9cd20b5379bf19928b6c/c8551/vector-header.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 8.75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAWElEQVQI1z2OOQ4AIAgE/f/b7Cwt7SwsjMQjyhpIYCuGJRNCrRWW1hrOOTozM0opeO8p33sxxnDOOSOl5LdrLey9EeacLuy969ISY1SRCYnIO2HrJCKUZz4yXZvpONa2qgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/90a2c0f682fb9cd20b5379bf19928b6c/8ac56/vector-header.webp 240w,
-/static/90a2c0f682fb9cd20b5379bf19928b6c/d3be9/vector-header.webp 480w,
-/static/90a2c0f682fb9cd20b5379bf19928b6c/e46b2/vector-header.webp 960w,
-/static/90a2c0f682fb9cd20b5379bf19928b6c/f992d/vector-header.webp 1440w,
-/static/90a2c0f682fb9cd20b5379bf19928b6c/882b9/vector-header.webp 1920w,
-/static/90a2c0f682fb9cd20b5379bf19928b6c/38df0/vector-header.webp 2814w&quot;
-              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/90a2c0f682fb9cd20b5379bf19928b6c/8ff5a/vector-header.png 240w,
-/static/90a2c0f682fb9cd20b5379bf19928b6c/e85cb/vector-header.png 480w,
-/static/90a2c0f682fb9cd20b5379bf19928b6c/d9199/vector-header.png 960w,
-/static/90a2c0f682fb9cd20b5379bf19928b6c/07a9c/vector-header.png 1440w,
-/static/90a2c0f682fb9cd20b5379bf19928b6c/29114/vector-header.png 1920w,
-/static/90a2c0f682fb9cd20b5379bf19928b6c/c8551/vector-header.png 2814w&quot;
-            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/90a2c0f682fb9cd20b5379bf19928b6c/d9199/vector-header.png&quot;
-            alt=&quot;vector header&quot;
-            title=&quot;vector header&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for reading!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Lessons learnt from Vector Drawables]]></title><description><![CDATA[Working safely with Vector Drawables on different API levels.]]></description><link>https://jitinsharma.com/posts/lessons-learnt-from-vector-drawables/</link><guid isPermaLink="false">https://jitinsharma.com/posts/lessons-learnt-from-vector-drawables/</guid><pubDate>Tue, 31 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;media/lessons-learnt-from-vector-drawables/vector-header.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Dialing back to days of Android 5.0 release(s) one of the things which got a lot of people excited was Android got support for SVGs in form of vector Drawables. No longer you were required to draw custom shapes or have icon png(s) based on density, just import SVGs using Android Studio and let the support library draw them for you!&lt;/p&gt;
 &lt;p&gt;This article is more or less a list of lessons which I’ve learnt while working with vectors and how to make sure to use vectors safely avoiding crashes on devices with API level less than 21.&lt;/p&gt;
 &lt;h2 id=&quot;without-support-library&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#without-support-library&quot; aria-label=&quot;without support library permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Without Support Library&lt;/h2&gt;
 &lt;p&gt;By default, if you don’t enable support library use all vector drawables are converted to pngs in their density folders. While this means you’ll never face an rendering issue since pngs are supported in all versions of Android, this will definitely increased size of your app by a lot if you heavily depend on vectors.&lt;/p&gt;
 &lt;p&gt;Here’s how a vector xml file in transformed into multiple pngs during build cycle&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 562px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/ad9a0eeae5df49192070d7adbb59071c/6e88f/vector-png.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75.83333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB1klEQVQ4y42TS5ObMBCE+TVJDntNNpddENi8QYg3eHnaqa1KpSr5/5fOCGMtXvvgQ5dgQF91z0iaEAk8l+GQ2phzF3kWI/QYAteA7+hKwVK7yNg8b98NaBIYea8Q0Q7v+Q5/Oo7T3KJvBcrMQ50HKISD2NdJBnggxTYru6ppPOEE1BH5DAXf43dmom0ExrcMc1+io2epugjRlBGS0FrAMQFi/yJDrVqaigUoC0Wyx9/KRl9HENxWDpLQpATWIh6w1SlTurwvQGtnKcshFXJ+jn7qMhSpp2ByPTsxbqBXQGauRflRbqBIndjjX+thmg8Uu8DUkWjNE2dJs3V3AzTNT0WSIDfv2Q6/yOVEfZTAhnp4cfk4cG12Fpk4Fs7iah5KGlBO7uy7cR8DhgxD6aHvK5zGGv0hQ0n9vOfuIWBODqfSRd+d4w50hM5n8RGg9WkoK/BY0VDGBsehWmLLQ/4QMI4jNblYRTYxFuTwjdxR3IF6WKTuZiNTR+hDK5BzuruurgryxsgeTtTDcXV4pD42ZawuwC3sQ1oY+khDgybLFqWkmpuYS4ccZjRheQ1THKrw6r97kns1Y+/i649XfHvWlZ5+6tBtF07Wwk+bRYYv8OX7y9V/9/QfO7gzynOtzyoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/ad9a0eeae5df49192070d7adbb59071c/8ac56/vector-png.webp 240w,
-/static/ad9a0eeae5df49192070d7adbb59071c/d3be9/vector-png.webp 480w,
-/static/ad9a0eeae5df49192070d7adbb59071c/49232/vector-png.webp 562w&quot;
-              sizes=&quot;(max-width: 562px) 100vw, 562px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/ad9a0eeae5df49192070d7adbb59071c/8ff5a/vector-png.png 240w,
-/static/ad9a0eeae5df49192070d7adbb59071c/e85cb/vector-png.png 480w,
-/static/ad9a0eeae5df49192070d7adbb59071c/6e88f/vector-png.png 562w&quot;
-            sizes=&quot;(max-width: 562px) 100vw, 562px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/ad9a0eeae5df49192070d7adbb59071c/6e88f/vector-png.png&quot;
-            alt=&quot;vector png&quot;
-            title=&quot;vector png&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;This rasterization into pngs modifies after build size of one vector(in this case) from 2kb to 7kb which is more than &lt;strong&gt;3x&lt;/strong&gt; size increase. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;media/lessons-learnt-from-vector-drawables/vector-png.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;This rasterization into pngs modifies after build size of one vector(in this case) from 2kb to 7kb which is more than &lt;strong&gt;3x&lt;/strong&gt; size increase.&lt;/p&gt;
 &lt;p&gt;Ideally this approach should be avoided if your app has a lot of vectors. Let’s look into next section on how to work with Support Library.&lt;/p&gt;
 &lt;h2 id=&quot;with-support-library&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#with-support-library&quot; aria-label=&quot;with support library permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;With Support Library&lt;/h2&gt;
 &lt;p&gt;To use vectors with support library, there is a simple flag which can be added in &lt;code class=&quot;language-text&quot;&gt;build.gradle&lt;/code&gt;&lt;/p&gt;
@@ -779,49 +654,7 @@ resources&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;h3 id=&quot;using-vector-drawables-in-framework-components&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#using-vector-drawables-in-framework-components&quot; aria-label=&quot;using vector drawables in framework components permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Using vector drawables in Framework Components&lt;/h3&gt;
 &lt;p&gt;A very straightforward way of using vectors is &lt;code class=&quot;language-text&quot;&gt;ImageView&lt;/code&gt; which can be used for icons/shapes etc.&lt;/p&gt;
 &lt;p&gt;Since vectors are not supported natively, they always should be used with &lt;code class=&quot;language-text&quot;&gt;app&lt;/code&gt; namespace. Android Studio does a good job to let you know the same for &lt;code class=&quot;language-text&quot;&gt;ImageView&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8a845613296359c96e6a0688a55c8461/061c7/vector-imageview.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 25.416666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABEElEQVQY001Q2Y6CQBDkc1CY4ZjhGGUARW5YJQKa3ez/f0Zti9nEh0pVVyfVlTZ0lkNnJyRpDhlGEELgEHAUqUR7jpAoAe45cIUDT7rgDgdjDIwzcMKmP2C8gv4RqwN8ChQeg8NdFEmD07FEMzSohwrDNCC7aERaItYBVB7CpWPM/gh8tUvzM45J+madwdztKJAjDTVylVJLhUgFiA4BQiXhBx5k7EOEHjW1YTOLwogtC0Y/fmF5PDGvD+I3Vpo3Td68LMQr7vOyefOyYn0+Md3v6McRKlH0EkZNOZWwYRTtFfXtB/X0i2pc0PYDyv6G6vqNkvyyo303oKhaXJoOl5q47ra5IO0LCdM0sd/vN/wBi6isHLqxM1MAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/8a845613296359c96e6a0688a55c8461/8ac56/vector-imageview.webp 240w,
-/static/8a845613296359c96e6a0688a55c8461/d3be9/vector-imageview.webp 480w,
-/static/8a845613296359c96e6a0688a55c8461/e46b2/vector-imageview.webp 960w,
-/static/8a845613296359c96e6a0688a55c8461/77293/vector-imageview.webp 1216w&quot;
-              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/8a845613296359c96e6a0688a55c8461/8ff5a/vector-imageview.png 240w,
-/static/8a845613296359c96e6a0688a55c8461/e85cb/vector-imageview.png 480w,
-/static/8a845613296359c96e6a0688a55c8461/d9199/vector-imageview.png 960w,
-/static/8a845613296359c96e6a0688a55c8461/061c7/vector-imageview.png 1216w&quot;
-            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/8a845613296359c96e6a0688a55c8461/d9199/vector-imageview.png&quot;
-            alt=&quot;vector imageview&quot;
-            title=&quot;vector imageview&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;media/lessons-learnt-from-vector-drawables/vector-imageview.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;But let’s look at some other scenarios&lt;/p&gt;
 &lt;h4 id=&quot;textview&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#textview&quot; aria-label=&quot;textview permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TextView&lt;/h4&gt;
 &lt;p&gt;We can also set icon to &lt;code class=&quot;language-text&quot;&gt;TextView&lt;/code&gt; as &lt;code class=&quot;language-text&quot;&gt;drawableStart&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;drawableTop&lt;/code&gt; etc.&lt;/p&gt;
@@ -830,7 +663,7 @@ resources&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
     &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;layout_height&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;wrap_content&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
     &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;drawableStart&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;@drawable/ic_account&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
     &lt;span class=&quot;token attr-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;android:&lt;/span&gt;text&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;Account&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;If you run this code on devices with &lt;strong&gt;API &amp;#x3C;21&lt;/strong&gt;, you’ll face this error. &lt;/p&gt;
+&lt;p&gt;If you run this code on devices with &lt;strong&gt;API &amp;#x3C;21&lt;/strong&gt;, you’ll face this error.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;Caused by: android.view.InflateException: Binary XML &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; line &lt;span class=&quot;token comment&quot;&gt;#11: Error inflating class TextView&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
 Caused by: android.content.res.Resources&lt;span class=&quot;token variable&quot;&gt;$NotFoundException&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt; File res/drawable/ic_account.xml from drawable resource ID &lt;span class=&quot;token comment&quot;&gt;#0x7f060060&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -857,7 +690,7 @@ Caused by: android.content.res.Resources&lt;span class=&quot;token variable&quot
 &lt;p&gt;You can set drawables to &lt;code class=&quot;language-text&quot;&gt;TextView&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;ViewGroup&lt;/code&gt; etc outside of xml also&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;viewGroup&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;background &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; yourDrawable
 textView&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setCompoundDrawables&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;leftDrawable&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; topDrawable&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; rightDrawable&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; bottomDrawable&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now the question is how to load Drawable. &lt;/p&gt;
+&lt;p&gt;Now the question is how to load Drawable.&lt;/p&gt;
 &lt;h3 id=&quot;loading-drawables-outside-xml&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#loading-drawables-outside-xml&quot; aria-label=&quot;loading drawables outside xml permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Loading drawables outside xml&lt;/h3&gt;
 &lt;p&gt;The most common known way of loading drawable is via &lt;code class=&quot;language-text&quot;&gt;ContextCompat&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;ContextCompat&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getDrawable&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; R&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;drawable&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ic_account&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -893,97 +726,11 @@ But let’s say we have a vector which has a &lt;code class=&quot;language-text&
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;Caused by: org.xmlpull.v1.XmlPullParserException: Binary XML &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; line &lt;span class=&quot;token comment&quot;&gt;#13: invalid color state list tag gradient&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This works fine above &lt;strong&gt;API 23&lt;/strong&gt; and even below &lt;strong&gt;API 21&lt;/strong&gt; but fails in between these APIs. Weird, right!&lt;/p&gt;
 &lt;p&gt;Let’s look at what &lt;code class=&quot;language-text&quot;&gt;ContextCompat&lt;/code&gt; does&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/4edb7b4864382e635a7fd16fe9881031/1dbe8/contextcompat-getdrawable.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 19.166666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAxklEQVQY002OS3KDMBAFOU4iKRL6WCCQAAPGTuX+5+kAdsVZdL2ZWbzpqnhJFwxtcJRxpuszU3LcimfMnjJomvjBpWl22iexpWkkuRd0nSS6T6J3WB+orFYsObKUlvX+w7p9s84P1uXOeL3tDwpKCaSUCPFMpdSe4rwrJc/5uB9U6ktTnGAIijLNp+W8PZiuG0M/k1Im5ZHYJvxuYIw5i4WQL8S/FFRaa6aoCVajtaGuLaauqa3bsed+FPlweRXqP9O32dvwF8oPf+BbyfW8AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/4edb7b4864382e635a7fd16fe9881031/8ac56/contextcompat-getdrawable.webp 240w,
-/static/4edb7b4864382e635a7fd16fe9881031/d3be9/contextcompat-getdrawable.webp 480w,
-/static/4edb7b4864382e635a7fd16fe9881031/e46b2/contextcompat-getdrawable.webp 960w,
-/static/4edb7b4864382e635a7fd16fe9881031/04d72/contextcompat-getdrawable.webp 1374w&quot;
-              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/4edb7b4864382e635a7fd16fe9881031/8ff5a/contextcompat-getdrawable.png 240w,
-/static/4edb7b4864382e635a7fd16fe9881031/e85cb/contextcompat-getdrawable.png 480w,
-/static/4edb7b4864382e635a7fd16fe9881031/d9199/contextcompat-getdrawable.png 960w,
-/static/4edb7b4864382e635a7fd16fe9881031/1dbe8/contextcompat-getdrawable.png 1374w&quot;
-            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/4edb7b4864382e635a7fd16fe9881031/d9199/contextcompat-getdrawable.png&quot;
-            alt=&quot;contextcompat getdrawable&quot;
-            title=&quot;contextcompat getdrawable&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;media/lessons-learnt-from-vector-drawables/contextcompat-getdrawable.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Above &lt;strong&gt;API 21&lt;/strong&gt;, it uses &lt;code class=&quot;language-text&quot;&gt;context&lt;/code&gt; to inflate drawables, but there is a catch. Support for &lt;code class=&quot;language-text&quot;&gt;gradient&lt;/code&gt; tag in vectors was introduced in &lt;strong&gt;API 24&lt;/strong&gt; hence resolving drawables via &lt;code class=&quot;language-text&quot;&gt;context&lt;/code&gt; will fail below &lt;strong&gt;API 24&lt;/strong&gt; since framework doesn’t know what &lt;code class=&quot;language-text&quot;&gt;gradient&lt;/code&gt; tag is!&lt;/p&gt;
 &lt;p&gt;Below &lt;strong&gt;API 21&lt;/strong&gt;, it uses &lt;code class=&quot;language-text&quot;&gt;context.getResources&lt;/code&gt; and IIRC, inflation of drawables via &lt;code class=&quot;language-text&quot;&gt;Resources&lt;/code&gt; is intercepted by &lt;code class=&quot;language-text&quot;&gt;AppCompat&lt;/code&gt; and it takes over inflation of drawables.&lt;/p&gt;
 &lt;p&gt;This error can be avoided by using &lt;code class=&quot;language-text&quot;&gt;AppCompatResources&lt;/code&gt; instead of &lt;code class=&quot;language-text&quot;&gt;ContextCompat&lt;/code&gt; which works well on all API levels because it does a lot of checks! 😅 Look for yourself&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/08ded04fad34f4b3fcabebe70d21ad24/6f278/appcompatresources-getdrawable.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 59.166666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABrklEQVQoz31SbZabMBDLaRowYPxtDCQp6e7Ldnv/86gas9sm27z+EGNjRkgaH5zusEaDt9Xh5brh5faOXz9f8X67YvtekFMHazWcD7DOER7eK6SoEIOCZb8PEcMwQCmFQ6vYEBJ8TAgxIqSJa4I1pIJxtOi6nujQ93vtOmnu0TQKLUnatqlkcnboOoUyZaznraJME1JwSFNBTJlIyGVmnSqc9/XH1to/JJ+oCmVhxhGX7RXz6UIbAcuyIOWyk2RRmitRBS3viv6S3JNWwuAMth+3qjAFj7VMNQLJTPKR/ITIGENlDlrrB6L79UHykUClUQIf2VQJPkjk/U4qhHb/ho7+Q6jgjKbF3Zrn2o99/eh4/Mbgj2iORNN84IiWtW3bh2HcDYXTo8J5PWMqCwLVrKcz8jRTWaoqBWI1MAYZ1KdyyVkm/6Cw58PZEWVeOdmZakdE72jL1KykQarWY7UqtuXM2N1+/49lbkY2nC5XYsNcCs7rWq9K5tUR5fO8QNPFbvMeTyyLgmgG5BhQ2CzD0FQifxfI/usQvuJBoUzY9ApGD2yOT5RQBeuzO/cMvwG0/XbJsKu+yAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/08ded04fad34f4b3fcabebe70d21ad24/8ac56/appcompatresources-getdrawable.webp 240w,
-/static/08ded04fad34f4b3fcabebe70d21ad24/d3be9/appcompatresources-getdrawable.webp 480w,
-/static/08ded04fad34f4b3fcabebe70d21ad24/e46b2/appcompatresources-getdrawable.webp 960w,
-/static/08ded04fad34f4b3fcabebe70d21ad24/f992d/appcompatresources-getdrawable.webp 1440w,
-/static/08ded04fad34f4b3fcabebe70d21ad24/a31b7/appcompatresources-getdrawable.webp 1488w&quot;
-              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/08ded04fad34f4b3fcabebe70d21ad24/8ff5a/appcompatresources-getdrawable.png 240w,
-/static/08ded04fad34f4b3fcabebe70d21ad24/e85cb/appcompatresources-getdrawable.png 480w,
-/static/08ded04fad34f4b3fcabebe70d21ad24/d9199/appcompatresources-getdrawable.png 960w,
-/static/08ded04fad34f4b3fcabebe70d21ad24/07a9c/appcompatresources-getdrawable.png 1440w,
-/static/08ded04fad34f4b3fcabebe70d21ad24/6f278/appcompatresources-getdrawable.png 1488w&quot;
-            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/08ded04fad34f4b3fcabebe70d21ad24/d9199/appcompatresources-getdrawable.png&quot;
-            alt=&quot;appcompatresources getdrawable&quot;
-            title=&quot;appcompatresources getdrawable&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;media/lessons-learnt-from-vector-drawables/appcompatresources-getdrawable.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Preferring &lt;code class=&quot;language-text&quot;&gt;AppCompatResources&lt;/code&gt; becomes fairly important if you have a utility class or an extension function to load drawables app wide, since that class won’t be aware of what kind of drawables it’s receiveing.&lt;/p&gt;
 &lt;h3 id=&quot;working-with-custom-views&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#working-with-custom-views&quot; aria-label=&quot;working with custom views permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Working with custom views&lt;/h3&gt;
 &lt;p&gt;If your app has Custom Views in it, it might be possible that you are receveing drawable references through custom attributes. These attributes can then resolve drawables via &lt;code class=&quot;language-text&quot;&gt;TypedArray&lt;/code&gt;&lt;/p&gt;
@@ -1009,90 +756,8 @@ But let’s say we have a vector which has a &lt;code class=&quot;language-text&
 &lt;h3 id=&quot;safeguarding-with-lint&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#safeguarding-with-lint&quot; aria-label=&quot;safeguarding with lint permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Safeguarding with Lint&lt;/h3&gt;
 &lt;p&gt;Android Studio’s lint checks may not be enough if you’re using vectors heavily in your app and often use it outside of &lt;code class=&quot;language-text&quot;&gt;ImageView&lt;/code&gt;. In such cases it might be beneficial to write your own lint rule to prevent runtime issues.&lt;/p&gt;
 &lt;p&gt;Here are two examples which will cause crash at runtime where we are using vector with &lt;code class=&quot;language-text&quot;&gt;android&lt;/code&gt; namespace on API levels below 21.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/003c4bea5e79a52f002a766d1585f9e5/d5bfb/linear-layout-vector.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 20%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAx0lEQVQY03XM3W6CQBRFYR6nDOOUmQ4/lYK10UQwiAK22kBK4vs/wyqS1qSJvfiyTvbFcaxRrBaWVRawWYaE1kd4AjnzkPLHTI6Vt3qe9y9HCIGvNFm8JI0yXtKEaB4QJSFxEmDCR+yznhrMNcqXuA8urnvf9DC0EetFzlu6piiKSZ6P3RYkr/EfT9bg+xqt9a2/jDE4Sina+si56Tg1n/R9zzAMdH3H+7ml/qhoTnv27Y7DsaKqS6qmHO/d1Ot+VR62XC5ffAMdkocd4xMB5AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/003c4bea5e79a52f002a766d1585f9e5/8ac56/linear-layout-vector.webp 240w,
-/static/003c4bea5e79a52f002a766d1585f9e5/d3be9/linear-layout-vector.webp 480w,
-/static/003c4bea5e79a52f002a766d1585f9e5/e46b2/linear-layout-vector.webp 960w,
-/static/003c4bea5e79a52f002a766d1585f9e5/f13ee/linear-layout-vector.webp 1072w&quot;
-              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/003c4bea5e79a52f002a766d1585f9e5/8ff5a/linear-layout-vector.png 240w,
-/static/003c4bea5e79a52f002a766d1585f9e5/e85cb/linear-layout-vector.png 480w,
-/static/003c4bea5e79a52f002a766d1585f9e5/d9199/linear-layout-vector.png 960w,
-/static/003c4bea5e79a52f002a766d1585f9e5/d5bfb/linear-layout-vector.png 1072w&quot;
-            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/003c4bea5e79a52f002a766d1585f9e5/d9199/linear-layout-vector.png&quot;
-            alt=&quot;linear layout vector&quot;
-            title=&quot;linear layout vector&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 818px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/af182ed1a0bcdcb90ee9def1e73d8928/64d87/textview-vector.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 22.499999999999996%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABFElEQVQY003OyXKCUBSEYV4mQVEJKkPiUKIRRCi44kVlCKIL3/8R/iimrCy+6tOrPsp6MWIxNfDdIVNHR+106NypqvrKh26n+9T9869rmvai2OMBX9YIbz5j7nyiDwxM08RxHAzDwLIsbNvmYzhAH/XpDTT6uoY+7Le0Xpf3d/U1rLzdy3ziEn7vCJYx3mpDHMekaUoYhiRJghACL1jj+nOWdzN30qbrPe/HA+bYbMcVd+kiRUaeVhxETppIiqLgfD63WVUVZVkiM0m8DxFZRCS2JDJqexgH+IGHv/Xx1iuUINhQ5TU/p4byWJMfCy6XhtvtxvV6pa5rmqahKHNknnIoJcdKkuV75Clltxftfawy0l3EL09dr/1t36tQAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/af182ed1a0bcdcb90ee9def1e73d8928/8ac56/textview-vector.webp 240w,
-/static/af182ed1a0bcdcb90ee9def1e73d8928/d3be9/textview-vector.webp 480w,
-/static/af182ed1a0bcdcb90ee9def1e73d8928/3a941/textview-vector.webp 818w&quot;
-              sizes=&quot;(max-width: 818px) 100vw, 818px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/af182ed1a0bcdcb90ee9def1e73d8928/8ff5a/textview-vector.png 240w,
-/static/af182ed1a0bcdcb90ee9def1e73d8928/e85cb/textview-vector.png 480w,
-/static/af182ed1a0bcdcb90ee9def1e73d8928/64d87/textview-vector.png 818w&quot;
-            sizes=&quot;(max-width: 818px) 100vw, 818px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/af182ed1a0bcdcb90ee9def1e73d8928/64d87/textview-vector.png&quot;
-            alt=&quot;textview vector&quot;
-            title=&quot;textview vector&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;media/lessons-learnt-from-vector-drawables/linear-layout-vector.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;media/lessons-learnt-from-vector-drawables/textview-vector.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;We can write a custom lint rule which will then give out errors in XML whenever vectors are used without &lt;code class=&quot;language-text&quot;&gt;app&lt;/code&gt; namespace.&lt;/p&gt;
 &lt;details&gt;
 &lt;summary&gt;&lt;u&gt;&lt;code class=&quot;language-kotlin&quot;&gt;VectorUsageDetector&lt;/code&gt;&lt;/u&gt;&lt;/summary&gt;
@@ -1159,92 +824,8 @@ But let’s say we have a vector which has a &lt;code class=&quot;language-text&
 &lt;/p&gt;
 &lt;/details&gt;  
 &lt;p&gt;Here’s how it looks like with lint rule in place.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/f0c6cd047ad94077b691a0c6b1d65a55/e9140/linear-layout-lint-error.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 28.750000000000004%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABEklEQVQY02XO6XKCMBQFYF6nrC5AYtgsJrLogEKgju37v8bpDa3Vmf745pxcyGIVYoMyDZFTep4Lx7WJs3Afucwd2DZ9c5z/aG7/sngYQ2US+zSHSDmYiLFLGbZsjZCvl4zMZYEH++258dXr4Va85SiTCkX6jqZpUFU1qZDJBLyIwej1PI+wiTfwgwDBmqyeVsT3/T8WizgKUSJLckgpUZbU8wR5wZBlDEJE1DkSSvGwC5e1seMhHbpCYC4j1jjP6IcB4zRj0BOuo8ZAXU8fmMgw6CX1gub0z0hMn+Yb9Gz2aZy7DnXbwlL9F1R3h+qNT6gL6W6QxHRJM9NNqvMVVXvCoelpdv/RdDg2J5THGvuDwjeGws2UZVolwgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/f0c6cd047ad94077b691a0c6b1d65a55/8ac56/linear-layout-lint-error.webp 240w,
-/static/f0c6cd047ad94077b691a0c6b1d65a55/d3be9/linear-layout-lint-error.webp 480w,
-/static/f0c6cd047ad94077b691a0c6b1d65a55/e46b2/linear-layout-lint-error.webp 960w,
-/static/f0c6cd047ad94077b691a0c6b1d65a55/ab43a/linear-layout-lint-error.webp 1226w&quot;
-              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/f0c6cd047ad94077b691a0c6b1d65a55/8ff5a/linear-layout-lint-error.png 240w,
-/static/f0c6cd047ad94077b691a0c6b1d65a55/e85cb/linear-layout-lint-error.png 480w,
-/static/f0c6cd047ad94077b691a0c6b1d65a55/d9199/linear-layout-lint-error.png 960w,
-/static/f0c6cd047ad94077b691a0c6b1d65a55/e9140/linear-layout-lint-error.png 1226w&quot;
-            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/f0c6cd047ad94077b691a0c6b1d65a55/d9199/linear-layout-lint-error.png&quot;
-            alt=&quot;linear layout lint error&quot;
-            title=&quot;linear layout lint error&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/4bfacda6be1554f575b9acf9997bbe4d/11a8f/textview-lint-error.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA9UlEQVQY042P207CQBRF+zXWdHoRqG0ZkKZQwNK5tAgmRqORB///D5ZTSIgvJD6snL3PZSfHEyJgmiUs5IRREhOG4RUhxJkwFARB8C+8KIpIJyPqp5ULLamqirK8VFnmpMWYdDohm6UkD4kLjxhubuFdRIx8LJkVC+q6plouWTqKeY6cpxQuUM4z8iJlPIqJ4wjx55OBa6Dv+8iZZN/3KKXoe0vXGWxnsVafvdbtWdtOY6xBae12W9dXGKPRxrDZbqnXa7x7/869tkK//dC8fLI7fjtO7A5OH75oB+24zE6o/oiyHc3+g/bVzfbvzvc8t5pNo/gFq1CqfMFctoQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/4bfacda6be1554f575b9acf9997bbe4d/8ac56/textview-lint-error.webp 240w,
-/static/4bfacda6be1554f575b9acf9997bbe4d/d3be9/textview-lint-error.webp 480w,
-/static/4bfacda6be1554f575b9acf9997bbe4d/e46b2/textview-lint-error.webp 960w,
-/static/4bfacda6be1554f575b9acf9997bbe4d/4cec6/textview-lint-error.webp 1272w&quot;
-              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/4bfacda6be1554f575b9acf9997bbe4d/8ff5a/textview-lint-error.png 240w,
-/static/4bfacda6be1554f575b9acf9997bbe4d/e85cb/textview-lint-error.png 480w,
-/static/4bfacda6be1554f575b9acf9997bbe4d/d9199/textview-lint-error.png 960w,
-/static/4bfacda6be1554f575b9acf9997bbe4d/11a8f/textview-lint-error.png 1272w&quot;
-            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/4bfacda6be1554f575b9acf9997bbe4d/d9199/textview-lint-error.png&quot;
-            alt=&quot;textview lint error&quot;
-            title=&quot;textview lint error&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;media/lessons-learnt-from-vector-drawables/linear-layout-lint-error.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;media/lessons-learnt-from-vector-drawables/textview-lint-error.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Having instrumentation test case which run on devices with API level less than 21 can also help to catch these errors early.&lt;/p&gt;
 &lt;h3 id=&quot;tl-dr&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#tl-dr&quot; aria-label=&quot;tl dr permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TL; DR&lt;/h3&gt;
 &lt;ul&gt;
@@ -1332,49 +913,7 @@ But let’s say we have a vector which has a &lt;code class=&quot;language-text&
     &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; stream&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toByteArray&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;br&gt;
 &lt;p&gt;Generated doc: &lt;strong&gt;ImageExtensions.md&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/22a1a502afaab2936ff2e5e6c71cedf1/78415/image-extensions-doc.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 48.75000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAABaklEQVQoz32S6W7bMBCE/f6v1yJNfOkWLZmHeIg6HGA6YmAXSdz8GAy1AEe733JnrMc4LQhxTn5XiMun72eK8/rwu3Ztr6AGB81gaSx9k2PNolca07piXt+pzW+fLn8NS4FdLXAuG1T0ttUQjUNbW9SlQVUY+oC+N7gIj0vr4X1E+KnDOEaIi0F2lAwYIOqAouixPxTYH0uczjXyUuDEnzSdh+gkdX2EfQvcxk3Mxhme2lj6OPE8JQ/TB9vU1fyP9X8D7wwHFyCuEsZ5aPfBUJGnYX29vWPZGC7rt6CvoTvZkGFeoKw6dGTUVo6jW1TZQH4W3UWj5KhH4VDLAEuG25Km5fZ8KbLTOGU1fr/uURYMf1XID5ZucKKyvcbhTeGcSW49Qg4BV2XSVM87lBYia5Czy19/3tIyXl5yOhdybKHUCKMjFLtTeiSGgI5ornp4HhhCxET4WzEtgnLjSOfzYH0it6R1fZx/Gvkvkf77/n8t8PYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/22a1a502afaab2936ff2e5e6c71cedf1/8ac56/image-extensions-doc.webp 240w,
-/static/22a1a502afaab2936ff2e5e6c71cedf1/d3be9/image-extensions-doc.webp 480w,
-/static/22a1a502afaab2936ff2e5e6c71cedf1/e46b2/image-extensions-doc.webp 960w,
-/static/22a1a502afaab2936ff2e5e6c71cedf1/459db/image-extensions-doc.webp 1207w&quot;
-              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/22a1a502afaab2936ff2e5e6c71cedf1/8ff5a/image-extensions-doc.png 240w,
-/static/22a1a502afaab2936ff2e5e6c71cedf1/e85cb/image-extensions-doc.png 480w,
-/static/22a1a502afaab2936ff2e5e6c71cedf1/d9199/image-extensions-doc.png 960w,
-/static/22a1a502afaab2936ff2e5e6c71cedf1/78415/image-extensions-doc.png 1207w&quot;
-            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/22a1a502afaab2936ff2e5e6c71cedf1/d9199/image-extensions-doc.png&quot;
-            alt=&quot;ImageExtensions.md&quot;
-            title=&quot;ImageExtensions.md&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/parsing-kotlin-files-kotlin/image-extensions-doc.png&quot; alt=&quot;ImageExtensions.md&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;final-words&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#final-words&quot; aria-label=&quot;final words permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Final Words&lt;/h2&gt;
 &lt;p&gt;So we have observed how we can leverage parsing kotlin source code to create solutions around code analysis and auto documentation generation. Let me know in comments if any other use case comes to your mind.&lt;/p&gt;
 &lt;p&gt;Here’s the repository for above example where markdown is auto generated
@@ -1384,10 +923,10 @@ But let’s say we have a vector which has a &lt;code class=&quot;language-text&
 &lt;p&gt;Android Studio 3.1 recently came out of beta. It has a lot of features such as kotlin lint checks, D8 compiler and also a revamped &lt;strong&gt;Network Profiler&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;From early days of DDMS, we could always check how network data was being consumed but the current iteration of profiler has added a whole new set of features. Let’s check them out&lt;/p&gt;
 &lt;p&gt;First of all, network graph looks pretty neat&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/3332/1*MoKlMWet4KS8TXvHKE7jww.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/3332/1*MoKlMWet4KS8TXvHKE7jww.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;request-debugging&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#request-debugging&quot; aria-label=&quot;request debugging permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Request Debugging&lt;/h3&gt;
 &lt;p&gt;Clicking on any request in graph will give you it’s details such as Request type and Response data.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2220/1*1a470GtDWs6bLEXiMDvbdQ.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2220/1*1a470GtDWs6bLEXiMDvbdQ.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;You can also check Request and Response headers&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2000/1*yFFAIJYNDn1qSrHTQA8DNw.png&quot; alt=&quot;Request headers&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2144/1*mmaN_wczgEwG95M96wUE2g.png&quot; alt=&quot;Response headers&quot;&gt;&lt;/p&gt;
@@ -1395,7 +934,7 @@ But let’s say we have a vector which has a &lt;code class=&quot;language-text&
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2104/1*d1bDXSRB1ZhnhRSpy3dVxQ.png&quot; alt=&quot;POST Request&quot;&gt;&lt;/p&gt;
 &lt;p&gt;I have found this to be very &lt;strong&gt;useful&lt;/strong&gt;. In past I have used tools such as &lt;a href=&quot;https://www.charlesproxy.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Charles&lt;/a&gt; to intercept and find request/response related details especially when dealing with third party APIs. This allows us to completely avoid that and check such details directly from Android Studio!&lt;/p&gt;
 &lt;p&gt;Bonus Point — If you are using third party SDKs, you can always check any arbitrary request going from your app and get details such as server url etc. Below is an example request sent from Crashlytics caught by the profiler&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/4836/1*-LRfcrGWNsulHPNnw_EIdA.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/4836/1*-LRfcrGWNsulHPNnw_EIdA.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Always better know such things in advance, than &lt;a href=&quot;https://medium.com/tow-center/the-graph-api-key-points-in-the-facebook-and-cambridge-analytica-debacle-b69fe692d747&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;getting red faced later.&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;and-one-last-thing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#and-one-last-thing&quot; aria-label=&quot;and one last thing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;And one last thing&lt;/h3&gt;
 &lt;p&gt;Profiler can also help you catch radio bursts of high power when you’re on mobile network.&lt;/p&gt;
@@ -1463,8 +1002,12 @@ compileTestKotlin &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2000/1*GGGoF41MuTlrN4zoj_zUaQ.png&quot; alt=&quot;Classes Generated&quot;&gt;&lt;/p&gt;
 &lt;p&gt;We can see three class files generated from Base.kt&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;BaseKt.class — For constant API_KEY variable&lt;/li&gt;
-&lt;li&gt;Helper and Model both of which are seperate classes&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;BaseKt.class — For constant API_KEY variable&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Helper and Model both of which are seperate classes&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Now we can simple call this code in an Activity in a very straightforward way&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; MainActivity &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;AppCompatActivity&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -1518,15 +1061,21 @@ konanArtifacts &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Few things to note&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;konan&lt;/strong&gt; is the plugin for Kotlin Native which allows targeting kotlin code to multiple platforms&lt;/li&gt;
-&lt;li&gt;konan.targets specify for which targets bytecode must be generated. We can also add other platform like &lt;em&gt;raspberry pi&lt;/em&gt; to it.&lt;/li&gt;
-&lt;li&gt;konanArtifacts will specify artifacts to be generated along with their name and src directory if required.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;konan&lt;/strong&gt; is the plugin for Kotlin Native which allows targeting kotlin code to multiple platforms&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;konan.targets specify for which targets bytecode must be generated. We can also add other platform like &lt;em&gt;raspberry pi&lt;/em&gt; to it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;konanArtifacts will specify artifacts to be generated along with their name and src directory if required.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We will run &lt;em&gt;./gradlew build&lt;/em&gt; on this which will produce the following&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/3944/1*nn6AHDhQU7Zvz9FBI4k4sg.png&quot; alt=&quot;Objective C framework created after build&quot;&gt;&lt;/p&gt;
 &lt;p&gt;We now have a file named &lt;strong&gt;Base.framework&lt;/strong&gt; which is an &lt;strong&gt;iOS framework&lt;/strong&gt; file and can be directly imported to Xcode. Let’s do that!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2000/1*yqpst-IZIxBYesSVAm57IA.png&quot; alt=&quot;Link framework file to a project&quot;&gt;&lt;/p&gt;
-&lt;p&gt;We have received something called &lt;strong&gt;Base.h **from the framework which contains code converted from **Base.kt&lt;/strong&gt; .&lt;/p&gt;
+&lt;p&gt;We have received something called **Base.h **from the framework which contains code converted from &lt;strong&gt;Base.kt&lt;/strong&gt; .&lt;/p&gt;
 &lt;p&gt;Header files are a little complex to read but Xcode provides Swift conversion of such files for better understanding. Here is an excerpt of what is present in header file&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;swift&quot;&gt;&lt;pre class=&quot;language-swift&quot;&gt;&lt;code class=&quot;language-swift&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Foundation&lt;/span&gt;
 
@@ -1562,13 +1111,27 @@ konanArtifacts &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
    &lt;span class=&quot;token keyword&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;token function-definition function&quot;&gt;API_KEY&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;By default a class named **KotlinBase **is created which extends NSObject and also implements NSCopying and all other classes extend this class.&lt;/li&gt;
-&lt;li&gt;All classes have prefix “Base” which is the name we provided in build.gradle while creating the iOS framework&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Int&lt;/strong&gt; from Kotlin is converted to &lt;strong&gt;Int32&lt;/strong&gt; in Swift not &lt;em&gt;Int(Swift).&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Kotlin’s List&lt;T&gt; is converted to a Swift Array.&lt;/li&gt;
-&lt;li&gt;Companion object is converted to a separate class with an init() method.&lt;/li&gt;
-&lt;li&gt;Module level constant API_KEY is converted to an function within a class.&lt;/li&gt;
-&lt;li&gt;**BaseModel **which is derived from a data class has a function *doCopy *similar to copy() of data class. But default initialization or copy is not possible as all arguments must be specified while initializing or copying.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;By default a class named **KotlinBase **is created which extends NSObject and also implements NSCopying and all other classes extend this class.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;All classes have prefix “Base” which is the name we provided in build.gradle while creating the iOS framework&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Int&lt;/strong&gt; from Kotlin is converted to &lt;strong&gt;Int32&lt;/strong&gt; in Swift not &lt;em&gt;Int(Swift).&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Kotlin’s List&lt;T&gt; is converted to a Swift Array.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Companion object is converted to a separate class with an init() method.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Module level constant API_KEY is converted to an function within a class.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;**BaseModel **which is derived from a data class has a function *doCopy *similar to copy() of data class. But default initialization or copy is not possible as all arguments must be specified while initializing or copying.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Now let’s try to call these functions from a Swift file&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;swift&quot;&gt;&lt;pre class=&quot;language-swift&quot;&gt;&lt;code class=&quot;language-swift&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ViewController&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;UIViewController&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -1593,11 +1156,11 @@ konanArtifacts &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
        &lt;span class=&quot;token class-name&quot;&gt;NSLog&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;helperId&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2000/1*MdYOXbj0Mpias_biYP2xDw.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2000/1*MdYOXbj0Mpias_biYP2xDw.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;So we took a piece of raw Kotlin code and ran it on multiple platforms without actually changing anything on the platform side code. Although above code may not be useful for production level applications, but in future as Kotlin Native and Kotlin Mutliplatform gets mature, we should be able to move more logic towards a common project.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/Kotlin/kotlinx.serialization&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Kotlinx Serialization&lt;/a&gt; is a library built on this concept and supports JVM/JS for now with native support coming soon. With this we should be able to serialize/deserialize data classes to JSON on all platforms with single lib.&lt;/p&gt;
 &lt;p&gt;Full code here:
-&lt;a href=&quot;https://github.com/jitinsharma/kotlin_multi_target&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;&lt;strong&gt;https://github.com/jitinsharma/kotlin&lt;em&gt;multi&lt;/em&gt;target&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;https://github.com/jitinsharma/kotlin_multi_target&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;&lt;strong&gt;https://github.com/jitinsharma/kotlin_multi_target&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Thanks for reading!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Kotlin Serialization Library]]></title><description><![CDATA[Kotlin has recently released a library for serialization. To put things in perspective, before this there was no serialization lib provided by kotlin but you could use any platform supported serialization libraries with Kotlin classes(eg. Gson for JVM/Android).]]></description><link>https://jitinsharma.com/posts/kotlin-serialization-librabry/</link><guid isPermaLink="false">https://jitinsharma.com/posts/kotlin-serialization-librabry/</guid><pubDate>Thu, 25 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;Ported from &lt;strong&gt;Medium&lt;/strong&gt;, original source &lt;a href=&quot;https://android.jlelse.eu/kotlin-serialization-library-38bf85d8768b&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1636,7 +1199,7 @@ konanArtifacts &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;// Destination(name=Paris, country=France, code=10)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;In above example, json string doesn’t have quotes. We can parse such json with &lt;code class=&quot;language-text&quot;&gt;JSON.unquoted&lt;/code&gt;. This can be helpful during debugging.&lt;/p&gt;
 &lt;p&gt;Here’s a definition of all such properties available&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/3492/1*rVs5EHVIHD7OkRImEhkucA.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/3492/1*rVs5EHVIHD7OkRImEhkucA.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;additional-properties&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#additional-properties&quot; aria-label=&quot;additional properties permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Additional Properties&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;Often our data objects have properties which could be optional. For example, there could be extra properties which we initialize on client side which server may not provide while fetching the json. Similarly there may be properties which may or may not be present in json. Fortunately the lib handles both cases.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token annotation builtin&quot;&gt;@Optional&lt;/span&gt;
@@ -1666,7 +1229,7 @@ barcelona &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; JSON&lt;sp
 isMetro&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;favorite&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&quot;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;// This will break as &quot;favorite&quot; is not recognised by serializer&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;blockquote&gt;
-&lt;p&gt; If you’re not sure about consistency of values in json, using JSON.nonstrict might be a good idea to avoid exceptions&lt;/p&gt;
+&lt;p&gt;If you’re not sure about consistency of values in json, using JSON.nonstrict might be a good idea to avoid exceptions&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;class-variables-can-have-different-names-than-the-name-of-key-in-json-just-annotate-using-serialname&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#class-variables-can-have-different-names-than-the-name-of-key-in-json-just-annotate-using-serialname&quot; aria-label=&quot;class variables can have different names than the name of key in json just annotate using serialname permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Class variables can have different names than the name of key in json. Just annotate using @SerialName&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token annotation builtin&quot;&gt;@SerialName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;d_country&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
@@ -1775,7 +1338,7 @@ withNetwork &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Again, this makes code more readable and looks nice :)&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt; But one should consider the logic which should be transformed into function block. The above code block only has if condition which works fine but if there needs to be an else section, we may wanna avoid function blocks. This is valid for &lt;code class=&quot;language-text&quot;&gt;withConnection {}&lt;/code&gt; where an else case may be required to show some message for network connectivity.&lt;/p&gt;
+&lt;p&gt;But one should consider the logic which should be transformed into function block. The above code block only has if condition which works fine but if there needs to be an else section, we may wanna avoid function blocks. This is valid for &lt;code class=&quot;language-text&quot;&gt;withConnection {}&lt;/code&gt; where an else case may be required to show some message for network connectivity.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Moving on to more cool stuff&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;T&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;asyncRxExecutor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;heavyFunction&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; T&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; response &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; T&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; Unit&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -1793,7 +1356,7 @@ observable&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span
     &lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;So basically we took an arbitrary function which was already written or may be written in future , did it’s execution asynchronously and returned a result.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2000/1*A2gir0uUVzdlgiEkPUoyvQ.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2000/1*A2gir0uUVzdlgiEkPUoyvQ.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;We could use different mechanism for async execution like Kotlin Coroutines&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;T&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;asyncCoroutinesExecutor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;heavyFunction&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; T&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; response &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; T&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; Unit&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;token function&quot;&gt;async&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;UI&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -1823,7 +1386,7 @@ observable&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span
     &lt;span class=&quot;token function&quot;&gt;myAnotherHeavyFunction&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;blockquote&gt;
-&lt;p&gt; thread {} is provided by Kotlin itself for running code in a thread.&lt;/p&gt;
+&lt;p&gt;thread {} is provided by Kotlin itself for running code in a thread.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;This is just the tip of the iceberg of what we can do with higher order functions!
 I’m maintaining a repo where I add utilities like this. Have a look&lt;/p&gt;
