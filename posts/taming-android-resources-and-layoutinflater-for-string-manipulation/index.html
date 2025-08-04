@@ -96,7 +96,54 @@
 <div class="gatsby-highlight" data-language="kotlin"><pre class="language-kotlin"><code class="language-kotlin">context<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>string<span class="token punctuation">.</span>hello_world<span class="token punctuation">)</span> <span class="token comment">//kotlin</span></code></pre></div>
 <p><code class="language-text">R.string.hello_world</code> is a constant integer which is created by <code class="language-text">aapt</code> and added to <code class="language-text">R.java</code> along with other constants.
 Once an <code class="language-text">apk</code> is generated strings are packaged in <code class="language-text">resources.arsc</code> along with other xml data. Here’s a image of our packaged string along with it’s generated id.</p>
-<p><img src="media/taming-android-resources-and-layoutinflater-for-string-manipulation/resource-arsc-preview.png" alt=""></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/6f9695f7c9e70b93ef45bce488a17261/9c2d2/resource-arsc-preview.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 10%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAXklEQVR42o3FQQtAMAAG0P0tTlzGmk22aTIkN5yJUn76R8uBm8PrESYNuHLIdANhOrDCeVRYyLJDlKh/Uo34ngg7Qg0nsmZF3h9I6t2j1QLZbgj5jMCbnt+mzyEfcQFU203eY8e0+AAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/6f9695f7c9e70b93ef45bce488a17261/8ac56/resource-arsc-preview.webp 240w,
+/static/6f9695f7c9e70b93ef45bce488a17261/d3be9/resource-arsc-preview.webp 480w,
+/static/6f9695f7c9e70b93ef45bce488a17261/e46b2/resource-arsc-preview.webp 960w,
+/static/6f9695f7c9e70b93ef45bce488a17261/f992d/resource-arsc-preview.webp 1440w,
+/static/6f9695f7c9e70b93ef45bce488a17261/882b9/resource-arsc-preview.webp 1920w,
+/static/6f9695f7c9e70b93ef45bce488a17261/3b8fd/resource-arsc-preview.webp 2226w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/6f9695f7c9e70b93ef45bce488a17261/8ff5a/resource-arsc-preview.png 240w,
+/static/6f9695f7c9e70b93ef45bce488a17261/e85cb/resource-arsc-preview.png 480w,
+/static/6f9695f7c9e70b93ef45bce488a17261/d9199/resource-arsc-preview.png 960w,
+/static/6f9695f7c9e70b93ef45bce488a17261/07a9c/resource-arsc-preview.png 1440w,
+/static/6f9695f7c9e70b93ef45bce488a17261/29114/resource-arsc-preview.png 1920w,
+/static/6f9695f7c9e70b93ef45bce488a17261/9c2d2/resource-arsc-preview.png 2226w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/6f9695f7c9e70b93ef45bce488a17261/d9199/resource-arsc-preview.png"
+            alt="resource arsc preview"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <p>The id here <code class="language-text">0x7f100027</code> represents the integer value of <code class="language-text">R.string.hello_world</code>.
 Any layout file referencing this string value using <code class="language-text">@string</code> is also re-written with same id.</p>
 <p>-> <code class="language-text">activity_main.xml</code> packaged in apk</p>

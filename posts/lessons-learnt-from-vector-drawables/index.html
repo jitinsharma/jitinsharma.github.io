@@ -78,13 +78,101 @@
 
             setTheme(cachedMode || (darkQuery.matches ? "dark" : "light"));
           }()
-        </script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout-module--layout--e08e0"><div class="post-module--post--cd62a"><div class="post-module--buttons--26059"><a class="button-module--button--5ffa9 post-module--buttonArticles--8a265" href="/">All Articles</a></div><div class="post-module--content--49372"><div class="post-content-module--postContent--5129c"><h1 class="post-content-module--title--b7e5d">Lessons learnt from Vector Drawables</h1><div class="post-content-module--body--3be78"><p><img src="media/lessons-learnt-from-vector-drawables/vector-header.png" alt=""></p>
+        </script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout-module--layout--e08e0"><div class="post-module--post--cd62a"><div class="post-module--buttons--26059"><a class="button-module--button--5ffa9 post-module--buttonArticles--8a265" href="/">All Articles</a></div><div class="post-module--content--49372"><div class="post-content-module--postContent--5129c"><h1 class="post-content-module--title--b7e5d">Lessons learnt from Vector Drawables</h1><div class="post-content-module--body--3be78"><p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/90a2c0f682fb9cd20b5379bf19928b6c/c8551/vector-header.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 8.75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAXElEQVR42lWMQQoAIQwD/f+z/IUHz4KXoqKiqFlSUNi5tGnDGO891logYwyICC4pJcQYX+69a+dirUUpRfdzDmqtMDln7L31SDElfJIQApxzP+Gc82XKb5eztYYPGQSbqh6DLs4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/90a2c0f682fb9cd20b5379bf19928b6c/8ac56/vector-header.webp 240w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/d3be9/vector-header.webp 480w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/e46b2/vector-header.webp 960w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/f992d/vector-header.webp 1440w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/882b9/vector-header.webp 1920w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/38df0/vector-header.webp 2814w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/90a2c0f682fb9cd20b5379bf19928b6c/8ff5a/vector-header.png 240w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/e85cb/vector-header.png 480w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/d9199/vector-header.png 960w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/07a9c/vector-header.png 1440w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/29114/vector-header.png 1920w,
+/static/90a2c0f682fb9cd20b5379bf19928b6c/c8551/vector-header.png 2814w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/90a2c0f682fb9cd20b5379bf19928b6c/d9199/vector-header.png"
+            alt="vector header"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <p>Dialing back to days of Android 5.0 release(s) one of the things which got a lot of people excited was Android got support for SVGs in form of vector Drawables. No longer you were required to draw custom shapes or have icon png(s) based on density, just import SVGs using Android Studio and let the support library draw them for you!</p>
 <p>This article is more or less a list of lessons which I’ve learnt while working with vectors and how to make sure to use vectors safely avoiding crashes on devices with API level less than 21.</p>
 <h2 id="without-support-library" style="position:relative;"><a href="#without-support-library" aria-label="without support library permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Without Support Library</h2>
 <p>By default, if you don’t enable support library use all vector drawables are converted to pngs in their density folders. While this means you’ll never face an rendering issue since pngs are supported in all versions of Android, this will definitely increased size of your app by a lot if you heavily depend on vectors.</p>
 <p>Here’s how a vector xml file in transformed into multiple pngs during build cycle</p>
-<p><img src="media/lessons-learnt-from-vector-drawables/vector-png.png" alt=""></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 562px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ad9a0eeae5df49192070d7adbb59071c/6e88f/vector-png.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75.83333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAABvklEQVR42pWTXXOaQBSG/TdtOr1tmpuKgiAg+wXsAoLyoWbS6cf/v3t72KSJqWNKLt5xOO4+PGc5O1NKII6WqNMAJxOhMAKC+WCxi03o2CThAozWjEmuhMVLROsFZkpJWjiHZCuc8hV+NhynQ42uyVDpBNuCw6QhRLyA2CyvRiZL++KZlJyADhgVC+njh/awrRTaOkW/N2gqiR09bw2zcMW8t4GjIScgp6IWPn4VAbqSQYrgsU5m/MlOJu7/DT3vZRGjjRn38UCtP7QaJbWc0ksySkp1MQ34+g9Omxrl43cVoh9qalvb1sfkcv1sO8nwb1Lm4rv2cU+WQ1daWJHHdtO7Wn6Mi5yAA41Qu9PWsK0zsguu2r0J5ATUBOyLGB3Z3Q9bO0ImjaaNjfvvGY5A7qEnw/3OoNvl2NMI5Wo9DbhaeRdAw10cyxgD2R37EgcyLbJ4WstCMDtv58DxDFtNhk1uB7ylX63CdwBj5+IMD8WGvnCFI9mdhsrelEnAJKFxGAvPoZbpenUmPDPMCJjY+/x67UsUAdkIdFYhPt7OcfPVecoCn+8cOEGEQJUIpaEUmIccH758O1t3mU+3c/wBeR80tpPa1NUAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/ad9a0eeae5df49192070d7adbb59071c/8ac56/vector-png.webp 240w,
+/static/ad9a0eeae5df49192070d7adbb59071c/d3be9/vector-png.webp 480w,
+/static/ad9a0eeae5df49192070d7adbb59071c/49232/vector-png.webp 562w"
+              sizes="(max-width: 562px) 100vw, 562px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/ad9a0eeae5df49192070d7adbb59071c/8ff5a/vector-png.png 240w,
+/static/ad9a0eeae5df49192070d7adbb59071c/e85cb/vector-png.png 480w,
+/static/ad9a0eeae5df49192070d7adbb59071c/6e88f/vector-png.png 562w"
+            sizes="(max-width: 562px) 100vw, 562px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/ad9a0eeae5df49192070d7adbb59071c/6e88f/vector-png.png"
+            alt="vector png"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <p>This rasterization into pngs modifies after build size of one vector(in this case) from 2kb to 7kb which is more than <strong>3x</strong> size increase.</p>
 <p>Ideally this approach should be avoided if your app has a lot of vectors. Let’s look into next section on how to work with Support Library.</p>
 <h2 id="with-support-library" style="position:relative;"><a href="#with-support-library" aria-label="with support library permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>With Support Library</h2>
@@ -107,7 +195,50 @@
 <h3 id="using-vector-drawables-in-framework-components" style="position:relative;"><a href="#using-vector-drawables-in-framework-components" aria-label="using vector drawables in framework components permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using vector drawables in Framework Components</h3>
 <p>A very straightforward way of using vectors is <code class="language-text">ImageView</code> which can be used for icons/shapes etc.</p>
 <p>Since vectors are not supported natively, they always should be used with <code class="language-text">app</code> namespace. Android Studio does a good job to let you know the same for <code class="language-text">ImageView</code></p>
-<p><img src="media/lessons-learnt-from-vector-drawables/vector-imageview.png" alt=""></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8a845613296359c96e6a0688a55c8461/061c7/vector-imageview.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 25.416666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABD0lEQVR42lWQ7W6CQBREeRwrsAuyfIoIS0UKtTaxFbDv/xynV5um6Y+TzM69mZ1dZ7dv+CVJc4wxlKmmKQ0vbc6+SAhNyCbZEGUR4SZAaYXWGh3oh1bqD+ceVFY/5EVJZGI2ocL3fWzRYbcdx6GnPx0ZzyP22JDuDNkupqjlsijA93zZVw+cfW2pbftoWDU/2vM8Ah1QpaWE1lTFlixPyLYJaRETpxFxHmGksQokTHnS1JNgF2d4PTHNNz6F67yIXphvX0zLHfGnWbyZj+sk50V2Zpnf/YnT+V2KVKjQJ5RXBRLs2G7k8DYLC8/jha4fsJ0wXLDjlUbmbddTt4f/2ANN28mfJzytVrhrl/Xa5Rtxy6ykvK3cMgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/8a845613296359c96e6a0688a55c8461/8ac56/vector-imageview.webp 240w,
+/static/8a845613296359c96e6a0688a55c8461/d3be9/vector-imageview.webp 480w,
+/static/8a845613296359c96e6a0688a55c8461/e46b2/vector-imageview.webp 960w,
+/static/8a845613296359c96e6a0688a55c8461/77293/vector-imageview.webp 1216w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/8a845613296359c96e6a0688a55c8461/8ff5a/vector-imageview.png 240w,
+/static/8a845613296359c96e6a0688a55c8461/e85cb/vector-imageview.png 480w,
+/static/8a845613296359c96e6a0688a55c8461/d9199/vector-imageview.png 960w,
+/static/8a845613296359c96e6a0688a55c8461/061c7/vector-imageview.png 1216w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/8a845613296359c96e6a0688a55c8461/d9199/vector-imageview.png"
+            alt="vector imageview"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <p>But let’s look at some other scenarios</p>
 <h4 id="textview" style="position:relative;"><a href="#textview" aria-label="textview permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TextView</h4>
 <p>We can also set icon to <code class="language-text">TextView</code> as <code class="language-text">drawableStart</code>, <code class="language-text">drawableTop</code> etc.</p>
@@ -179,11 +310,99 @@ But let’s say we have a vector which has a <code class="language-text">gradien
 <div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">Caused by: org.xmlpull.v1.XmlPullParserException: Binary XML <span class="token function">file</span> line <span class="token comment">#13: invalid color state list tag gradient</span></code></pre></div>
 <p>This works fine above <strong>API 23</strong> and even below <strong>API 21</strong> but fails in between these APIs. Weird, right!</p>
 <p>Let’s look at what <code class="language-text">ContextCompat</code> does</p>
-<p><img src="media/lessons-learnt-from-vector-drawables/contextcompat-getdrawable.png" alt=""></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4edb7b4864382e635a7fd16fe9881031/1dbe8/contextcompat-getdrawable.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 19.166666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAwklEQVR42l2O226DMBAF+Z1gB9d3bnZNgCRt//97piZCUdWH0c5qpbOnyU4yes3gLamsTHOiDJZ7dpTZkbIihgshRHzsCTFW74lRMk+CcRQE2+KdwVhHozvJOge21LM9f9gf3+zrF9v2pNzu9UFGSokQkra91CnO/Zgn1cVJc70qUv2QnSB9Li+W/UFZdtJ0YxhmxlSIw4jzAaVUDW7fAf9puq4jB4U3isONsWh91Ld8GI3S+uXWuYqvN302k++Qv/4LCeuASwalfrAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/4edb7b4864382e635a7fd16fe9881031/8ac56/contextcompat-getdrawable.webp 240w,
+/static/4edb7b4864382e635a7fd16fe9881031/d3be9/contextcompat-getdrawable.webp 480w,
+/static/4edb7b4864382e635a7fd16fe9881031/e46b2/contextcompat-getdrawable.webp 960w,
+/static/4edb7b4864382e635a7fd16fe9881031/04d72/contextcompat-getdrawable.webp 1374w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/4edb7b4864382e635a7fd16fe9881031/8ff5a/contextcompat-getdrawable.png 240w,
+/static/4edb7b4864382e635a7fd16fe9881031/e85cb/contextcompat-getdrawable.png 480w,
+/static/4edb7b4864382e635a7fd16fe9881031/d9199/contextcompat-getdrawable.png 960w,
+/static/4edb7b4864382e635a7fd16fe9881031/1dbe8/contextcompat-getdrawable.png 1374w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/4edb7b4864382e635a7fd16fe9881031/d9199/contextcompat-getdrawable.png"
+            alt="contextcompat getdrawable"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <p>Above <strong>API 21</strong>, it uses <code class="language-text">context</code> to inflate drawables, but there is a catch. Support for <code class="language-text">gradient</code> tag in vectors was introduced in <strong>API 24</strong> hence resolving drawables via <code class="language-text">context</code> will fail below <strong>API 24</strong> since framework doesn’t know what <code class="language-text">gradient</code> tag is!</p>
 <p>Below <strong>API 21</strong>, it uses <code class="language-text">context.getResources</code> and IIRC, inflation of drawables via <code class="language-text">Resources</code> is intercepted by <code class="language-text">AppCompat</code> and it takes over inflation of drawables.</p>
 <p>This error can be avoided by using <code class="language-text">AppCompatResources</code> instead of <code class="language-text">ContextCompat</code> which works well on all API levels because it does a lot of checks! 😅 Look for yourself</p>
-<p><img src="media/lessons-learnt-from-vector-drawables/appcompatresources-getdrawable.png" alt=""></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/08ded04fad34f4b3fcabebe70d21ad24/6f278/appcompatresources-getdrawable.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 59.166666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABsElEQVR42n1T2babMAzM3ySY1eAVCEkO6W2bPrT//zPTkQhdbnP7MMhgW5rRiEPsKiyhxWO2uK8rPn154Me3O74/VtyuAWM28N7ChwTnA2NADCWmsUSKJRzvx5RR1zXKssTBlBV6HxEjwcNpnOEzkWY4JmkaC2NKwugFicZUKIpyg5FYwHBPE9ZVhcwKeVowzhdE7+GHAYHfHAuEEJWBZxT03PMsbq1lgq3InzhUVYmem+vbV0znK3IMmKcZMU8IMWsyiYNzcM5jYMKd7SuQIfvQW9zWz8oy+QFjihjYL2t7JvJk5WD7AV3X6be9Xy8TVpTctA0SGellXpTGiwHOUXIUM6K+i0yJbdt+yFIZ9l2jB4XJ0NWwdaUXTscjTqeTohAUsj5uJphC4z8J5dE0Dc7LTVkGsjsvF2W2Se03UKq870y1OBXULP6OIceGvcnTma7SRdvBu989k2Jt2+m6eyaVAr0YREjL/u4hH3L4cruT2RVTTnR5pLujjkweJ6SU1Ihd6i73pWSp4GzNWUycw+WXq7sRIv2jmXttCisPjaHs9vln1E8DCjVB8L+5e5/wJ6F8eI+b04unAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/08ded04fad34f4b3fcabebe70d21ad24/8ac56/appcompatresources-getdrawable.webp 240w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/d3be9/appcompatresources-getdrawable.webp 480w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/e46b2/appcompatresources-getdrawable.webp 960w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/f992d/appcompatresources-getdrawable.webp 1440w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/a31b7/appcompatresources-getdrawable.webp 1488w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/08ded04fad34f4b3fcabebe70d21ad24/8ff5a/appcompatresources-getdrawable.png 240w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/e85cb/appcompatresources-getdrawable.png 480w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/d9199/appcompatresources-getdrawable.png 960w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/07a9c/appcompatresources-getdrawable.png 1440w,
+/static/08ded04fad34f4b3fcabebe70d21ad24/6f278/appcompatresources-getdrawable.png 1488w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/08ded04fad34f4b3fcabebe70d21ad24/d9199/appcompatresources-getdrawable.png"
+            alt="appcompatresources getdrawable"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <p>Preferring <code class="language-text">AppCompatResources</code> becomes fairly important if you have a utility class or an extension function to load drawables app wide, since that class won’t be aware of what kind of drawables it’s receiveing.</p>
 <h3 id="working-with-custom-views" style="position:relative;"><a href="#working-with-custom-views" aria-label="working with custom views permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Working with custom views</h3>
 <p>If your app has Custom Views in it, it might be possible that you are receveing drawable references through custom attributes. These attributes can then resolve drawables via <code class="language-text">TypedArray</code></p>
@@ -209,8 +428,92 @@ But let’s say we have a vector which has a <code class="language-text">gradien
 <h3 id="safeguarding-with-lint" style="position:relative;"><a href="#safeguarding-with-lint" aria-label="safeguarding with lint permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Safeguarding with Lint</h3>
 <p>Android Studio’s lint checks may not be enough if you’re using vectors heavily in your app and often use it outside of <code class="language-text">ImageView</code>. In such cases it might be beneficial to write your own lint rule to prevent runtime issues.</p>
 <p>Here are two examples which will cause crash at runtime where we are using vector with <code class="language-text">android</code> namespace on API levels below 21.</p>
-<p><img src="media/lessons-learnt-from-vector-drawables/linear-layout-vector.png" alt=""></p>
-<p><img src="media/lessons-learnt-from-vector-drawables/textview-vector.png" alt=""></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/003c4bea5e79a52f002a766d1585f9e5/d5bfb/linear-layout-vector.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 20%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAxklEQVR42nXOS06EQBRGYZYj74YqupDmkTZtNKEI0BSKQtj/Lo4oONPBl/OPbq6ViIBbKXmuFK/XlESecH0XP/AO/s7ft7fVdd1/WY7jEAUxlbqSq5KiyFGXhMdckeZnYhUi0wihTsgswg897Acb2/6b9X01U5ftu5pb9ULTNOhao3VDrWuKp4xyUxySRCKEQEhBLOJ9H5VSYoVhiLmPfJiZyXyyLAvrujLPM+NkGKae4b2nNy33saMb2n2/dT/tzW9blnniC4hIh84PzRt7AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/003c4bea5e79a52f002a766d1585f9e5/8ac56/linear-layout-vector.webp 240w,
+/static/003c4bea5e79a52f002a766d1585f9e5/d3be9/linear-layout-vector.webp 480w,
+/static/003c4bea5e79a52f002a766d1585f9e5/e46b2/linear-layout-vector.webp 960w,
+/static/003c4bea5e79a52f002a766d1585f9e5/f13ee/linear-layout-vector.webp 1072w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/003c4bea5e79a52f002a766d1585f9e5/8ff5a/linear-layout-vector.png 240w,
+/static/003c4bea5e79a52f002a766d1585f9e5/e85cb/linear-layout-vector.png 480w,
+/static/003c4bea5e79a52f002a766d1585f9e5/d9199/linear-layout-vector.png 960w,
+/static/003c4bea5e79a52f002a766d1585f9e5/d5bfb/linear-layout-vector.png 1072w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/003c4bea5e79a52f002a766d1585f9e5/d9199/linear-layout-vector.png"
+            alt="linear layout vector"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 818px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/af182ed1a0bcdcb90ee9def1e73d8928/64d87/textview-vector.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 22.499999999999996%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABC0lEQVR42m3OSW6DQBCFYU5jBg8ET5DEDvFIg8F0N4OEZSzf/xJ/OngVKYtPr14tSmUluyW7bUB6mPOxnmE7Dq7r4AzpDvmavX953l/Wcj7hfbnguNnyuYrwZ2+s1yuiKCIIAsIwHMzmU/zFhPHUY+qPTZ/gG67nMhrZ2PaLZTsu+/hMftJkxyvJSSClRGtNnucopUxXnNMThzRmn3wT77ccxO8c87XbmAfWgzCMsJLkTCNbOt3TyhuVqrnf7zyfT263G33fD72qNWVzMXIKlSHrnNLICoHIkkEqTlhCCGrV0KqOqmzRqjKHOh6PB13X0bbtkEorCp0jqwLZFFyVOSwvZHlKaXZXoywEPw0Hr8rYIXyEAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/af182ed1a0bcdcb90ee9def1e73d8928/8ac56/textview-vector.webp 240w,
+/static/af182ed1a0bcdcb90ee9def1e73d8928/d3be9/textview-vector.webp 480w,
+/static/af182ed1a0bcdcb90ee9def1e73d8928/3a941/textview-vector.webp 818w"
+              sizes="(max-width: 818px) 100vw, 818px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/af182ed1a0bcdcb90ee9def1e73d8928/8ff5a/textview-vector.png 240w,
+/static/af182ed1a0bcdcb90ee9def1e73d8928/e85cb/textview-vector.png 480w,
+/static/af182ed1a0bcdcb90ee9def1e73d8928/64d87/textview-vector.png 818w"
+            sizes="(max-width: 818px) 100vw, 818px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/af182ed1a0bcdcb90ee9def1e73d8928/64d87/textview-vector.png"
+            alt="textview vector"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <p>We can write a custom lint rule which will then give out errors in XML whenever vectors are used without <code class="language-text">app</code> namespace.</p>
 <details>
 <summary><u><code class="language-kotlin">VectorUsageDetector</code></u></summary>
@@ -277,8 +580,94 @@ But let’s say we have a vector which has a <code class="language-text">gradien
 </p>
 </details>  
 <p>Here’s how it looks like with lint rule in place.</p>
-<p><img src="media/lessons-learnt-from-vector-drawables/linear-layout-lint-error.png" alt=""></p>
-<p><img src="media/lessons-learnt-from-vector-drawables/textview-lint-error.png" alt=""></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f0c6cd047ad94077b691a0c6b1d65a55/e9140/linear-layout-lint-error.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 28.750000000000004%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABGElEQVR42oWRUY6DMAxEOU8hUOhCEwKhBCgstCtVEEJ7/3vMGlhV/duPpxk7sh0nTilPqFUClZ7AGIPH3DeMeaQemE/quXDd/3FEzNFkNYpMIc0FuDxDZBxfPEIsol1pmO8zuIeP4sMHnw15LFHJDhel0fc9uvYb7bWFaiREkeCcxeC0QZRECMIAx/D4Jlj1GNAw/40jkhSXVEPRDZumhtYlciVRFBwqP0OmCXmxaSYTyJU0Ri7XmLbhMTUNCRoQBHDM8sRjmjDZJ8bZbqx+ti/MywujsbunnLELDJ1vkLfLnh+Nwc/jgapp4FT3BXowxAx9m1ERepig+2nz5fAXDxZVd0fddijb217TG5TXHhU9UVlf6Q8UfgFW0M2/Pm2a1wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/f0c6cd047ad94077b691a0c6b1d65a55/8ac56/linear-layout-lint-error.webp 240w,
+/static/f0c6cd047ad94077b691a0c6b1d65a55/d3be9/linear-layout-lint-error.webp 480w,
+/static/f0c6cd047ad94077b691a0c6b1d65a55/e46b2/linear-layout-lint-error.webp 960w,
+/static/f0c6cd047ad94077b691a0c6b1d65a55/ab43a/linear-layout-lint-error.webp 1226w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/f0c6cd047ad94077b691a0c6b1d65a55/8ff5a/linear-layout-lint-error.png 240w,
+/static/f0c6cd047ad94077b691a0c6b1d65a55/e85cb/linear-layout-lint-error.png 480w,
+/static/f0c6cd047ad94077b691a0c6b1d65a55/d9199/linear-layout-lint-error.png 960w,
+/static/f0c6cd047ad94077b691a0c6b1d65a55/e9140/linear-layout-lint-error.png 1226w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/f0c6cd047ad94077b691a0c6b1d65a55/d9199/linear-layout-lint-error.png"
+            alt="linear layout lint error"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4bfacda6be1554f575b9acf9997bbe4d/11a8f/textview-lint-error.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 25%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA7klEQVR42n2N606EMBCFeRsRKBdhV5CiDdDtyhJLuUSDie//FsdpSfxhjD++zJw5M2e8KApRlylafsJDloCxGHF8YD0HixCGIYIgcPU/PHtY5Bm6psNLLdC2LYQQ6LoWtShxqnJHSQ/TLKVw9vPwLzzmFhLwswAvn9HL3oVaKv6IuilQPeWo+RllVdDzBEkSw979xgX6vg/eNFi3DXqaMC8LzDLDzAfrutBcwxhD3jHT1NvdiarVEzGMI6RS8O79O1SNwHX+gnx7h5p2XM0nlP7AhbD9MB9a6h3qpqGGG/pxI3+HHFfSI3r1CtFJfAOW16q9h3RdtwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/4bfacda6be1554f575b9acf9997bbe4d/8ac56/textview-lint-error.webp 240w,
+/static/4bfacda6be1554f575b9acf9997bbe4d/d3be9/textview-lint-error.webp 480w,
+/static/4bfacda6be1554f575b9acf9997bbe4d/e46b2/textview-lint-error.webp 960w,
+/static/4bfacda6be1554f575b9acf9997bbe4d/4cec6/textview-lint-error.webp 1272w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/4bfacda6be1554f575b9acf9997bbe4d/8ff5a/textview-lint-error.png 240w,
+/static/4bfacda6be1554f575b9acf9997bbe4d/e85cb/textview-lint-error.png 480w,
+/static/4bfacda6be1554f575b9acf9997bbe4d/d9199/textview-lint-error.png 960w,
+/static/4bfacda6be1554f575b9acf9997bbe4d/11a8f/textview-lint-error.png 1272w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/4bfacda6be1554f575b9acf9997bbe4d/d9199/textview-lint-error.png"
+            alt="textview lint error"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <p>Having instrumentation test case which run on devices with API level less than 21 can also help to catch these errors early.</p>
 <h3 id="tl-dr" style="position:relative;"><a href="#tl-dr" aria-label="tl dr permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TL; DR</h3>
 <ul>

@@ -232,7 +232,50 @@ setContent <span class="token punctuation">{</span>
 <h2 id="components" style="position:relative;"><a href="#components" aria-label="components permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Components</h2>
 <p>If we take a look back at traditional Android UI, the framework provided a lot of customisable components such as <code class="language-text">Button</code>, <code class="language-text">EditText</code> and even more like <code class="language-text">RecyclerView</code>, <code class="language-text">Card</code> were provided via AppCompat. One of the behaviour common in a lot of these components was they were themed according to what theme OS was applying. For example a <code class="language-text">Button</code> would look wildly different depending on which OS it was being rendered. For <code class="language-text">MaterialTheme</code>, this was advently solved by MDC components which followed material guidelines irrespective of OS versions on which they were being rendered.</p>
 <p>Compose builds components on the same concept where components are separated by a design layer defined by <code class="language-text">foundation</code> and <code class="language-text">material</code> packages.</p>
-<p><img src="media/composing-a-design-system/ui-packages.png" alt=""></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/919b58cee0efdda9d1cc2015126250e3/7a4b2/ui-packages.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 27.916666666666668%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAACxLAAAsSwGlPZapAAAAj0lEQVR42qWQiwqCQBBFN5TykWUqalmpRCH0///XHTiBCoLgwmHYuTN3Z8e55VOIL7xFI85uw4nEU1xFTfTWNsfiyAQxZnYPRzUJWoJucY+2g8n3WvERvehomhfblAOxW1pBjaG9XomTyMRd+COzC1qAoekH8jeR/msDEi1GtrcX5v5sup5VNNQ9RClytPAHWjUFv/TjkfgAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/919b58cee0efdda9d1cc2015126250e3/8ac56/ui-packages.webp 240w,
+/static/919b58cee0efdda9d1cc2015126250e3/d3be9/ui-packages.webp 480w,
+/static/919b58cee0efdda9d1cc2015126250e3/e46b2/ui-packages.webp 960w,
+/static/919b58cee0efdda9d1cc2015126250e3/9eb34/ui-packages.webp 1240w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/919b58cee0efdda9d1cc2015126250e3/8ff5a/ui-packages.png 240w,
+/static/919b58cee0efdda9d1cc2015126250e3/e85cb/ui-packages.png 480w,
+/static/919b58cee0efdda9d1cc2015126250e3/d9199/ui-packages.png 960w,
+/static/919b58cee0efdda9d1cc2015126250e3/7a4b2/ui-packages.png 1240w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/919b58cee0efdda9d1cc2015126250e3/d9199/ui-packages.png"
+            alt="ui packages"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
 <p>UI components within the Compose framework are divided into classes which make no assumptions around Theming such as <code class="language-text">BasicText</code> and classes such as <code class="language-text">Text</code> which expose <code class="language-text">LocalTextStyle</code> as a <code class="language-text">CompositionLocal</code> allowing them to be themed. This can be compared to color attributes such as <code class="language-text">colorControlActivated</code> which we would use in traditional framework components such as <code class="language-text">Switch</code> to theme it.</p>
 <p><strong>To Material or not</strong></p>
 <p>Since compose separates out Material components, if you try to build a Custom Design system with just <code class="language-text">foundation</code>, the only components you will find yourself with are <code class="language-text">BasicText</code>, <code class="language-text">BasicTextField</code> and layout functions. Any other component like <code class="language-text">RadioButton</code>, <code class="language-text">CheckBox</code>, <code class="language-text">Switch</code> etc will have to be built with scratch which is a departure from current situation where you could create custom versions of such components using <code class="language-text">AppCompatRadioButton</code>, <code class="language-text">AppCompatCheckBox</code>, <code class="language-text">SwitchCompat</code> etc.</p>
