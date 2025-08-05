@@ -1,4 +1,477 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jitin Sharma]]></title><description><![CDATA[Jitin Sharma]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 04 Aug 2025 17:42:54 GMT</lastBuildDate><item><title><![CDATA[Adventures in Android Timekeeping]]></title><description><![CDATA[Understanding clock skew of System.currentTimeMillis() in Android]]></description><link>https://jitinsharma.com/posts/adventures-in-android-timekeeping/</link><guid isPermaLink="false">https://jitinsharma.com/posts/adventures-in-android-timekeeping/</guid><pubDate>Tue, 15 Apr 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jitin Sharma]]></title><description><![CDATA[Jitin Sharma]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 05 Aug 2025 14:00:49 GMT</lastBuildDate><item><title><![CDATA[Finding Network in a haystack]]></title><description><![CDATA[Low-level discoveries for improving network reliability and performance in mobile apps]]></description><link>https://jitinsharma.com/posts/finding-network-in-a-haystack/</link><guid isPermaLink="false">https://jitinsharma.com/posts/finding-network-in-a-haystack/</guid><pubDate>Tue, 05 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7a2a680950d73850a7efee9dd690337a/30f63/image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.58333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjUlEQVR42hXSW2/SAAAF4BpHS7m29E6hpbR0tJRCGQwYlw3YuCjIZBDAbW7CNkM2py5zTM30QafRaLwkGp+MDz4tmYm/wJj44ou/SZac15OcfDmACXaCFgSyY5CThFEGRBg1oCgBFXKydpJHOdHBCFbcY8FYGGPNTgpy4CYrOgU7JgFMFsSMkKADNyO0FWdB1NOp1Na6DSIih7rX1HaHkMKYP+xkRBvmsRNus4OGEAq0uaZgJwDTPJYqkKIuJCtKue/LNpdaw4VanZ7R9U5Xa7YJOYJ6NUqK8OWG1G8JrbKN5qCLCQRgxbnw0avC+K1WWQvMt1mjpOSb0mzVzmgYZ7Ba1h1M+1JVfeu2ut6nw8Xg4Ja3sGhx8RbcA0B2wl9uKStDxK3ifoORZ/K9Ua47kvONYL0vLvVC/S19766/vMbISVqaUTeH7FzN7CBNNhcwYYBsxHQ0l660E8VGvHAlvnB1tticHxwkDx6pve3pxoY7Upo0I7Vhor1fePE62tqR0w2cV4AJcixbDqcWSD7oVdJspMkayxifRN1hSkh51BKnV6hAnBCN+RuHq+9/Dn7/W/18vrR+yKqzgEcKxecWAZCgo73oxtPlb6PQ0Ym0ue3rbnGZqpApcUYWE3ScN/LjN+2zPysvvxd3nqRuHuK+EEBxSrK5LA6vi6MH8ceDxMO2sPsptHuinR7LvWFo/Cw+HmiD9eCdvfyHj7Wzv9XTs+TO81j/vn0CBpqR+Nfz+q8fTCxAaYKdFhxUEpfTmOR30kFEqZDxKp+PUboh5jqZe19y++8iq8feVB2agF26bGaMtJAomEDEBF9cBXaRMELBqGfyGStKWRAasjFWF+fgopic8cTKrkDCQvhNVvQ/49yE9YKI56oAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/7a2a680950d73850a7efee9dd690337a/8ac56/image.webp 240w,
+/static/7a2a680950d73850a7efee9dd690337a/d3be9/image.webp 480w,
+/static/7a2a680950d73850a7efee9dd690337a/e46b2/image.webp 960w,
+/static/7a2a680950d73850a7efee9dd690337a/f992d/image.webp 1440w,
+/static/7a2a680950d73850a7efee9dd690337a/882b9/image.webp 1920w,
+/static/7a2a680950d73850a7efee9dd690337a/b0136/image.webp 2816w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/7a2a680950d73850a7efee9dd690337a/8ff5a/image.png 240w,
+/static/7a2a680950d73850a7efee9dd690337a/e85cb/image.png 480w,
+/static/7a2a680950d73850a7efee9dd690337a/d9199/image.png 960w,
+/static/7a2a680950d73850a7efee9dd690337a/07a9c/image.png 1440w,
+/static/7a2a680950d73850a7efee9dd690337a/29114/image.png 1920w,
+/static/7a2a680950d73850a7efee9dd690337a/30f63/image.png 2816w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/7a2a680950d73850a7efee9dd690337a/d9199/image.png&quot;
+            alt=&quot;Finding Network in a haystack&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I recently learned about spread spectrum technology (credit &lt;a href=&quot;https://www.acquired.fm/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;acquired.fm&lt;/a&gt;) - a communication technique developed decades ago that works by hopping signals across frequencies to improve reliability. What started as a way to make military communications jam-resistant eventually led to CDMA and the cellular networks we rely on today. The entire journey of how a communication signal travels is quite fascinating, and equally complex and deep when performing a simple step such as a network call on mobile.&lt;/p&gt;
+&lt;p&gt;A simple HTTP request might seem straightforward, but under the hood, it’s a complex dance between your device, cellular towers, ISPs, and data centers. Each step in this chain can introduce latency, failures, or performance bottlenecks. Through real-world experimentation and production deployments, I’ve discovered several low-level optimizations that can dramatically improve network reliability and performance.&lt;/p&gt;
+&lt;h2 id=&quot;the-network-call-journey&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#the-network-call-journey&quot; aria-label=&quot;the network call journey permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;The Network Call Journey&lt;/h2&gt;
+&lt;p&gt;Before diving into optimizations, let’s understand what actually happens when your app makes a network request:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2501bb1f9597d8370d925c7b8052872a/ba715/connection_stages.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 31.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABYklEQVR42k2QO25UQRBFZw8sgy0QsQhiMkSAxEacI1JSZ4iAAAIkBBphyUi2BR7Pf/w+/bq7+vfezNiyDuUBAUGrSt23Tt3bo0ndMp5OmbWGPOzp0pbK99Qy4PNA7LfYWPCpJ2lfW8faeBpJuBAIuRDK9u8ZPXl1xIOXT3n+5jWiossm8eXS8m0uLG3BSuR8suJq1eBjZFI5xjPhZB659plUElJ2/4Bn6w0fL874UVXEsld3masqsmgTrfRI3mFDwcX+4KYLibXNLNt4cB1yUtB/wH57y83+jmF3S2s7jFdhcIi6Md7jxGns/e+hfA/I1Lp00wW91y8p+fAm+Q9QVOT7O8ScUr9/SPh5hPn0GDl9QTt+RvXhESl7jXVD7gszExlr3JNlYqV95y3XCv9+MaUywiiUgXDvIFpkcYx05/jlO6T+itt8xi7e6ub+4CJqbUSYNcJch40ETRNwGr22WmPhFxgKuxKqjmwIAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/2501bb1f9597d8370d925c7b8052872a/8ac56/connection_stages.webp 240w,
+/static/2501bb1f9597d8370d925c7b8052872a/d3be9/connection_stages.webp 480w,
+/static/2501bb1f9597d8370d925c7b8052872a/e46b2/connection_stages.webp 960w,
+/static/2501bb1f9597d8370d925c7b8052872a/f992d/connection_stages.webp 1440w,
+/static/2501bb1f9597d8370d925c7b8052872a/882b9/connection_stages.webp 1920w,
+/static/2501bb1f9597d8370d925c7b8052872a/2b738/connection_stages.webp 2210w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/2501bb1f9597d8370d925c7b8052872a/8ff5a/connection_stages.png 240w,
+/static/2501bb1f9597d8370d925c7b8052872a/e85cb/connection_stages.png 480w,
+/static/2501bb1f9597d8370d925c7b8052872a/d9199/connection_stages.png 960w,
+/static/2501bb1f9597d8370d925c7b8052872a/07a9c/connection_stages.png 1440w,
+/static/2501bb1f9597d8370d925c7b8052872a/29114/connection_stages.png 1920w,
+/static/2501bb1f9597d8370d925c7b8052872a/ba715/connection_stages.png 2210w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/2501bb1f9597d8370d925c7b8052872a/d9199/connection_stages.png&quot;
+            alt=&quot;connection stages&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Each of these stages can fail or introduce delays. In a world of cellular networks, WiFi handoffs, and varying signal strengths, optimizing each step becomes crucial for a smooth user experience.&lt;/p&gt;
+&lt;h2 id=&quot;its-always-dns&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#its-always-dns&quot; aria-label=&quot;its always dns permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;It’s always DNS&lt;/h2&gt;
+&lt;p&gt;DNS resolution is often the forgotten stepchild of network optimization, but it can easily add 50-200ms to the first request to a new domain. Here’s what actually happens during DNS resolution:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DNS Resolution Stages:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Local Cache Check&lt;/strong&gt; - Device checks its DNS cache&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;System Resolver&lt;/strong&gt; - Query the system’s configured DNS server&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Recursive Resolution&lt;/strong&gt; - DNS server queries root servers, TLD servers, authoritative servers&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Response Propagation&lt;/strong&gt; - Result travels back through the chain&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Each of these stages can fail or be slow, especially on mobile networks where packet loss is common.&lt;/p&gt;
+&lt;h3 id=&quot;dns-subtleties-that-kill-performance&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#dns-subtleties-that-kill-performance&quot; aria-label=&quot;dns subtleties that kill performance permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;DNS Subtleties That Kill Performance&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cache Invalidation&lt;/strong&gt;: Low TTL can mean, devices need to resolve DNS frequently which might occur over unreliable or low-bandwidth paths.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Network Switching&lt;/strong&gt;: Moving from WiFi to cellular (or vice versa) or fluctuations can clear DNS cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;optimizing-dns&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#optimizing-dns&quot; aria-label=&quot;optimizing dns permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Optimizing DNS&lt;/h3&gt;
+&lt;p&gt;DNS can be optimized depending on your configurations. For eg. if you have static IPs, you can probably cache them for a longer time and refresh them asynchronously within your app.&lt;/p&gt;
+&lt;p&gt;If IPs are dynamic, it’s probably not safe to cache them for a longer time but you can try to reduce errors by using a cached or a different static IP in case primary resolution fails.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;okhttp&lt;/code&gt; allows you override DNS lookup which you can attach to your &lt;code class=&quot;language-text&quot;&gt;Builder&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; CustomDns &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Dns &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hostname&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; List&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;InetAddress&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// With static IPs, check cache with a bit more relaxed expiry&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; cached &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getCachedAddresses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hostname&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cached &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; cached
+        
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token comment&quot;&gt;// Fallback to system DNS&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; addresses &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Dns&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;SYSTEM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hostname&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+            addresses
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;e&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; UnknownHostException&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token comment&quot;&gt;// With dynamic IPs, try to fallback to preconfigured static IP&lt;/span&gt;
+            &lt;span class=&quot;token function&quot;&gt;getStaticAddresses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hostname&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; e
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getStaticAddresses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hostname&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; List&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;InetAddress&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hostname&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;api.myapp.com&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;listOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;InetAddress&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getByName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;x.xx.xxx.xx&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Depending on whether your objective is reliability or performance, overriding DNS resolution can be useful if you have users facing latency or connectivity challenges. I’ll discuss later in the article, how to identify these issues.&lt;/p&gt;
+&lt;h2 id=&quot;ip-addresses-can-deceive&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ip-addresses-can-deceive&quot; aria-label=&quot;ip addresses can deceive permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;IP addresses can deceive&lt;/h2&gt;
+&lt;p&gt;DNS returns IP address(es), to one of which a connection must be made. Most modern servers will publish multiple IP addresses which can be often used as means of load balancing or handling requests from different geographies.&lt;/p&gt;
+&lt;p&gt;Often these are combinations of IPv4 and IPv6, where lies our next challenge.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Problem:&lt;/strong&gt;
+IPv6 was launched more than a decade ago, to address (pun intended) exhaustion of IPv4 addresses. Like all large-scale migrations, its quirks are still felt today&lt;/p&gt;
+&lt;p&gt;Today largely all servers would support IPv6+IPv4, where IPv6 is preferred if available via AAAA record. The clients will prefer the same if they themselves support IPv6 along with a connected network.
+Here lies the problem, there are many layers between client, their nearest network and servers which may not be configured for IPv6.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Connection Flow (Traditional):&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/345c6a2821aa513e676eaaac6ea93c8c/e8e04/ip_address_sequential_2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 76.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACMklEQVR42o1Ty27TUBDNn/BDrPgA2KCKDwD1E9jDgk0XCFiVBR/ApgIVUQRJCq3tKo2dJnZsXz+vX9ehlQ4zk7YCKRVZHM21fX1mzpmZwYFt4dn+W+y+f4en+29w4Fjo+ivo1iCpDKywgxO1OA1q2FEHL+lQdz1K+l7UHYI4xyLO5Fw2BoP7L55j8PgB7u0+kcjPkSownQeY+CnG/gqHdoyPQ4/OBid+jaXK4BPRPMzxdWjhaGTD8xOkZYPBh+/f8GjvJXZev8JDivxctyvkukFUNDgJOhxfaIy8Ar/8FlPVSjV5xdEQkYK7iJHpdl1hT/JMf4nWXErsV1fy4Qa66VC1vYDPumXw2SBMCiKMcbFUCFQmCQbrTN0t8msvGHyBfUyrfh3rnsDVNXI3IxXzMMEiSkluva7w72puiQgVmR6VBp+cFIeOwpezFJ8thaGbwZp4mC0TLJMSp5M5fjoekeaUqNtMKFKJUGmD0UxjPCvEwx9ujnPVSDL+Oc4q8e98HiJKS6n6TsIbVN0KqqDOkl++ykWayrVYU5vf1O1UwOc7Jf9baY84rwhayNivM3ch1TAJNyagRJx4K8JKCDWiTKMhAkZI8njmWLLj+rCnPr3TMkr/JWTwRa5iESU0JpF0lj1b0gIc2x7BlaZk2xLqxlyPSYuEZPu0amxFRSvI3jJYyVaSN4Gr5ViblXjKFW/dlE3gbrOPvM8sd2y5tC3p9h5uGnz2i7vvBbTLtM8RNYXn8A8WY1/wjUy5wwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/345c6a2821aa513e676eaaac6ea93c8c/8ac56/ip_address_sequential_2.webp 240w,
+/static/345c6a2821aa513e676eaaac6ea93c8c/d3be9/ip_address_sequential_2.webp 480w,
+/static/345c6a2821aa513e676eaaac6ea93c8c/e46b2/ip_address_sequential_2.webp 960w,
+/static/345c6a2821aa513e676eaaac6ea93c8c/3979e/ip_address_sequential_2.webp 1270w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/345c6a2821aa513e676eaaac6ea93c8c/8ff5a/ip_address_sequential_2.png 240w,
+/static/345c6a2821aa513e676eaaac6ea93c8c/e85cb/ip_address_sequential_2.png 480w,
+/static/345c6a2821aa513e676eaaac6ea93c8c/d9199/ip_address_sequential_2.png 960w,
+/static/345c6a2821aa513e676eaaac6ea93c8c/e8e04/ip_address_sequential_2.png 1270w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/345c6a2821aa513e676eaaac6ea93c8c/d9199/ip_address_sequential_2.png&quot;
+            alt=&quot;ip address sequential 2&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The major challenge here is that if you have multiple IPv6 addresses, which are non-functional for certain users, there will be multiple attempts with timeouts (typically 10-15 seconds), before you actually get a connection success, leading to overall latency of 30-60s.&lt;/p&gt;
+&lt;h3 id=&quot;fast-fallback-algorithm&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#fast-fallback-algorithm&quot; aria-label=&quot;fast fallback algorithm permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Fast Fallback Algorithm&lt;/h3&gt;
+&lt;p&gt;The solution is &lt;a href=&quot;https://datatracker.ietf.org/doc/html/rfc6555&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Happy Eyeballs (RFC 8305)&lt;/a&gt; - make parallel connection attempts to all available IP addresses and return the fastest successful connection.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Optimized Connection Flow:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/75cbbefe7c8c8caf5f9f5323e2e6cfa8/6b26f/ip_address_parallel.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 42.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABiUlEQVR42n1Sy06DQBTlF0z8Jn/DuNGtfoN717rUz3CjJi7UdFNNpVZqa3kMMAMDDDBtoznemUqa1MfiZAZuOPc8cG6GLq5dF5OUo9ZLqHaBuGjh5xohIchbZEqjauYoao28aiBVi/L7eRPO1uEuto/2sHNyjJgXCFiK57DBvVfgdsDQDzQmcYlESASpRO9pBHccQJS1Jd0kdvbPT3FwcYbTq0sUpCQrFd54iye/Qn+awWUtmCRVpIzLGsO3wCIk8jgrwbiEKNSacL74gMFy+bneqMyQTrpLtd6u9AKprKzliOdEmtn3TBRrwpyGHX7LpIMkpKRk7McIkgx+LOAzTo5qeO8hqVdWjPMfyQqrjMp2jliUGLzO8DqNkOQVMorBzAx5/n13NlVUjYaX1HicVRhQjiZL0zoji36y+jDJlSUeTSJbjomhK+cHoWo1XiKFuxFHz+N48ARYoRFRXtMwtRZF2eCFihnPGGZMkGVmSzJ5/2m5K6jbXNH/adDNzd3MDOEzqfXpNAq/AFqIoQOvQ/svAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/75cbbefe7c8c8caf5f9f5323e2e6cfa8/8ac56/ip_address_parallel.webp 240w,
+/static/75cbbefe7c8c8caf5f9f5323e2e6cfa8/d3be9/ip_address_parallel.webp 480w,
+/static/75cbbefe7c8c8caf5f9f5323e2e6cfa8/e46b2/ip_address_parallel.webp 960w,
+/static/75cbbefe7c8c8caf5f9f5323e2e6cfa8/f992d/ip_address_parallel.webp 1440w,
+/static/75cbbefe7c8c8caf5f9f5323e2e6cfa8/237a5/ip_address_parallel.webp 1658w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/75cbbefe7c8c8caf5f9f5323e2e6cfa8/8ff5a/ip_address_parallel.png 240w,
+/static/75cbbefe7c8c8caf5f9f5323e2e6cfa8/e85cb/ip_address_parallel.png 480w,
+/static/75cbbefe7c8c8caf5f9f5323e2e6cfa8/d9199/ip_address_parallel.png 960w,
+/static/75cbbefe7c8c8caf5f9f5323e2e6cfa8/07a9c/ip_address_parallel.png 1440w,
+/static/75cbbefe7c8c8caf5f9f5323e2e6cfa8/6b26f/ip_address_parallel.png 1658w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/75cbbefe7c8c8caf5f9f5323e2e6cfa8/d9199/ip_address_parallel.png&quot;
+            alt=&quot;ip address parallel&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Thankfully most modern clients support this internally. Chrome, Firefox, even iOS &lt;code class=&quot;language-text&quot;&gt;UrlSession&lt;/code&gt; enable it by default.&lt;/p&gt;
+&lt;p&gt;In OkHttp, you can enable this with(default since v5.0):&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; client &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; OkHttpClient&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Builder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;fastFallback&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;the-hardware-reality&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#the-hardware-reality&quot; aria-label=&quot;the hardware reality permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;The Hardware Reality&lt;/h4&gt;
+&lt;p&gt;I faced the above problem, when using a different &lt;a href=&quot;https://github.com/nats-io/nats.java&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;client&lt;/a&gt; for networking needs than &lt;code class=&quot;language-text&quot;&gt;okhttp&lt;/code&gt;, where we would find some users running into persistent disconnections over IPv6 addresses.
+While clients attempting to connect to IPv6 have been informed by network to use it, the underlying network isn’t actually ready for these addresses. This is largely due to :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cellular tower configuration issues&lt;/li&gt;
+&lt;li&gt;ISP routing problems&lt;/li&gt;
+&lt;li&gt;Corporate firewall policies&lt;/li&gt;
+&lt;li&gt;Home router misconfigurations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We later figured out that &lt;strong&gt;~3%&lt;/strong&gt; users can’t connect to IPv6, even when DNS resolves it for them and end up connecting to IPv4 addresses. It is also more likely to happen on a wifi connection than a cellular one.&lt;/p&gt;
+&lt;h2 id=&quot;making-attempts-faster&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#making-attempts-faster&quot; aria-label=&quot;making attempts faster permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Making attempts faster&lt;/h2&gt;
+&lt;p&gt;Clients often come up with a default set of values around timeouts, optimisations which might be counterintuitive in certain use cases. For example, &lt;code class=&quot;language-text&quot;&gt;okhttp&lt;/code&gt; has&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Default timeout of 10s for connections&lt;/li&gt;
+&lt;li&gt;Default timeout of 10s for read/write requests.&lt;/li&gt;
+&lt;li&gt;Max 5 concurrent calls per host, while limiting it to 64 globally.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Increasing concurrent calls per host might be worth it if all calls use the same host, which can be the usual case for mobile apps.&lt;/p&gt;
+&lt;p&gt;In terms of timeout, it might be worth experimenting if failing fast with lower timeouts helps with app experience. It also forces you to look at your own infrastructure in terms of what you need to change to reach users in let’s say &amp;#x3C;5 seconds.&lt;/p&gt;
+&lt;p&gt;Another advantage here is faster timeouts can capture degraded TCP connections faster. Let me take an HTTP detour to expand on this.&lt;/p&gt;
+&lt;h3 id=&quot;http-1--2&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#http-1--2&quot; aria-label=&quot;http 1  2 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP 1 &amp;#x26; 2&lt;/h3&gt;
+&lt;p&gt;HTTP 1 makes requests over connection sequentially, which means if one request is slow, all others in line become slow as well. This can be mitigated by creating a bunch of connections and splitting requests over them.&lt;/p&gt;
+&lt;p&gt;HTTP2 solves this by multiplexing requests over a single connection as different streams, which can be dispatched and returned in any sequence.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/99f1dfa4e8fc6ceb4cd730b5705ddbe2/ea64c/http1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABn0lEQVR42m1S2ZLaMBD0//9ZjkqAcC1mA75PyYcsyTx1ZmZx2IJ96NJIdrempxX0k8dg5xecK4uwtLKea/eB+1nROYzulcNagR4tam3QdAZtPxEMSj3h23XCJveCVTIJ/hQev1OPkIT1YIg3yv/MY35nHALeZLXGe5wjLhoUjUZc9/gRWexJ4FDO+HXpsIoGHKneZA4n6rLRPS5pJbysVqLRGYtgsF7a53YZXCvj8TOesC2cYEfCu9JLvSbBv43D5B82eV00Am7zGQN9yGlOcWuRqFeo8ZXDEMHHDbf/w9V0tkktdebItiPbXsD1NneIWgdzD+UzTwTVMNHceiRli5zmULY90mbE98iK1T3P8NpjFY8yz/V9hi0FkpQKadUSvxMNCUUNFpUaRZAH2+gBOe055S0lvCtmEVsnhuZINaV84pQpXf4/KRtpoiKeCH62vLytjs4OZO+tnnEihM2N1pvUx2pGqh6WjX+yvKTb3bFcwDfyM0orJV1k1Yc9xlecBUH/dMBtc6fXrML6cMY+vGIXXnB8j3A4R7JfEv0K/wAA5j4U/eJGpAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/99f1dfa4e8fc6ceb4cd730b5705ddbe2/8ac56/http1.webp 240w,
+/static/99f1dfa4e8fc6ceb4cd730b5705ddbe2/d3be9/http1.webp 480w,
+/static/99f1dfa4e8fc6ceb4cd730b5705ddbe2/e46b2/http1.webp 960w,
+/static/99f1dfa4e8fc6ceb4cd730b5705ddbe2/36c36/http1.webp 1116w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/99f1dfa4e8fc6ceb4cd730b5705ddbe2/8ff5a/http1.png 240w,
+/static/99f1dfa4e8fc6ceb4cd730b5705ddbe2/e85cb/http1.png 480w,
+/static/99f1dfa4e8fc6ceb4cd730b5705ddbe2/d9199/http1.png 960w,
+/static/99f1dfa4e8fc6ceb4cd730b5705ddbe2/ea64c/http1.png 1116w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/99f1dfa4e8fc6ceb4cd730b5705ddbe2/d9199/http1.png&quot;
+            alt=&quot;http1&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/25186e8adc3c7b94e53671fd96573159/62a6a/http2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 33.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABKklEQVR42m2Q21LCQBBE+f9PsxRFKQUNkL0Rks39sgRf2pkJBMvyoXd2ku1TM72o+4C6P4uqLqCh6soBygfo/KZBKn9zZZjf/vZV3XRf2LTATh+hjxlcViLxFZa6x9IErI9nvJHWyShV5AKSooVNc0Tki10K5yefAFXisd1r7AxBTx7qVODVDXi2AZtsxMq0eIg8PtIR7yeG0pR5A0UDsC9SDszgYQQYO4/N7vqDHhkCPtGEj2ogcMCLJbjpsaK7yE7A2GXi+4qt3HlTAfL+ed2haHqULWcYcKDMVHmBqb6hq6ka6uNihMrDlFnLvv7qG+ZMF3w0w0g6zyELlCKIYoODTaBI3Ce+QBfG+zvx3fsZ+Fc8Ka+z/txL3R4MNpSXpqzacEH1j+cG/AEU1Q05XpvKGwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/25186e8adc3c7b94e53671fd96573159/8ac56/http2.webp 240w,
+/static/25186e8adc3c7b94e53671fd96573159/d3be9/http2.webp 480w,
+/static/25186e8adc3c7b94e53671fd96573159/e46b2/http2.webp 960w,
+/static/25186e8adc3c7b94e53671fd96573159/e6b69/http2.webp 1122w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/25186e8adc3c7b94e53671fd96573159/8ff5a/http2.png 240w,
+/static/25186e8adc3c7b94e53671fd96573159/e85cb/http2.png 480w,
+/static/25186e8adc3c7b94e53671fd96573159/d9199/http2.png 960w,
+/static/25186e8adc3c7b94e53671fd96573159/62a6a/http2.png 1122w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/25186e8adc3c7b94e53671fd96573159/d9199/http2.png&quot;
+            alt=&quot;http2&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The only blocker here is the TCP connection here itself, since TCP acknowledges every packet sent, a packet loss at any request will pause all request streams until lost packet is retrieved. Packet loss is more prevalent in fluctuating mobile networks.&lt;/p&gt;
+&lt;p&gt;Shorter timeouts can force clients to revalidate their connection &lt;a href=&quot;https://github.com/square/okhttp/blob/4e7860212f3d873b37b69e4f0a882cf60bb91dd7/okhttp/src/commonJvmAndroid/kotlin/okhttp3/internal/http2/Http2Connection.kt#L530&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;health&lt;/a&gt; faster, upon which you can fail fast and retry on a newer (hopefully better) path when the network is fluctuating.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Timeout Strategy:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; client &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; OkHttpClient&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Builder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;connectTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; TimeUnit&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;SECONDS&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;readTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; TimeUnit&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;SECONDS&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Parallel Connection Limits:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; dispatcher &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Dispatcher&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+dispatcher&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;maxRequestsPerHost &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; client &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; OkHttpClient&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Builder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;dispatcher&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dispatcher&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;http3-return-of-udp&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#http3-return-of-udp&quot; aria-label=&quot;http3 return of udp permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP3: Return of UDP&lt;/h2&gt;
+&lt;p&gt;HTTP/3 uses &lt;a href=&quot;https://www.chromium.org/quic/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;QUIC&lt;/a&gt; protocol, which runs over UDP instead of TCP. This solves several fundamental issues with TCP:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TCP Problems QUIC Solves:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Head-of-line blocking&lt;/strong&gt;: One lost packet blocks all streams&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Connection setup&lt;/strong&gt;: Requires multiple round trips&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mobility&lt;/strong&gt;: Connections break when switching networks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Mobile-Specific Advantages:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Connection Migration&lt;/strong&gt;: Maintains connection when switching from WiFi to Mobile&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Better Loss Recovery&lt;/strong&gt;: Per-stream recovery instead of connection-wide&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reduced Latency&lt;/strong&gt;: Built-in encryption, no separate TLS handshake&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Unfortunately, &lt;code class=&quot;language-text&quot;&gt;okhttp&lt;/code&gt; doesn’t support HTTP3 natively, but we can use Google’s &lt;a href=&quot;https://developer.android.com/develop/connectivity/cronet&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Cronet&lt;/a&gt; library, which can also plug into &lt;code class=&quot;language-text&quot;&gt;okhttp&lt;/code&gt; stack but with limited &lt;a href=&quot;https://github.com/google/cronet-transport-for-okhttp&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;features&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fun side note&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Google introduced &lt;a href=&quot;https://www.chromium.org/spdy/spdy-whitepaper/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;SPDY&lt;/a&gt; protocol to overcome HTTP1 limitations, which eventually was used in HTTP2. Same is repeated with QUIC, which was introduced by Google and eventually made it’s way to HTTP3.&lt;/p&gt;
+&lt;h2 id=&quot;measurement&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#measurement&quot; aria-label=&quot;measurement permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Measurement&lt;/h2&gt;
+&lt;p&gt;If using &lt;code class=&quot;language-text&quot;&gt;okhttp&lt;/code&gt; , you can attach an &lt;code class=&quot;language-text&quot;&gt;EventListener&lt;/code&gt; to the &lt;code class=&quot;language-text&quot;&gt;Builder&lt;/code&gt;, which can then be used to measure different stages of http calls.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; MetricsListener &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;EventListener&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;callEnd&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;call&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Call&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;callStart&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;call&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Call&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;connectStart&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;call&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Call&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; inetSocketAddress&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; InetSocketAddress&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; proxy&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Proxy&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;connectEnd&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        call&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Call&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        inetSocketAddress&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; InetSocketAddress&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        proxy&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Proxy&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        protocol&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Protocol&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;dnsStart&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;call&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Call&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; domainName&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;dnsEnd&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;call&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Call&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; domainName&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; inetAddressList&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; List&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;InetAddress&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;secureConnectStart&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;call&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Call&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;secureConnectEnd&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;call&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Call&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; handshake&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Handshake&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;EventListener&lt;/code&gt; is quite extensive, and can be used to get metrics around cache hit, dns, SSL and much more. You can push these metrics to your favorite analytics/observability system and analyze patterns around carrier, geography etc.&lt;/p&gt;
+&lt;h2 id=&quot;conclusion&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#conclusion&quot; aria-label=&quot;conclusion permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Just like spread spectrum technology spread signals across multiple frequencies to survive interference, modern mobile apps need to spread their bets across multiple optimization strategies. DNS caching handles resolution failures, fast fallback survives IPv6 connectivity issues, aggressive timeouts help recover from degraded connections, and HTTP/3 promises to solve fundamental TCP limitations.&lt;/p&gt;
+&lt;p&gt;The network will always be unreliable - that’s the one constant we can count on. But by understanding each stage of the network journey and optimizing for the realities of mobile communication, we can build apps that feel fast and reliable even when the underlying infrastructure isn’t.&lt;/p&gt;
+&lt;p&gt;Next time a user complains about network performance, you’ll know it’s not just “the network is slow” - it’s a complex chain of optimizable steps waiting to be fine-tuned.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 710px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/26fa0c720c4397587e1628200f923dc0/67e9d/meme.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 49.583333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAUA/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAECA//aAAwDAQACEAMQAAABpz1To0fiZH//xAAaEAEAAgMBAAAAAAAAAAAAAAABAgMAETIS/9oACAEBAAEFAnXpVtjeA8QXIc//xAAXEQEAAwAAAAAAAAAAAAAAAAAAAQIh/9oACAEDAQE/AYsx/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8Bh//EABwQAAEDBQAAAAAAAAAAAAAAAAACETEBEEJxgf/aAAgBAQAGPwJx0v0iorRONv/EABsQAQADAAMBAAAAAAAAAAAAAAEAESExQWHR/9oACAEBAAE/IXbaV4Bd46jgV3zJzu/iMdXCJRbc/9oADAMBAAIAAwAAABCzH//EABcRAQADAAAAAAAAAAAAAAAAAAARQXH/2gAIAQMBAT8Qgph//8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERUf/aAAgBAgEBPxBl3T//xAAaEAEBAAMBAQAAAAAAAAAAAAABEQAhUUGx/9oACAEBAAE/EKEAAX7lXUtiPGSy6ldHMBokKPpgTTs2+3HZF1bn/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/26fa0c720c4397587e1628200f923dc0/8ac56/meme.webp 240w,
+/static/26fa0c720c4397587e1628200f923dc0/d3be9/meme.webp 480w,
+/static/26fa0c720c4397587e1628200f923dc0/457aa/meme.webp 710w&quot;
+              sizes=&quot;(max-width: 710px) 100vw, 710px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/26fa0c720c4397587e1628200f923dc0/09b79/meme.jpg 240w,
+/static/26fa0c720c4397587e1628200f923dc0/7cc5e/meme.jpg 480w,
+/static/26fa0c720c4397587e1628200f923dc0/67e9d/meme.jpg 710w&quot;
+            sizes=&quot;(max-width: 710px) 100vw, 710px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/26fa0c720c4397587e1628200f923dc0/67e9d/meme.jpg&quot;
+            alt=&quot;meme&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Adventures in Android Timekeeping]]></title><description><![CDATA[Understanding clock skew of System.currentTimeMillis() in Android]]></description><link>https://jitinsharma.com/posts/adventures-in-android-timekeeping/</link><guid isPermaLink="false">https://jitinsharma.com/posts/adventures-in-android-timekeeping/</guid><pubDate>Tue, 15 Apr 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
