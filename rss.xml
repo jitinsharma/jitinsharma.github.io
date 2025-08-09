@@ -1,4 +1,148 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jitin Sharma]]></title><description><![CDATA[Jitin Sharma]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 05 Aug 2025 14:00:49 GMT</lastBuildDate><item><title><![CDATA[Finding Network in a haystack]]></title><description><![CDATA[Low-level discoveries for improving network reliability and performance in mobile apps]]></description><link>https://jitinsharma.com/posts/finding-network-in-a-haystack/</link><guid isPermaLink="false">https://jitinsharma.com/posts/finding-network-in-a-haystack/</guid><pubDate>Tue, 05 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jitin Sharma]]></title><description><![CDATA[Jitin Sharma]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 09 Aug 2025 13:11:30 GMT</lastBuildDate><item><title><![CDATA[Compute and AI with Kotlin on Cloudflare Workers]]></title><description><![CDATA[Building serverless edge functions with Kotlin/JS and sharing code across mobile and serverless platforms]]></description><link>https://jitinsharma.com/posts/compute-and-ai-with-kotlin-on-cloudflare-workers/</link><guid isPermaLink="false">https://jitinsharma.com/posts/compute-and-ai-with-kotlin-on-cloudflare-workers/</guid><pubDate>Sat, 09 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;What if your serverless functions and mobile apps could share the same code — models, network logic, and business rules — all in one place?
+At work, we’ve been using Cloudflare Workers for a while, and I recently decided to try building them in Kotlin using Kotlin Multiplatform. The result: a unified codebase powering both our edge functions and mobile applications, with no duplicated logic.&lt;/p&gt;
+&lt;h2 id=&quot;workers-and-edge-computing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#workers-and-edge-computing&quot; aria-label=&quot;workers and edge computing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Workers and Edge Computing&lt;/h2&gt;
+&lt;p&gt;Cloudflare Workers allow you to run serverless functions across a globally distributed network, choosing the location closest to the user (possibly even in their city).
+Instead of routing everything to a single server in one location, your functions run where they’re needed, reducing latency and improving performance.&lt;/p&gt;
+&lt;p&gt;Workers also provide built-in integrations such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Key-Value storage&lt;/li&gt;
+&lt;li&gt;Databases&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3dcbeffe57b612bd20c37a9685654ecc/8d68c/edge.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.41666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABtUlEQVR42pVT2XaCQAz1Z6oIyM6wyCII0ta1Paf//ylpbgYo9ql9iMxkuUnuXFeGHZLpJuTFNflLUzX7KrL9jDYW5ziK3KgUP+KI/eTVtAv2ZNgRrZCMS9Fe6NA/qO5u8m2GDyqasyRvrIBsL6O0epUYrDxeOfdOFedXfA7TVgPiB91RYHmpTASTM3w8vcFNt7tYfJarzfbzMZ6KH1vOgDBMCjPsmIvV4q7jaIpi00kkbrnZeFdzE9QKoMc8ZPUbpeVA+eGdcj5nvB4sSBqZzg0LitJO1quON+rPX7z6XdZWeS8rY0oNyDxNQL8tTDWgA8DsSDEXJ8VA7fDJvJ8p3vfs7zSgkyxWNgNt1kRBQGvzeWVwhiJMIl9HcyeccgyNBRAHeYiRbLw6CjSAmjk25GFyiSFn4tTk78S3yEYkwfyJJE4PkULDK4FXrAqtSh43ha85saTaq0gLuaACzZ5k44blLFRYoA7ksZAhCb12KNO4UcUxLWzkIHcS9Qw4jfuy9XWAu03npXSm+9oMnmyZMz8KXrrkf0vRXKhmOUAaeLntuMpfbQZ0eOWYnz9iEJV3YmjyX8Bv5Q6iSHhjoa8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/3dcbeffe57b612bd20c37a9685654ecc/8ac56/edge.webp 240w,
+/static/3dcbeffe57b612bd20c37a9685654ecc/d3be9/edge.webp 480w,
+/static/3dcbeffe57b612bd20c37a9685654ecc/e46b2/edge.webp 960w,
+/static/3dcbeffe57b612bd20c37a9685654ecc/5dcdf/edge.webp 1234w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/3dcbeffe57b612bd20c37a9685654ecc/8ff5a/edge.png 240w,
+/static/3dcbeffe57b612bd20c37a9685654ecc/e85cb/edge.png 480w,
+/static/3dcbeffe57b612bd20c37a9685654ecc/d9199/edge.png 960w,
+/static/3dcbeffe57b612bd20c37a9685654ecc/8d68c/edge.png 1234w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/3dcbeffe57b612bd20c37a9685654ecc/d9199/edge.png&quot;
+            alt=&quot;edge&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;workers-runtime&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#workers-runtime&quot; aria-label=&quot;workers runtime permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Workers Runtime&lt;/h2&gt;
+&lt;p&gt;Workers run on WebAssembly (WASM), a portable and high-performance binary format that can be compiled from various languages.&lt;/p&gt;
+&lt;p&gt;This opens the door for Kotlin/JS — Kotlin code compiled to JavaScript (and eventually running inside WASM).
+We get to keep Kotlin’s strong type system, coroutines, and familiar APIs, while targeting the Cloudflare Workers runtime.&lt;/p&gt;
+&lt;p&gt;Example Worker entrypoint in Kotlin:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token annotation builtin&quot;&gt;@JsExport&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;request&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Request&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; env&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;dynamic&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ctx&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;dynamic&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;dynamic&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; GlobalScope&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;promise&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;handleRequest&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;request&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; env&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ctx&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;sharing-code-with-kmp&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#sharing-code-with-kmp&quot; aria-label=&quot;sharing code with kmp permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Sharing code with KMP&lt;/h2&gt;
+&lt;p&gt;Because the whole setup uses Kotlin, we can share a significant amount of code between mobile and edge environments, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP client (ktor)&lt;/li&gt;
+&lt;li&gt;Serialization (kotlinx.serialization)&lt;/li&gt;
+&lt;li&gt;Request/Response models&lt;/li&gt;
+&lt;li&gt;Business rules and validation logic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This means the same Kotlin models that your Android/iOS app uses can also be used in your Workers, ensuring consistency and
+eliminating duplication.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e5bef1b96ba54bd54e3b694a29829017/bb543/kmp.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.08333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACEElEQVR42pWSW08TURSF59cIMr0w086UduyFVgIqVrG+eAmaaIwJAgGVopYplCKFUii9UTSUS8tNIhEJhPho4u9anr3HRqOS6MPKZPac+c5eey+p1ebG/6jNoePZSAKpTAmvklmMm/N4PbXA7/2PhiDRoRZZxYU2Sy2y61wYfSPgWv0TZrJVRGP9uPtwAL1990XtCLO5VUgX7RpUPQS3NywUQbs7AKrRj39CNcjODhRWt5FfaWDoxSReJjIYHDWxvnMMM523gJovAm+gh6V6Qgy0KV4L+qNjqjUvKgpgbfszcqUNAa4jW6hh5+MXmNNLBNSFFcuOZVdjANknAHXUyiAPS3Z6UFn7gKfDb6AbXYj03BINXUZ6voJpMUdJEXb94eusQCQKo/MaHK5LDHK4/DBCvVwPdt3gkVB9udrA4clXbO6donFwhq39UxydfUMitQiJDtgVH2ztHZCF7KqPbfECRDdOtx8O1eCnjc95sVjexJOBOC/l9p3HuHrzHuITc5iaLUKiH+mQogdZBCHLVGuCKQXNUVCNlpKaK2PwuYnR8bSI0QSWyluYfFuwYkO3+4JXWHbFAM3VKWzTDH/fMjmgeBTf7bL15arYeKWOldqB6DJjAZsZ+zWDf8sjLUrRAhgTUens7hMLiSEslkLzjcYeYCSe+gn8F9EltOXkTJ67WyisI1fc4NiU3u+KXCbxHUXTo5dBA8hNAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/e5bef1b96ba54bd54e3b694a29829017/8ac56/kmp.webp 240w,
+/static/e5bef1b96ba54bd54e3b694a29829017/d3be9/kmp.webp 480w,
+/static/e5bef1b96ba54bd54e3b694a29829017/e46b2/kmp.webp 960w,
+/static/e5bef1b96ba54bd54e3b694a29829017/e0593/kmp.webp 1418w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/e5bef1b96ba54bd54e3b694a29829017/8ff5a/kmp.png 240w,
+/static/e5bef1b96ba54bd54e3b694a29829017/e85cb/kmp.png 480w,
+/static/e5bef1b96ba54bd54e3b694a29829017/d9199/kmp.png 960w,
+/static/e5bef1b96ba54bd54e3b694a29829017/bb543/kmp.png 1418w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/e5bef1b96ba54bd54e3b694a29829017/d9199/kmp.png&quot;
+            alt=&quot;kmp&quot;
+            title=&quot;&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;inferencing-ai-models-at-edge&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#inferencing-ai-models-at-edge&quot; aria-label=&quot;inferencing ai models at edge permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Inferencing AI models at edge&lt;/h2&gt;
+&lt;p&gt;Cloudflare’s AI Workers integration takes edge computing further by allowing AI inference directly at the edge.
+Imagine parsing a request, running an LLM, and returning a result — all without leaving the nearest Cloudflare PoP.&lt;/p&gt;
+&lt;p&gt;Here’s an example of calling an AI model from Kotlin:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;suspend&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;handleAIRequest&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;env&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;dynamic&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; request&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; AIRequest&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Response &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; prompt &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string-literal multiline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&quot;&quot;
+        Provide one paragraph information about &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;token expression&quot;&gt;request&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;url&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;
+        Response should only contain text and should give brief about conference
+        topics, speakers and location.
+    &quot;&quot;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;trimIndent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; aiResponse &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ai&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-literal singleline&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;@cf/meta/llama-3-8b-instruct&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; promptObject&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;unsafeCast&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;kotlin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;js&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Promise&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;dynamic&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;await&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Response&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Json&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;encodeToString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;aiResponse&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;ResponseInit&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;headers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; headers&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The same code handles HTTP parsing, AI model execution, and response formatting — all at the edge, with minimal latency.&lt;/p&gt;
+&lt;h2 id=&quot;tradeoffs&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#tradeoffs&quot; aria-label=&quot;tradeoffs permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Tradeoffs&lt;/h2&gt;
+&lt;p&gt;While Kotlin/JS works well with JavaScript, there are considerations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ES module export — Workers require ESM; setup can be tricky.&lt;/li&gt;
+&lt;li&gt;Bundle size — Kotlin/JS output may be larger than handwritten JS.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That said, if your team already uses Kotlin Multiplatform, this approach delivers huge code reuse and consistency wins.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The complete source code and detailed setup instructions are available in my &lt;a href=&quot;https://github.com/jitinsharma/kotlinworker&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;KotlinWorker repository&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Finding Network in a haystack]]></title><description><![CDATA[Low-level discoveries for improving network reliability and performance in mobile apps]]></description><link>https://jitinsharma.com/posts/finding-network-in-a-haystack/</link><guid isPermaLink="false">https://jitinsharma.com/posts/finding-network-in-a-haystack/</guid><pubDate>Tue, 05 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
